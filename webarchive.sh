@@ -8,7 +8,7 @@ cat reports.csv | while read line; do
         url="$(echo "${line}" | sed 's/^"//g;s/"$//g' |  awk -F'","' '{print $5}')"
         filename="${date}-${author}-${name}"                                     
 
-	echo " [+] Archiving via web.archive.org/save/"
+	echo " [+] Archiving via web.archive.org/save/${url}"
 	curl "https://web.archive.org/save/${url}" | head
 	sleep 3
 done

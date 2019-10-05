@@ -44,29 +44,14 @@ cat reports.csv | while read line; do
 
 case "${filetype}" in
 	"html")
-		if [ ! -f "${html}" ]; then
+		if [ ! -f "${text}" ] && [ ! -f "${html}" ]; then
 			echo "	[+] Downloading: ${html}"
 			eval "${curlcmd} \"${url}\" -o \"${html}\""
 		else
 			echo "	[.] We already have: ${html}"	
 		fi
-	
-		if [ ! -f "${text}" ]; then
-			echo "	[+] Converting to: ${text}"
-			#cat "${html}" | html2text > "${text}"
-			pandoc -f html "${html}" -t plain > "${text}"
-		else
-			echo "	[.] Already converted to: ${text}"
-		fi
-	
-#		if [ ! -f "${markdown}" ]; then
-#			echo "	[+] Converting to: ${markdown}"
-#			pandoc -f html ${html} -t markdown -o "${markdown}"
-#		else
-#			echo "	[.] Already converted to: ${markdown}"
-#		fi
-	
-		if [ ! -f "${pdf}" ]; then
+
+		if [ ! -f "${text}" ] && [ ! -f "${pdf}" ]; then
 			echo "	[+] wkthmltopdf to: ${tmp}"
 			wkhtmltopdf -gl -s A4 -T 2 -B 2 -n "${url}" "${tmp}"
 			echo "	[+] Shrinking PDF to: ${pdf}"
@@ -75,10 +60,18 @@ case "${filetype}" in
 			echo "	[.] PDF already exists: ${pdf}"
 		fi
 
+		if [ ! -f "${text}" ]; then
+			echo "	[+] Converting to: ${text}"
+			#cat "${html}" | html2text > "${text}"
+			pandoc -f html "${html}" -t plain > "${text}"
+		else
+			echo "	[.] Already converted to: ${text}"
+		fi
+
 		;;
 
 	"pdf")
-		if [ ! -f "${pdf}" ]; then
+		if [ ! -f "${text}" ] && [ ! -f "${pdf}" ]; then
 			echo "	[+] Downloading: ${tmp}"
 			eval "${curlcmd} \"${url}\" -o \"${tmp}\""
 			echo "	[+] Shrinking PDF to: ${pdf}"

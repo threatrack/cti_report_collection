@@ -1,0 +1,880 @@
+Trickbot – An analysis of data collected from the botnet
+GovCERT.ch
+September 20, 2019
+
+1
+
+Introduction
+
+We are monitoring various threats and in that context we have collected quite some data
+about the Trickbot botnet in the past few years. This paper is based on an analysis of selected
+aspects of our Trickbot data collection. Some of our analysis is rather straightforward, yet,
+we also take the freedom to make some speculative statements, which might turn out to be
+debatable or plain wrong. In that spirit we are open for discussions and are happy to receive
+comments by the readers of this article.
+Our analysis consists of two main parts. In the first part we consider the PE timestamps
+of Trickbot droppers (i.e., the binaries being distributed by the Trickbot operators) and of
+the respective payloads (i.e., the PE binaries which are unpacked and then executed once a
+dropper is executed). The analysis is based on a collection of approximately 2100 droppers
+and corresponding payloads which were collected between July 2016 and February 2019. The
+main insights from this analysis are:
+• The PE timestamp of many trickbot droppers is backdated, while the PE timestamp of
+the payloads is unmodified and thus reflects the actual production time of samples.
+• The same payload is re-packed over and over again into different droppers. We have
+observed up to 69-fold repacking.
+• The working times of the operators is consistent with working hours in the Moscow time
+zone.
+• The production of Trickbot binaries is likely operated by humans, and thus not fully
+automated.
+In the second second part we analyse a collection of Trickbot config files which we have
+collected by emulating the protocol over a period of 4-5 months end of 2018 beginning of
+2019. The config files contain information on the Trickbot infrastructure such as exfiltration
+sites used by different stealer modules, the first level C2 infrastructure, etc., as well as lists
+of targeted financial institutions.
+The main insights from this analysis are:
+• There is a sequence visible in two configuration types (static injects and mailconf) that
+shows that the attackers are regularly exchanging these infrastructure elements.
+• The sequence is less clear in the main configuration file where we can observe some
+temporal overlapping of the C2 servers.
+1
+
+GovCERT.ch
+
+TLP WHITE
+
+• The lifetime of how long a C2 server remains in service varies. The C2 servers in the
+main config are used only for a short time (with some exceptions) and the C2 servers
+from the static inject and mailconf file are used for a longer period.
+• This leads to the conclusion that the attackers are actively managing their infrastructure
+by exchanging the C2 servers on a regular base.
+• We also extracted the targets from the configuration files and observed that the main
+targets are banks in the US, Great Britain, Ireland and Germany. Interestingly, German
+targets were added during our analysis period in the month of November.
+
+2
+
+An Analysis of Dropper and Payload Timestamps
+
+As many malware families, Trickbot is delivering its samples (“droppers”) in packed form.
+The effective “payload” is contained within the dropper and unpacked upon execution. The
+payloads are also in PE format and can be easily recovered using simple memory dumping
+and PE restoration techniques.
+Our subsequent analysis is based on a collection of approximately 2100 droppers and corresponding payloads which were collected between July 2016 and February 2019. For each
+dropper we consider three different timestamps: The dropper’s PE timestamp, the corresponding payload’s PE timestamp, and the first-seen timestamp of the dropper as reported
+by VirusTotal [1] and / or Abuse.CH [2] (if both services report a first-seen timestamp for a
+sample, we choose the earlier of the two).
+
+2.1
+
+Backdated Droppers and Unmodified Payload Timestamps
+
+For non-targeted malware that is distributed through spam waves (such as the Trickbot
+family), we would expect that the first-seen time of a sample is a reasonable estimate for the
+time when a sample was released into the wild. Further assuming that samples are produced
+shortly before being released into the wild, we can expect the first-seen times to approximate
+the production times (i.e., the PE timestamps) of samples.
+In the following we use the first seen timestamps to analyze whether, and if so, to what
+extent Trickbot payload and dropper PE timestamps are forged. Figure 1 compares the first
+seen times with the PE timestamps of droppers and payloads.
+First we look at the relation between payload PE timestamps vs. first-seen timestamps
+in Figure 1(a). Our interpretation of this figure is that the payload PE timestamps are not
+backdated, i.e., that the PE payload timestamps correspond to the actual compilation times of
+the payloads. The reason is that the distribution in the plot corresponds to what one would
+expect from a random process such as the collection of malware samples using honeypots.
+In fact, we see that most samples are caught relatively soon (first seen timestamp is roughly
+equal to the PE timestamp) and the number of samples that survive longer in the wild is
+falling off quickly.
+Next we consider the dropper PE timestamps in Figure 1(b). The figure suggests that
+there are two type of droppers: those that are not backdated (the “yellow samples” in the
+figure) and those that are backdated by roughly 300 - 1000 days (the “black samples” in the
+figure). One could argue that the “black samples” are not backdated samples but rather just
+samples that go undetected in the wild for a longer time. We do not think so because there
+
+2
+
+GovCERT.ch
+
+TLP WHITE
+
+(a) Payload PE timestamp vs. first-seen (b) Dropper PE timestamp vs. first-seen
+times from threat feeds.
+times from threat feeds.
+
+Figure 1: PE timestamps vs. first-seen dates for droppers and payloads (measured in days
+since 1970).
+is a time gap between the yellow and black samples. As mentioned earlier, catching samples
+in the wild is a random process probably following a Poisson distribution. The existence of
+the gap is not consistent with such a random process. A much more plausible explanation is
+that gap is caused by backdating the black droppers.
+Further evidence for dropper backdating. There is another observation that strengthens the backdating hypothesis for droppers and the “non-modification hypothesis” for payloads. The earliest published research (we have found) mentioning the Trickbot family dates
+back to fall 2016 [3, 4]. This research suggests that the inception of the Trickbot family likely
+dates back to summer or fall 2016.
+We have looked at the timestamps of the samples mentioned in the research reports, and
+they support our observations: In fact, the Malwarebytes [3, 4] article contains hashes of a
+dropper1 and payload 2 pair. The respective timestamps of dropper and payload are 09.03.15
+00:49 and 11.10.16 19:04. The payload timestamp is consistent with the conjectured inception date of the Trickbot family and thus seems not to be backdated. On the other hand, the
+dropper timestamp dates back to spring 2015 way before the family’s conjectured inception
+date and is therefore likely backdated.
+In a nutshell, we believe that payload PE timestamps reflect the actual production time
+of the payloads. Concerning droppers, it seems that there are roughly two categories of
+droppers. Namely those that are backdated by several hundred of days and those that are
+not backdated.
+1
+2
+
+f26649fc31ede7594b18f8cd7cdbbc15
+f24384228fb49f9271762253b0733123
+
+3
+
+GovCERT.ch
+
+2.2
+
+TLP WHITE
+
+Working Days and Hours of Trickbot Operators
+
+Under the assumption that the payload PE timestamps reflect the actual production dates
+we can try to establish the hours of activity of the operators producing Trickbot samples.
+To this end we have plotted the distribution of the hours found in the payload PE headers
+in Figure 3(a). The plot clearly shows periods of activity and periods of rest. The lifetime
+of these periods matches rather well with a human’s activity and rest periods. We thus
+conclude that the production of new samples is not entirely automated but rather performed
+by humans. Figure 3(b) shows the number of samples produced on different days of the week.
+This is again highly consistent with human working habits: most weekends are off, slight
+under-productivity on Mondays etc.
+Timestamps have been used to “determine” the timezone of malware operators in the
+past [7]. There is inherent uncertainty of a couple of hours in such attributions, due to the
+fact that the malware operators can be early birds, late risers etc. (assuming that cybercrime
+operations allow for flexible working hours). Moreover, PE timestamps can be modified at
+will. Yet, Trickbot has been attributed to Eastern actors in several publications [5, 6]. We
+believe that the working hours in our plot seem to be compatible with this attributions. For
+instance, the period of rest which is 22h - 3h in UTC time, translates into a period of rest
+from 1h - 6h in UTC+3 which e.g., corresponds to Moscow’s timezone.
+
+(a) PE timestamps of payloads (in hours UTC) on (b) PE timestamps of payloads grouped by weekx-axis, relative frequency on y-axis.
+days on x-axis, absolut frequencies on y-axis.
+
+Figure 2: PE timestamps vs. first-seen dates for droppers and payloads.
+
+2.3
+
+Repackaging of Payloads
+
+A widely known technique to avoid AV detection is to pack the same malware sample using
+different variants of packing algorithms resulting in different binaries which are deployed in
+the wild. We were wondering whether we could find signs of payload packing in our Trickbot
+data set. To this end we have clustered droppers that contain the same3 payload. An excerpt
+3
+
+We consider payloads to be equal when they have same PE timestamp. Since we unpack payloads from
+memory the resulting payloads are not identical, i.e., they do not have the same hash value. For a selected few
+samples we have verified manually using binary diffing techniques that payloads with the same PE timestamps
+contain essentially equivalent code, and that the code of payloads with different PE timestamps has lower
+similarity.
+
+4
+
+GovCERT.ch
+
+TLP WHITE
+
+from the results is shown in Figure 5. The results clearly confirm that the Trickbot operators
+are practicing repacking.
+
+Figure 3: Repacking of payloads. Table shows clusters of droppers (which are different) but
+which contain the same payload once unpacked.
+We have also included the timestamps of the payload as well as of the earliest and oldest dropper containing the payload. The table further confirms our previous analysis: it
+clearly shows that in many but not all cases the same payload is packed into droppers whose
+timestamps vary considerably due to backdating.
+
+2.4
+
+Trickbot Production Cycles?
+
+In this last and possibly most speculative part of our PE analysis we are comparing dropper
+and payload PE timestamps. Naively, we would expect that payloads are produced / compiled
+first, and then packed, resulting in the dropper containing the payload. As a consequence
+we would expect that dropper PE timestamps are somewhat older than the payload PE
+timestamps, and that the difference in timestamps reflects the production time of a Trickbot
+sample.
+Figure 4 compares the PE timestamps of droppers and payloads. The plot reveals roughly
+two groups of samples. Those that fall into the “green region” and those that fall into the
+“red region”. The red region consists of the samples whose droppers are backdated (see our
+discussion above). This region is useless for our analysis of production times. The samples
+in the “green region” are those whose payload and dropper are roughly produced around the
+same time. These are thus the samples that are fit for a production time analysis.
+The table in Figure 5 shows the distribution of production times of the “green samples”.
+For a total of 838 samples (which corresponds to ∼ 39% of our sample set) we found a
+production time in the range of 0h − 24h.
+We did not come up with a conclusive analysis of the numbers in Figure 5. The samples
+in the 0h − 2h production range seem to be somewhat plausible and can be explained by
+an automated tool chain that first compiles the payload, let’s say on one machine, and then
+passes on the payload to a packer machine. Yet we would expect this production times to
+be somewhat constant and we have no good explanation why the production process of some
+samples apparently takes many hours. Maybe a deeper analysis of the samples and the packers
+used in Trickbot production could shed some light on this issue.
+Last but not least we would like to point out that it is uncertain whether the numbers
+in Figure 5 indeed reflect the production times: (i) Unlike for normal compilers, we do not
+5
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 4: PE timestamps for payloads on x-axis, for droppers on y-axis (measured in days
+since 1970).
+know how packers set the PE timestamps of the dropper files they produce. (ii) We have
+found that for 8% of the samples the dropper PE timestamp is 0h to 24h older than the
+payload timestamp. The existence of such samples can be hypothetically explained by clock
+synchronization issues between multiple machines or services used for compilation and subsequent sample packing. This however implies that we cannot necessarily trust PE timestamps,
+even for the samples whose timestamp is not intentionally forged (iii) As we said earlier, PE
+timestamps can be forged at will.
+
+6
+
+GovCERT.ch
+
+TLP WHITE
+
+Production time
+0h-1h
+1h-2h
+2h-3h
+3h-4h
+4h-5h
+5h-6h
+6h-7h
+7h-8h
+8h-9h
+9h-10h
+10h-11h
+11h-12h
+12h-13h
+13h-14h
+14h-15h
+15h-16h
+16h-17h
+17h-18h
+18h-19h
+19h-20h
+20h-21h
+21h-22h
+22h-23h
+23h-24h
+
+Number of samples
+262
+160
+97
+81
+54
+43
+37
+42
+22
+5
+3
+1
+1
+3
+8
+3
+0
+2
+1
+4
+2
+3
+3
+1
+
+Figure 5: Number of Trickbot samples with production times of 0 − 24 hours in 1 hour
+intervals.
+
+3
+
+Infrastructure Analysis
+
+In this section we are going to have a deeper look at the networking infrastructure of Trickbot
+based on the information we collected during approximately 5 months. We do not go into
+details about Trickbot networking protocol as the focus lies on the temporal analysis. However a brief introduction of the way Trickbot communicates might be helpful for the further
+understanding, Figure 6 shows a high-level schema of how Trickbot communicates.
+The most common infection vector are weaponized Office documents that trigger the
+download of the Trickbot binary or a dropping of Trickbot after an Emotet infection has
+happened. The first method is using Powershell code that is embedded in the Office document.
+The Powershell scripts download the binary directly from a webserver and executes it. The
+second is commonly seen during targeted ransomware attacks such as reported by Trend
+Micro [10] and us [11].
+After the successful infection, Trickbot begins to communicate with the first stage C2
+servers that are in the configuration delivered within the binary. These first stage C2 servers
+are mostly compromised systems. The communication is encrypted and uses either TCP port
+443 or (often) TCP port 447 or 449. Interestingly, the certificates used for these communica7
+
+GovCERT.ch
+
+TLP WHITE
+
+tions are self-signed and use the default parameters of OpenSSL (”organizationName=Internet
+Widgits Pty Ltd”). The malware then downloads the next actual configuration file (we name
+it main.cfg) with a list of C2 servers to connect to. Communication however remains identical
+using SSL with the aforementioned ports. Depending on the module, additional C2 servers
+come into play that are contained in additional configuration files. In the following we focus
+on the configuration file of the injectDll module (or more precisely injectDll32 or injectDll64
+depending on the platform), which is used for credential theft and injects within the browser.
+
+Figure 6: TrickbotNetwork
+There are 3 types of configuration files shown in Table 1 that are going to be discussed
+later in this document.
+File
+sinj
+dinj
+dpost
+mailconf
+main
+
+Description
+Static injects, contains targets, C2 servers, used by injectdll
+Dynamic injects, contains targets, C2 servers, used by injectdll
+Password Grabber, contains exfiltration IP addresses, used by injectdll
+Email stealer, contains exfiltration IP addresses, used by mailsearcher
+Main configuration of Trickbot
+
+No of files
+1566
+1559
+1697
+1648
+7156
+
+Table 1: Overview of collected configuration files
+
+We have analyzed the configuration files and extracted IP addresses, domain names and
+targets for their temporal and spatial traits and are going to present them in the following
+sections.
+8
+
+GovCERT.ch
+
+3.1
+
+TLP WHITE
+
+Analysis of C2 Servers
+
+Information about C2 servers is stored in the configuration files mentioned above. We have
+extracted the IP addresses, Autonomous System (AS), geolocation and their temporal behavior. The term temporal behaviour explains how the infrastructure elements are changing over
+time. In the following chapters we are going to analyze the C2 servers for basic configuration,
+static injects, dynamic injects, mail exfiltration and credential theft.
+3.1.1
+
+Analysis of Main Configuration
+
+We collected a total of 316 IP addresses in the main configuration files. These show interesting
+patterns as there are some hosting providers that are often used. In Listing 7 an excerpt of a
+typical main configuration file of Trickbot is shown. In the context of the network analysis, the
+<srv> tags are important, as they consist of the IP address and the port number. We extracted
+and analyzed the IP addresses and are introducing the results in the subsequent sections. The
+<gtag> displays the campaign ID. After the <servs> section the module configuration follows.
+In our example, the System Reconnaissance and the Browser Inject modules are configured.
+<mcconf>
+<v e r>1000292</ v e r>
+<g t a g>t t 0 0 0 2</ g t a g>
+<s e r v s>
+<s r v> 5 1 . 6 8 . 1 7 0 [ . ] 5 8 : 4 4 3</ s r v>
+<s r v> 6 8 . 3 . 1 4 [ . ] 7 1 : 4 4 3</ s r v>
+<s r v>1 7 4 . 1 0 5 . 2 3 5 [ . ] 1 7 8 : 4 4 9</ s r v>
+<s r v> 1 9 5 . 5 4 . 1 6 2 [ . ] 2 4 7 : 4 4 3</ s r v>
+<s r v> 1 8 1 . 1 1 3 . 1 7 [ . ] 2 3 0 : 4 4 9</ s r v>
+...
+</ s e r v s>
+<autorun>
+<module name=” s y s t e m i n f o ” c t l=” GetSystemInfo ”/>
+<module name=” i n j e c t D l l ”/>
+</ autorun>
+</ mcconf>
+Figure 7: Excerpt from main configuration file
+This example shows C2 servers hosted on TCP port 443 and TCP port 449, but no usage
+of TCP port 447 which is also known to be used by Trickbot. We extracted and analyzed the
+IP addresses for their AS as shown in Figure 8.
+
+9
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 8: C2 servers in Main Configuration
+To get the temporal context, we took the timestamp of the first and last appearance
+of a given IP address within a configuration file. Figure 9 shows that the lifetimes vary.
+The majority of the IPs are very short lived, while others have a lifetime of several days, or
+even weeks. We do not know the exact reason for this pattern, but we assume that most IP
+addresses are only short-lived because they are blacklisted or used for detection of an infection
+after a very short time thus forcing the attackers to change them quickly. Why other IPs
+have a longer lifetime cannot be answered, perhaps these are just testing systems that only
+appeared in pre-production configuration files. It would also be interesting to correlate the
+disappearance of IP addresses with their appearance in blacklists, but this was out of the
+scope of this article.
+
+10
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 9: C2 servers in Main Configuration
+A small extract from October and November shows this pattern in more detail in Figure
+10.
+
+Figure 10: C2 servers in Main Configuration
+
+11
+
+GovCERT.ch
+
+3.1.2
+
+TLP WHITE
+
+Analysis of Static Configuration
+
+Sinj files describe the Static Configuration of Trickbot with an example shown in Figure 11
+<s l i s t >
+<s i n j >
+<mm>hXXps : / /www. r b s i d i g i t a l [ . ] com∗</mm>
+<sm>hXXps : / /www. r b s i d i g i t a l [ . ] com/ d e f a u l t . aspx∗</sm>
+<nh>k r s a j x n b f i c g m r h t w s o e z p k l q v y d [ . ] net </nh>
+<u r l 4 0 4 ></u r l 4 0 4 >
+<srv > 1 6 2 . 2 4 8 . 2 2 5 [ . ] 1 0 3 : 4 4 3 < / srv >
+</ s i n j >
+Figure 11: Sinj Configuration Example
+The parameter <mm> describes the target host, the <sm> the target URL and the <srv>
+the IP address of the server that is contacted for the injects.
+We have analyzed the destination IPs of the sinj configuration files. We do not know for
+sure whether these are hacked systems or owned by the attackers. However, there are a few
+traces that may indicate the latter. If these were hacked systems, one would expect a more
+random distribution of registrar information which is clearly not the case as can be seen in
+Figure 13. Many of these IP addresses seem to have been running Nginx and are showing
+its default webpage. However we do not have enough evidence to either verify or falsify this.
+
+Figure 12: C2 servers in Static Configuration
+It is interesting that many of the servers in our dataset are located either at Hosting
+Solution or G-Core Labs. Table 2 shows the IPs and their respective ASNs.
+
+12
+
+GovCERT.ch
+
+TLP WHITE
+
+IP
+104.149.50[.]68
+107.174.15[.]76
+108.174.60[.]156
+131.153.19[.]122
+131.153.19[.]58
+154.16.195[.]34
+162.247.155[.]116
+162.247.155[.]128
+162.247.155[.]155
+162.248.225[.]103
+162.248.4[.]55
+165.231.102[.]50
+185.180.197[.]117
+185.180.197[.]35
+185.180.197[.]36
+185.180.198[.]147
+185.20.184[.]74
+192.252.210[.]19
+192.99.178[.]144
+198.46.160[.]190
+198.8.91[.]37
+204.155.31[.]137
+23.94.160[.]49
+31.131.27[.]213
+92.38.149[.]175
+92.38.149[.]45
+92.38.149[.]50
+92.38.149[.]52
+92.38.149[.]53
+
+Country
+US
+US
+US
+NL
+NL
+NL
+US
+US
+US
+US
+US
+NL
+US
+US
+US
+US
+NL
+US
+CA
+US
+US
+US
+US
+US
+US
+US
+US
+US
+US
+
+AS
+40676
+36352
+36352
+60558
+60558
+49981
+30235
+30235
+30235
+14576
+62838
+41564
+14576
+14576
+14576
+14576
+50673
+46562
+16276
+36352
+46562
+14576
+36352
+56851
+202422
+202422
+202422
+202422
+202422
+
+AS Description
+Psychz Networks
+ColoCrossing
+ColoCrossing
+Phoenix Nap, LLC.
+Phoenix Nap, LLC.
+WorldStream B.V.
+Twinservers Hosting Solutions Inc.
+Twinservers Hosting Solutions Inc.
+Twinservers Hosting Solutions Inc.
+Hosting Solution Ltd.
+Reprise Hosting
+Packet Exchange Limited
+Hosting Solution Ltd.
+Hosting Solution Ltd.
+Hosting Solution Ltd.
+Hosting Solution Ltd.
+Serverius Holding B.V.
+Total Server Solutions L.L.C.
+OVH SAS
+ColoCrossing
+Total Server Solutions L.L.C.
+Hosting Solution Ltd.
+ColoCrossing
+PE Skurykhin Mukola Volodumurovuch
+G-Core Labs S.A.
+G-Core Labs S.A.
+G-Core Labs S.A.
+G-Core Labs S.A.
+G-Core Labs S.A.
+
+Table 2: Static Configuration Country and ASN Distribution
+
+Most of the IPs are short lived and can only be observed during one day as can be seen
+in Figure 13. However there are a few that last longer, but not more than 6 days which is
+in sharp contrast to the IPs in the main config which have some very long-living elements.
+Whether the 6days are merely coincidental or if these are really longer lived elements is
+difficult to tell. Nevertheless, the difference to the temporal pattern of the main config is
+noteworthy even if we cannot provide a good explanation.
+
+13
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 13: C2 servers in Static Configuration Lifetime
+Plotted on a timeline (see Figure 14) there are three remarkable elements:
+• The lifetime of IP addresses essentially does not overlap. IP addresses are rather used
+sequentially.
+• The diagram shows a sequence of IPs used for static injects.
+• Some of them were seen for several days, others were just used in one occasion, the
+longest period was 7 days.
+
+14
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 14: C2 servers in Static Configuration over Time (extract)
+3.1.3
+
+Analysis of dpost
+
+As already mentioned, dpost configuration files contain exfiltration points for stolen credentials. The configuration files have the following format as shown in Listing 18. The format is
+pretty self-explanatory as it just has the handlers (C2 servers) where the stolen credentials are
+sent to. Interestingly this is done using plain http with the stolen data sent out in cleartext.
+See also the blog post by Fortinet about the pwgrab module [12].
+<dpost>
+<h a n d l e r >hXXp: / / 2 4 . 2 4 7 . 1 8 1 [ . ] 1 2 5 : 8 0 8 2 < / h a n d l e r >
+<h a n d l e r >hXXp: / / 9 6 . 3 6 . 2 5 3 [ . ] 1 4 6 : 8 0 8 2 < / h a n d l e r >
+<h a n d l e r >hXXp: / / 4 6 . 1 4 6 . 2 5 2 [ . ] 1 7 8 : 8 0 8 2 < / h a n d l e r >
+...
+</post>
+Figure 15: Listing of dpost configuration file (extract)
+If we plot the IP addresses over time as in shown in Figure 16, the pattern is different
+from the other configuration files:
+
+15
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 16: C2 servers in dpost config over time
+We see that some IPs have slong lifetimes whereas others are only very short lived. This
+gets much more evident when we plot it in a histogram (see Figure 17) showing the count of
+IPs with a certain lifetime. Most IP addresses are short lived, meaning one day or less while
+some are active for a longer time, the longest being 127 days (46.146.252.178/ASN12768/ERTELECOM-AS, RU).
+
+16
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 17: C2 servers in dpost config lifetime
+3.1.4
+
+Analysis of Mailconf
+
+We harvested various mailconf files of Trickbot which configure one of the possible data
+exfiltration points. These are simple configuration files similar to the dpost configs. The
+<handler> denotes the C2 server where the harvested email is sent to. An example is shown
+in Listing 18.
+<mail>
+<h a n d l e r > 1 9 5 . 1 2 3 . 2 4 5 [ . ] 1 3 1 : 4 4 3 < / h a n d l e r >
+</mail>
+Figure 18: Listing of dpost configuration file (extract)
+Figure 19 shows the IP addresses plotted onto a timeline. One can clearly see that the
+IPs are seldom used at the same time but are replacing one another after lifetime of a few
+days to a few weeks. It seems that they have only one IP address active at a given time.
+As we have only monitored the actors over 4 months we do not have enough data to make a
+histogram showing the lifetime distribution.
+
+17
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 19: C2 servers in Mailconf
+In Table 3 the networks and countries of these servers are listed. We can see that there is
+some tendency to use hosters in the US and in Eastern Europe but apart from that we have
+not enough data to draw any conclusions.
+IP
+107.174.71[.]101
+108.170.31[.]55
+185.251.38[.]138
+195.123.245[.]131
+198.46.207[.]107
+23.226.138[.]170
+
+Country
+US
+US
+NL
+CZ
+US
+US
+
+AS
+36352
+20454
+48282
+204957
+36352
+8100
+
+AS Description
+AS-COLOCROSSING - ColoCrossing
+SSASN2 - SECURED SERVERS LLC
+MCHOST-AS
+LAYER6
+AS-COLOCROSSING - ColoCrossing
+Quadranet
+
+Country of AS
+US
+US
+RU
+UA
+US
+US
+
+Table 3: Mailconf Country and ASN Distribution
+
+3.2
+
+Targets
+
+For the determination of targets, we focused on the Static Configuration. In order to determine the country of the target, we looked where the web server was located assuming that
+most banks position their ebanking servers in the country of their most relevant customer
+base. We checked the result manually and made adjustments where necessary. We took
+the top 5 values as there is a gap between the 5th and 6th country. We have observed the
+following illustrated in Figure 20:
+• Trickbot has a lot of targets in the US region.
+• Switzerland is currently not a target (apart from big international financial institutes).
+• The campaigns are spread widely and are neither targeted to a region nor done in a
+way that tries to adapt to the victims.
+18
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 20: Targets per Country
+Our results are matching with the results published by Fortinet at Botconf 2018 [8] even
+though there might be some minor discrepancies, probably based on differences in the method
+of determining the target’s country.
+Having a look at the temporal distribution of the target countries to time in Figure 21,
+we can observe a few noteworthy points:
+• The number of targets remains stable over an extended time period.
+• In November, we observe a steep rise in the number of targets.
+• The scattered points at the beginning and the end is probably due to lack of data from
+our side and has no special meaning.
+• Switzerland is currently not a target (apart from big international financial institutes).
+By looking deeper into the data, we observed that Germany became a target on November
+7th 2018: when we started the tracker in autumn 2018, we had a stable rate of 250 - 260
+targets in the list. This went on until November the 7th when we noticed a large increase
+to 318 targets. When we compare the list of the attacked organizations we can see that
+nearly all of them are located in Germany. We believe that the attacker began targeting
+German financial institutes at this point. After that, the target list remained stable again.
+The decrease at the end of the measurement is most probably due to our reduced visibility
+because the criminals made significant changes in Trickbot. In contrast to other malware
+families such as Dridex, Gozi or Retefe, there seems to exist only one configuration file used
+for all countries.
+
+19
+
+GovCERT.ch
+
+TLP WHITE
+
+Figure 21: Number of targets over time
+
+3.3
+
+Conclusions Network Analysis
+
+As we have shown, there seems to be some kind of coordination about the networking infrastructure. Even though there is a lot of uncertainty yet, we believe that the analysis proofs
+that the actors are actively managing their infrastructure and exchanging it on a regular base.
+We observe a clear sequence in the data of the static inject servers as well as in the mailconf
+servers. For the larger amount of C2 servers used in the main config, the sequence is less clear,
+there is more overlapping (as one would expect). Although we do not have that much data
+when it comes to dpost configuration, the pattern seems to be similar to the one seen with C2
+servers from the main config. The lifetime of how long a server is being used greatly varies.
+However, most IP addresses are used for a very short time period but there are several IPs
+with a much longer malicious lifespan. We can also see that there is a preference for certain
+AS (Colocrossing, Charter and G-Core Labs), but as these are huge providers, it cannot be
+told if this is on purpose as the attackers prefer these networks or if it is merely a coincidence.
+One of the most important part of the work of a CERT is to determine which organisations
+of its constituency are at risk. This is why we try to extract configuration files that contain
+the target lists on a regular base. When analyzing the Trickbot target list we can see that
+the attackers have a strong focus on the US, Great Britain and Ireland, Germany and the
+Netherlands. In the analyzed configuration files we saw a sharp rise in the number of targets
+on November 7th when a lot of German targets were added to the target list.
+
+20
+
+GovCERT.ch
+
+TLP WHITE
+
+References
+[1] https://www.virustotal.com
+[2] https://abuse.ch/
+[3] Trickbot: We Missed you, Dyre. https://www.fidelissecurity.com/threatgeek/
+threat-intelligence/Trickbot-we-missed-you-dyre
+[4] Introducing Trickbot,
+Dyreza’s successor. https://blog.malwarebytes.com/
+threat-analysis/2016/10/trick-bot-dyrezas-successor/
+[5] A Nasty Trick:
+From Credential Theft Malware to Business Disruption.
+https://www.fireeye.com/blog/threat-research/2019/01/
+a-nasty-trick-from-credential-theft-malware-to-business-disruption.html
+[6] The
+Business
+of
+Organized
+Cybercrime:
+Rising
+Intergang
+Collaboration
+in
+2018.
+https://securityintelligence.com/
+the-business-of-organized-cybercrime-rising-intergang-collaboration-in-2018/
+[7] Spring
+Dragon
+–
+Updated
+Activity.
+spring-dragon-updated-activity/79067/
+
+https://securelist.com/
+
+[8] Fortinet - Trickbot: The Trick is on you. https://www.botconf.eu/wp-content/uploads/2018/12/
+2018-F-Bacurio-Junior-J-Salvio-Trickbot-The-Trick-is-On-You-presented.pdf
+[9] Cyberreaon
+A
+one-two
+punch
+of
+Emotet,
+Trickbot,
+&
+Ryuk
+Stealing
+&
+ransoming
+data.
+https://www.cybereason.com/blog/
+one-two-punch-emotet-Trickbot-and-ryuk-steal-then-ransom-data
+[10] Trendmicro
+Emotet-Distributed
+Ransomware
+Loader
+for
+Nozelesn
+Found
+via
+Managed
+Detection
+and
+Response.
+https://blog.trendmicro.com/trendlabs-security-intelligence
+/emotet-distributed-ransomware-loader-for-nozelesn-found-via-manageddetection-and-response/
+[11] GovCERT.ch - Severe Ransomware Attacks Against Swiss SMEs. https://www.
+govcert.admin.ch/blog/36/severe-ransomware-attacks-against-swiss-smes
+[12] Fortinet - Deep Analysis of Trickbot New Module pwgrab. https://www.fortinet.com/
+blog/threat-research/deep-analysis-of-Trickbot-new-module-pwgrab.html
+
+21
+
+
