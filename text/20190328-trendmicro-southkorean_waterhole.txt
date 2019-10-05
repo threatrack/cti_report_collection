@@ -1,0 +1,267 @@
+-   Trend Micro
+-   About TrendLabs Security Intelligence Blog
+
+-   []
+-   []
+-   []
+-   []
+-   []
+
+[]
+
+Search:
+
+Go to…Home Categories -   Ransomware -   Vulnerabilities -   Exploits -
+  Targeted Attacks -   Deep Web -   Mobile -   Internet of Things -
+  Malware -   Bad Sites -   Spam -   Botnets -   Social -   Open source
+
+-   Home
+-   Categories
+    -   Ransomware
+    -   Vulnerabilities
+    -   Exploits
+    -   Targeted Attacks
+    -   Deep Web
+    -   Mobile
+    -   Internet of Things
+    -   Malware
+    -   Bad Sites
+    -   Spam
+    -   Botnets
+    -   Social
+    -   Open source
+
+Home   »   Bad Sites   »   Desktop, Mobile Phishing Campaign Targets
+South Korean Websites, Steals Credentials Via Watering Hole
+
+Desktop, Mobile Phishing Campaign Targets South Korean Websites, Steals Credentials Via Watering Hole
+=====================================================================================================
+
+-   Posted on:March 28, 2019 at 5:02 am
+-   Posted in:Bad Sites, Mobile
+-   Author:
+    Joseph C Chen (Fraud Researcher)
+
+0
+
+[]
+
+We discovered a phishing campaign that has compromised at least four
+South Korean websites – including a business page ranked as one of the
+most visited sites in the country – by injecting fake login forms to
+steal user credentials. While we’ve previously seen cybercriminals
+inject a malicious JavaScript code in the websites to load browser
+exploits or financial information skimmers, using the watering hole
+technique for a phishing campaign is unusual. The campaign, which we
+labeled “Soula” (detected by Trend Micro as Trojan.HTML.PHISH.TIAOOHDW),
+collects information via a spoofed login screen of one of the country’s
+leading search engines that pops up over the original webpage. It sends
+the logged credentials to the attackers’ server even without accurate
+data confirmation, leading us to think that the cybercriminals are at
+research and information-gathering stage.
+
+Routine
+
+[]
+
+Figure 1. Soula’s attack chain.
+
+We traced the initial JavaScript injection done on the compromised
+websites on March 14. The injected script profiles the website’s
+visitors and loads the phishing forms on top of the main pages. It scans
+the HTTP referer header string and checks if it contains keywords
+related to popular search engines and social media sites to authenticate
+that the visitor is real. Since the HTTP referer identifies the address
+webpage of the source to the requested page, this check makes it easier
+to identify the visitor as a real user if the request comes from one, as
+well as filter out bot crawlers or threat engine scanners.
+
+The script then scans for the HTTP User-Agent header for strings such as
+iPhone, iPad, iPod, iOS and Android to identify the device used by the
+user as desktop or mobile, which allows it to deliver the respective
+phishing forms to the victim.  Mobile users will see the fake login form
+pop-up only after clicking any button on the compromised websites. To
+mask the malicious routine, it only enables the pop-up to appear after
+the sixth time the victim visits the websites, setting a cookie to count
+the number of visits. The cookie is also set to expire after two hours
+since the last pop-up.
+
+[]
+
+Figure 2. Injected script to check HTTP Referer and HTTP User-Agent.
+
+If the device has none of the strings listed, Soula assumes that the
+user is visiting the website using a desktop computer. Users will see
+the fake login form directly on top of the compromised webpage, asking
+the user to input their username and password before they can continue
+visiting the site. The user information is directly sent to the
+attackers’ servers. To prevent attack suspicions from the website, the
+phishing script sets a browser cookie to the devices that received the
+phishing forms that enables the fake login to expire 12 hours after the
+initial interaction.
+
+We noted that the comments were set in Simplified Chinese, and used
+Cloudflare to protect their domains and hide their real IP addresses. We
+contacted Cloudflare after identifying this attack, but while they
+immediately removed the malicious domain from their service, the
+campaign did not stop. In fact, the campaign further enhanced its
+detection evasion features. The attackers added obfuscation to the
+JavaScript code injected into the compromised websites and moved the
+scripts and phishing page to a compromised web server to avoid detection
+and prevent removal of their domain. The websites are no longer
+compromised at the time of publishing.
+
+[]
+
+Figure 3. Comments in Simplified Chinese.
+
+[]  
+ []
+
+Figure 4. The original script injected in the compromised website vs.
+the injected script after obfuscation.
+
+Conclusion
+
+Considering that one of the compromised websites are among the country’s
+top 300 most-visited sites, and that the search engine hosts a variety
+of services for its South Korean customers as a trusted site, Soula is a
+significant threat to both enterprises and users as it exposes user
+credentials on a number of platforms. Further, the content string it
+searches for and connects to may indicate cybercriminals’ possible plans
+to develop this to a bigger campaign that could affect more people
+worldwide.
+
+While this technique can be more difficult to trace compared to socially
+engineered phishing attacks, endpoint users can still protect themselves
+by enabling a multi-layered defense system that allows detection,
+scanning and blocking of malicious URLs and pop-ups. Users should also
+enable additional authentication measures such as 2FA whenever possible.
+Security administrators are advised to download updates as soon as
+patches are available from legitimate vendors, and enable Content
+Security Policy to prevent unauthorized access and use of exploits for
+remotely injected scripts.
+
+ 
+
+Trend Micro solutions
+
+Trend Micro™ Deep Discovery™
+
+Trend Micro™ User Protection Solution
+
+ 
+
+Indicators of Compromise
+
+Listed below are the Soula phishing script hashes detected
+as Trojan.HTML.PHISH.TIAOOHDW:
+
+-   03ab41336ff260ec2410ac2704467676284df8644befce5a0b40773cc570286a
+-   29447d09a76f2a7982562a4386529d0af26cd756671fd7173d518a34717c2aae
+-   7034c01be6c94ce2d42bbc3c197d0f9678ccb0fcc6ba6d0484d6bcf859a6d774
+-   b2bc1df018abd4ebc2e2f68fbae09a55bc38173697171507f8cfef9e7ec39978
+
+Listed below are the phishing domains:
+
+-   hxxps://oauth2[.]space/
+-   hxxps://oauth20[.]xyz/
+
+Related posts:
+
+-   Fake Voice Apps on Google Play, Botnet Likely in Development
+-   How a Hacking Group is Stealing Popular Instagram Profiles
+
+[]
+
+Learn how to protect Enterprises, Small Businesses, and Home Users from
+ransomware:
+
+ENTERPRISE »
+
+SMALL BUSINESS»
+
+HOME»
+
+Tags: JavaScriptphishingSouth Koreawatering hole
+
+Featured Stories
+
+-   systemd Vulnerability Leads to Denial of Service on Linux
+-   qkG Filecoder: Self-Replicating, Document-Encrypting Ransomware
+-   Mitigating CVE-2017-5689, an Intel Management Engine Vulnerability
+-   A Closer Look at North Korea’s Internet
+-   From Cybercrime to Cyberpropaganda
+
+Security Predictions for 2019
+
+-   Our security predictions for 2019 are based on our experts’ analysis
+    of the progress of current and emerging technologies, user behavior,
+    and market trends, and their impact on the threat landscape. We have
+    categorized them according to the main areas that are likely to be
+    affected, given the sprawling nature of the technological and
+    sociopolitical changes under consideration.  
+     Read our security predictions for 2019.
+
+Business Process Compromise
+
+-   Attackers are starting to invest in long-term operations that target
+    specific processes enterprises rely on. They scout for vulnerable
+    practices, susceptible systems and operational loopholes that they
+    can leverage or abuse. To learn more, read our Security 101:
+    Business Process Compromise.
+
+Recent Posts
+
+-   New Fileless Botnet Novter Distributed by KovCoreG Malvertising
+    Campaign
+-   Gambling Apps Sneak into Top 100: How Hundreds of Fake Apps Spread
+    on iOS App Store and Google Play
+-   Mac Malware that Spoofs Trading App Steals User Information, Uploads
+    it to Website
+-   Fileless Cryptocurrency-Miner GhostMiner Weaponizes WMI Objects,
+    Kills Other Cryptocurrency-Mining Payloads
+-   Magecart Skimming Attack Targets Mobile Users of Hotel Chain Booking
+    Websites
+
+Popular Posts
+
+-   Gambling Apps Sneak into Top 100: How Hundreds of Fake Apps Spread
+    on iOS App Store and Google Play
+-   TA505 At It Again: Variety is the Spice of ServHelper and
+    FlawedAmmyy
+-   Adware Posing as 85 Photography and Gaming Apps on Google Play
+    Installed Over 8 Million Times
+-   September Patch Tuesday Bears More Remote Desktop Vulnerability
+    Fixes and Two Zero-Days
+-   Skidmap Linux Malware Uses Rootkit Capabilities to Hide
+    Cryptocurrency-Mining Payload
+
+Stay Updated
+
+Email Subscription
+
+Subscribe
+
+-   Home and Home Office
+-   |
+-   For Business
+-   |
+-   Security Intelligence
+-   |
+-   About Trend Micro
+
+-   Asia Pacific Region (APAC): Australia / New Zealand, 中国, 日本,
+    대한민국, 台灣
+-   Latin America Region (LAR): Brasil, México
+-   North America Region (NABU): United States, Canada   
+-   Europe, Middle East, & Africa Region (EMEA): France, Deutschland /
+    Österreich / Schweiz, Italia, Россия, España, United Kingdom /
+    Ireland
+
+-   Privacy Statement
+-   Legal Policies
+
+-   Copyright ©
+    Trend Micro Incorporated. All rights reserved.
+

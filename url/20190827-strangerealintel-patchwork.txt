@@ -1,0 +1,5 @@
+https://attack.mitre.org/techniques/T1093
+https://twitter.com/jsoo/status/1166353584923041798
+https://attack.mitre.org/techniques/T1060
+https://attack.mitre.org/techniques/T1064
+https://attack.mitre.org/techniques/T1087

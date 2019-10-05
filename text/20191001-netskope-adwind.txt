@@ -1,0 +1,663 @@
+[]
+
+This website uses cookies for advertising and analytics purposes as
+described in our cookie policy. For more information and to set
+preferences, please click here. By continuing to browse this website,
+you accept our use of cookies.
+
+×
+
+[Netskope logo] [Netskope logo]
+
+-   ×
+    Search
+-   Language
+    -   English
+    -   Français
+    -   日本語
+    -   Español
+-   Contact us
+
+[Netskope logo] [Netskope logo]
+
+-   Why Netskope
+
+    Why Netskope
+
+    Reimagine   
+    your perimeter
+
+    []
+
+    Why Netskope?
+
+    Only proven cloud security platform that is data-centric,
+    cloud-smart, and as fast as your business.
+
+    Data-Centric
+
+    Netskope takes a data-centric approach to cloud security, following
+    data everywhere it goes.
+
+    Cloud-smart
+
+    Netskope enables you to take advantage of our intimate, contextual
+    understanding of the cloud to secure the cloud and web.
+
+    Fast
+
+    Netskope delivers real-time, cloud-native security, without the
+    traditional performance trade-off.
+
+    Our customers
+
+    Our customers trust us to protect their data and users everywhere
+    they go.
+
+    []
+
+    []
+
+    []
+
+    []
+
+    []
+
+    []
+
+    Case studies
+
+    Learn how Netskope customers are reimagining their perimeter.
+
+-   Products & Services
+
+    Products & Services
+
+    Netskope Platform
+
+    Data-centric, cloud-smart, and fast. So you can reimagine your
+    perimeter.  
+      
+
+    Cloud nativeCloud XDDeployment optionsNewEdgeTechnology
+    integrationsTruly unified
+
+    Products & Services
+
+    Our products and services help you secure your digital
+    transformation journey every step of the way.
+
+    Cloud Access Security Broker (CASB)Next-gen Secure Web Gateway
+    (SWG)Private AccessPublic Cloud
+    SecurityServicesTrainingSupportProfessional Services
+
+    Capabilities
+
+    Unrivaled visibility and real-time data and threat protection
+    anywhere, on any device.
+
+    Adaptive access controlDeployment optionsData protectionZero Trust
+    Network AccessCloud encryptionSSL/TLS inspectionThird-party riskWeb
+    content filteringThreat protection
+
+-   Solutions
+
+    Solutions
+
+    Secure the cloud, web & private apps  
+
+    Protect users and data anywhere, on any device.  
+      
+      
+
+    Office 365Managed cloud applicationsUnmanaged cloudAWS, Azure, &
+    GCPMobile & Direct-to-net
+
+    Modernize your security program  
+
+    Improve efficiency and performance for today’s cloud- and mobile
+    world.  
+      
+
+    Data protectionThreat protectionComplianceEfficiencyPerformance
+
+    Upgrade your security stack  
+
+    Upgrade your existing tools with modern functionality architected
+    for today’s world.
+
+    Virtual Private Networks (VPNs)Secure web gateway (SWG)SSL
+    decryption appliancesFirst-generation CASB
+
+    Industries  
+      
+
+    Netskope helps the largest enterprises in the world secure their
+    journey to the cloud.
+
+    Federal GovernmentFinancial Services & InsuranceHealthcare & Life
+    SciencesHigh-TechnologyManufacturingRetail & HospitalitySee more
+    industries
+
+-   Resources
+
+    Resources
+
+    Gartner Note: The Future of Network Security Is in the Cloud
+
+    []
+
+    Get the report
+
+    Resource library
+
+    Learn more about how Netskope can help you secure your journey to
+    the cloud.
+
+    Analyst reportsCase studiesData sheetsDemos &
+    videosEbooksEventsSolution briefsWebinarsWhite papers
+
+    Blog
+
+    Read more about how Netskope is reimaging the perimeter.  
+      
+
+    Behind the scenesCloud architectureData protectionNews &
+    announcementsPrivate accessSecurity transformationThreat
+    protectionThreat Research Labs
+
+-   Company
+
+    Company
+
+    About Netskope  
+      
+
+    We're redefining cloud, network, and data security.  
+      
+      
+
+    Leadership  
+      
+
+    Our leadership team is fiercely committed to doing everything it
+    takes to make our customers successful.
+
+    Security & Assurance
+
+    We take our responsibility to protect our users’ information and the
+    services we provide to them very seriously.
+
+    Threat Research Labs
+
+    The Netskope Threat Research Labs discovers and analyzes the latest
+    cloud threats affecting enterprises.
+
+    Events
+
+    Awards
+
+    Contact us
+
+    Careers
+
+    Press releases
+
+    Partners
+
+    We partner with leaders across the security industry to help
+    customers secure their journey to the cloud.
+
+    Solution providers
+
+    Technology partners
+
+    Partner portal
+
+-   Request demo
+
+-   Search
+    ×
+-   Language
+    -   English
+    -   Français
+    -   日本語
+    -   Español
+-   Contact us
+
+-   Why Netskope
+
+    Why Netskope
+
+    Reimagine   
+    your perimeter
+
+    []
+
+    Why Netskope?
+
+    Only proven cloud security platform that is data-centric,
+    cloud-smart, and as fast as your business.
+
+    Data-Centric
+
+    Netskope takes a data-centric approach to cloud security, following
+    data everywhere it goes.
+
+    Cloud-smart
+
+    Netskope enables you to take advantage of our intimate, contextual
+    understanding of the cloud to secure the cloud and web.
+
+    Fast
+
+    Netskope delivers real-time, cloud-native security, without the
+    traditional performance trade-off.
+
+    Our customers
+
+    Our customers trust us to protect their data and users everywhere
+    they go.
+
+    []
+
+    []
+
+    []
+
+    []
+
+    []
+
+    []
+
+    Case studies
+
+    Learn how Netskope customers are reimagining their perimeter.
+
+-   Products & Services
+
+    Products & Services
+
+    Netskope Platform
+
+    Data-centric, cloud-smart, and fast. So you can reimagine your
+    perimeter.  
+      
+
+    Cloud nativeCloud XDDeployment optionsNewEdgeTechnology
+    integrationsTruly unified
+
+    Products & Services
+
+    Our products and services help you secure your digital
+    transformation journey every step of the way.
+
+    Cloud Access Security Broker (CASB)Next-gen Secure Web Gateway
+    (SWG)Private AccessPublic Cloud
+    SecurityServicesTrainingSupportProfessional Services
+
+    Capabilities
+
+    Unrivaled visibility and real-time data and threat protection
+    anywhere, on any device.
+
+    Adaptive access controlDeployment optionsData protectionZero Trust
+    Network AccessCloud encryptionSSL/TLS inspectionThird-party riskWeb
+    content filteringThreat protection
+
+-   Solutions
+
+    Solutions
+
+    Secure the cloud, web & private apps  
+
+    Protect users and data anywhere, on any device.  
+      
+      
+
+    Office 365Managed cloud applicationsUnmanaged cloudAWS, Azure, &
+    GCPMobile & Direct-to-net
+
+    Modernize your security program  
+
+    Improve efficiency and performance for today’s cloud- and mobile
+    world.  
+      
+
+    Data protectionThreat protectionComplianceEfficiencyPerformance
+
+    Upgrade your security stack  
+
+    Upgrade your existing tools with modern functionality architected
+    for today’s world.
+
+    Virtual Private Networks (VPNs)Secure web gateway (SWG)SSL
+    decryption appliancesFirst-generation CASB
+
+    Industries  
+      
+
+    Netskope helps the largest enterprises in the world secure their
+    journey to the cloud.
+
+    Federal GovernmentFinancial Services & InsuranceHealthcare & Life
+    SciencesHigh-TechnologyManufacturingRetail & HospitalitySee more
+    industries
+
+-   Resources
+
+    Resources
+
+    Gartner Note: The Future of Network Security Is in the Cloud
+
+    []
+
+    Get the report
+
+    Resource library
+
+    Learn more about how Netskope can help you secure your journey to
+    the cloud.
+
+    Analyst reportsCase studiesData sheetsDemos &
+    videosEbooksEventsSolution briefsWebinarsWhite papers
+
+    Blog
+
+    Read more about how Netskope is reimaging the perimeter.  
+      
+
+    Behind the scenesCloud architectureData protectionNews &
+    announcementsPrivate accessSecurity transformationThreat
+    protectionThreat Research Labs
+
+-   Company
+
+    Company
+
+    About Netskope  
+      
+
+    We're redefining cloud, network, and data security.  
+      
+      
+
+    Leadership  
+      
+
+    Our leadership team is fiercely committed to doing everything it
+    takes to make our customers successful.
+
+    Security & Assurance
+
+    We take our responsibility to protect our users’ information and the
+    services we provide to them very seriously.
+
+    Threat Research Labs
+
+    The Netskope Threat Research Labs discovers and analyzes the latest
+    cloud threats affecting enterprises.
+
+    Events
+
+    Awards
+
+    Contact us
+
+    Careers
+
+    Press releases
+
+    Partners
+
+    We partner with leaders across the security industry to help
+    customers secure their journey to the cloud.
+
+    Solution providers
+
+    Technology partners
+
+    Partner portal
+
+-   Request demo
+
+New Adwind Campaign targets US Petroleum Industry {style="color: #FFFFFF"}
+=================================================
+
+[Netskope]
+
+-   []
+-   []
+-   []
+-   []
+
+< Back to Posts
+
+[]Oct 01 2019 Abhinav Singh
+
+Threat Research Labs
+
+< Back to Posts
+
+[]
+
+A new campaign spreading the Adwind RAT has been seen in the wild,
+specifically targeting the petroleum industry in the US. The samples are
+relatively new and implement multi-layer obfuscation to try to evade
+detection. We found multiple RAT samples hosted on the serving domain
+and spread across multiple directories, all hosted within the last
+month. We have previously reported the use of this RAT targeting the
+retail and hospitality industry. 
+
+The overall functionality of the RAT has remained the same as our
+previous post: It achieves persistence through registry modifications,
+performs process injection to stay under the radar, terminates security
+services (e.g., firewall, AV), and steals sensitive data. The major
+change is in the obfuscation technique, wherein multiple embedded JAR
+archives are used before unpacking the actual payload. Netskope Threat
+Protection detects the malware as ByteCode-JAVA.Trojan.Kryptik and
+Gen:Variant.Application.Agentus.1. This blog post provides an analysis
+of the new campaign and the new obfuscation techniques.
+
+Responsible Disclosure
+----------------------
+
+The URLs hosting the Adwind RAT were reported to Westnet on September
+9th, 2019.
+
+Analysis Details
+----------------
+
+We discovered the new campaign serving the Adwind RAT JAR payload from
+“members[.]westnet[.]com[.]au/~joeven/”. Westnet is an Australian ISP.
+The attacker is either a Westnet user or has compromised the account of
+one or more Westnet users. The same RAT is being hosted by multiple
+other Westnet users. Some of the recent uploads have multiple file
+extensions (*.png.jar.jar) to hide the actual file-type visibility from
+the target user. We have listed some of the current upload directories
+in the Indicators of compromise section. At the time of writing, the
+links were still active.
+
+When the victim executes the payload, there are multiple levels of JAR
+extractions that occur. Figure 1 below summarizes the execution stages
+at a high level. 
+
+[]
+
+Figure 1: Process execution stages involved in Adwind’s infection
+chain   
+
+Step 1
+
+The dropped JAR payload executes and creates the parent java process and
+copies itself into the %User% directory. Once the copy is created, the
+java thread performs the following three actions:
+
+-   Executes the copy
+-   Creates a registry entry in HKCU/CurrentVersion/Runto maintain
+    persistence. 
+-   Creates WMI scripts in %temp% and launches them. These scripts,
+    shown in Figure 2, disable firewall and antivirus services.
+
+[]
+
+Figure 2: WMI scripts created by the first stage JAR payload.
+
+Step 2
+
+The new JAR dropped in Step 1:
+
+-   Performs AES decryption routine on an embedded object to construct
+    the Step 3 JAR 
+-   Writes the Step 3 JAR in the %temp% directory and executes it as a
+    new java thread.
+
+Figure 3 below shows the decompiled class files implementing the
+decryption routine on an object named “_”. 
+
+[]
+
+Figure 3: Embedded object which decrypts to JAR file with the JRAT class
+
+Step 3
+
+The Step 3 JAR loads the JRAT class.
+
+Step 4
+
+This JRAT class is responsible for loading and linking the DLL which
+contains the major RAT functionality. It then tries connecting to its
+command and control server at 185[.]205[.]210[.]48. The JRAT class
+contains multiple levels of obfuscations within itself in order to hide
+its features and functionality. 
+
+When we last blogged about it, the RAT was cross-platform and supported
+Windows, Linux, and Mac. Figure 4 below shows the OS check implemented
+by JRAT, indicating that the cross-platform support hasn’t changed. 
+
+[]
+
+Figure 4: JRAT class checking for OS environment
+
+The core functionalities of the RAT is shown in Figure 4 below. Some of
+the highlight features include:
+
+-   Capturing webcam images
+-   Scanning the hard-drive for files based on extensions defined in
+    RAT’s config.
+-   Spinning up multiple process threads and performing injection into
+    known legitimate windows processes. 
+-   Monitoring system status.
+-   Encrypting and exfiltrating the data to its command and control
+    server.
+
+[]
+
+Figure 5: Netskope Advanced Heuristic dashboard listing key features of
+the RAT.
+
+Conclusion
+----------
+
+The Adwind RAT is a well-known malware family that has actively been
+used in multiple campaigns over the last couple of years. The samples we
+analyzed showed that the VirusTotal detection ratio for the top-level
+JAR was 5/56 while that of the final decrypted JAR was 49/58. These
+detection ratios indicate that attackers have largely been successful in
+developing new, innovative obfuscation techniques to evade detection.
+
+Indicators Of Compromise
+------------------------
+
+  --------------------------------------------------------- ------ -----------------------------------------
+  IOC                                                       Type   Description
+  3bdfd33017806b85949b6faa7d4b98e4                          Hash   WMI script created by Malware
+  a32c109297ed1ca155598cd295c26611                          Hash   WMI script created by Malware
+  a9175094b275a0aaed30604f7dceeb14                          Hash   First level JAR payload
+  781fb531354d6f291f1ccab48da6d39f                          Hash   Decrypted JAR file
+  0b7b52302c8c5df59d960dd97e3abdaf                          Hash   DLL file created by the JAR
+  185.205.210.48                                            IP     Command and Control IP
+  huup://members[.]westnet[.]com[.]au/~philchief/           URL    Pages serving the malicious JAR payload
+  huup://members[.]westnet[.]com[.]au/~lionsnortham/        URL    Pages serving the malicious JAR payload
+  huup://members[.]westnet[.]com[.]au/~mcleodart/           URL    Pages serving the malicious JAR payload
+  huup://members[.]westnet[.]com[.]au/~jbush/               URL    Pages serving the malicious JAR payload
+  huup://members[.]westnet[.]com[.]au/~joeven/              URL    Pages serving the malicious JAR payload
+  huup://members[.]westnet[.]com[.]au/~howrahnursery_nbn/   URL    Pages serving the malicious JAR payload
+  --------------------------------------------------------- ------ -----------------------------------------
+
+Related Posts
+-------------
+
+[]
+
+Defcon Cloud Village – Phishing in the Cloud Era
+
+Read more
+
+[]
+
+Why the Future of Command and Control is the Cloud
+
+Read more
+
+[]
+
+AWS Loopholes with Temporary Credentials
+
+Read more
+
+[]
+
+< Previous Article: Gartner SASE – The Future of Network Security is Now
+
+Next Article: > AWS Loopholes with Temporary Credentials
+
+[]
+
+Contact Us {#cta-global-questions}
+----------
+
+Contact Us
+----------
+
+We'd love to hear from you!
+
+[Netskope logo]
+
+-   Explore
+    -   Why Netskope
+    -   About CASBs
+    -   Products
+    -   Services
+    -   Solutions
+    -   Our customers
+-   Resources
+    -   Resource library
+    -   Threat Research Labs
+    -   Customer support
+    -   Events
+    -   Blog
+-   Company
+    -   About Netskope
+    -   Careers
+    -   Press releases
+-   Contact
+    -   Contact Us
+    -   1-800-979-6988
+    -   2445 Augustine Dr., 3rd floor  Santa Clara, CA 95054
+
+[] [] []
+
+Gartner Note: The Future of Network Security Is in the Cloud
+
+[]
+
+Get the report
+
+-   Privacy Policy
+-   Vulnerability Disclosure Policy
+-   Terms of Use
+
+© 2019, All rights reserved.

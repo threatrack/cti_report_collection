@@ -1,0 +1,3 @@
+portal.msrc.microsoft.com
+docs.microsoft.com
+www.cvedetails.com

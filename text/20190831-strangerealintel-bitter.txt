@@ -1,0 +1,339 @@
+Skip to content
+
+[]
+
+Please note that GitHub no longer supports old versions of Firefox.
+
+We recommend upgrading to the latest Safari, Google Chrome, or Firefox.
+
+Ignore
+
+Learn more
+
+StrangerealIntel / CyberThreatIntel
+
+Sign up
+
+-   Why GitHub?
+    Features →
+    -   Code review
+    -   Project management
+    -   Integrations
+    -   Actions
+    -   Package registry
+    -   Security
+    -   Team management
+    -   Social coding
+    -   Documentation
+    -   Code hosting
+
+    -   Customer stories →
+    -   Security →
+-   Enterprise
+-   Explore
+
+    -   Explore GitHub →
+
+    Learn & contribute
+
+    -   Topics
+    -   Collections
+    -   Trending
+    -   Learning Lab
+    -   Open source guides
+
+    Connect with others
+
+    -   Events
+    -   Community forum
+    -   GitHub Education
+-   Marketplace
+-   Pricing
+    Plans →
+    -   Compare plans
+    -   Contact Sales
+
+    -   Nonprofit →
+    -   Education →
+
+[]
+
+-   
+    []
+    In this repository All GitHub ↵
+    Jump to ↵
+
+-   No suggested jump to results
+
+-   
+    []
+    In this repository All GitHub ↵
+    Jump to ↵
+-   
+    []
+    In this repository All GitHub ↵
+    Jump to ↵
+
+Sign in Sign up
+
+-   
+    Watch 17
+-   
+    Star 116
+-   
+    Fork 23
+
+StrangerealIntel/CyberThreatIntel
+
+Code
+
+Issues 0
+
+Pull requests 0
+
+Projects 0
+
+Security
+
+Insights
+
+Code Issues 0 Pull requests 0 Projects 0 Security Pulse
+
+Permalink
+
+Dismiss
+
+Join GitHub today
+
+GitHub is home to over 40 million developers working together to host
+and review code, manage projects, and build software together.
+
+Sign up
+
+Branch: master
+
+Find file Copy path
+
+CyberThreatIntel/offshore APT organization/Bitter/27-08-19/Malware analysis 31-08-19.md {#blob-path .breadcrumb .flex-auto .min-width-0 .text-normal .flex-md-self-center .ml-md-2 .mr-md-3 .my-2 .my-md-0}
+---------------------------------------------------------------------------------------
+
+Find file Copy path
+
+[@StrangerealIntel] StrangerealIntel Update Malware analysis 31-08-19.md
+c652dc8 Sep 2, 2019
+
+1 contributor
+
+Users who have contributed to this file
+
+116 lines (100 sloc) 9.6 KB
+
+Raw Blame History
+
+Malware analysis on Bitter APT campaign (31-08-19)
+
+Table of Contents
+
+-   Malware analysis
+    -   Initial vector
+    -   ArtraDownloader
+-   Cyber Threat Intel
+-   Indicators Of Compromise (IOC)
+-   References MITRE ATT&CK Matrix
+-   Links
+    -   Original Tweet
+    -   Link Anyrun
+    -   Documents
+
+Malware-analysis
+
+Initial vector
+
+Use a document with a remote template injection as initial vector. This
+request http[:]//maq.com.pk/ for be redirected on the next URL.
+
+[alt text]
+
+This seconds URL (http[:]//maq.com.pk/wehsd) send an RTF exploit.
+
+[alt text]
+
+This exploit firstly executes a request by WebDAV and after by WebClient
+service for download the backdoor on the final address
+(http[:]//maq.com.pk/wehs) and execute it.
+
+[alt text]
+
+Here we can see the redirection and the data sended on the victim.
+
+[alt text]
+
+ArtraDownloader
+
+In the first, we can see that launch by the factory option for separate
+the application of the current Explorer instance for avoid if one
+crashes the other stays alive (C:\Windows\explorer.exe
+/factory,{75dff2b7-6936-4c06-a8bb-676a7b00b24b} -Embedding). Secondly,
+we can note encoded string pushed on a function and the result is moved
+on another registry as storage for be used by the backdoor.
+
+[alt text]
+
+In observing this function we can resume by the following algorithm used
+for decode these strings : for each byte of the string -> value of the
+byte -1 -> get Unicode value -> convert to char.
+
+[alt text]
+
+We can edit a script for decode the encoded string.
+
+[alt text]
+
+Now we can see the actions did by the malware.
+
+[alt text] [alt text]
+
+Once this done, we can see on the entry point, this uses the startupinfo
+structure to specify window properties, verify the header of the PE and
+the get the environment values for create the process. The malware is
+coded in C++ language.
+
+[alt text]
+
+We can observe that the malware pushes the persistence by a Run key in
+the registry. We can note too that use DOS commands with an environment
+value ("C:\ProgramData\Ntuser\winlgn.exe") for launch the backdoor.
+
+[alt text]
+
+This query the registry for getting, the version of the OS and proceeds
+for identifying the victim’s machine GUID by the
+HKLM\SOFTWARE\Microsoft\Cryptography\MachineGuid registry key.
+
+[alt text]
+
+This use too, the EncodePointer function for encoding a specified
+pointer (encoded pointers can be used to provide another layer of
+protection for pointer values).
+
+[alt text]
+
+After performing the reconnaissance actions, this can send a query as
+pulse with the informations to the C2, the URL to send is decoded and an
+additional operation give the final URL.
+
+[alt text] [alt text]
+
+The data are encoded by the algorithm too, with the script, we can
+decode the strings and see that the roles and data send to the C2.
+
+SNI=VTFS.QD&UME=Xjoepxt!8!Qspgfttjpobm&OPQ=benjo&IVR=VTFS.QD$$benjoAA11482.572.3314613.96675&st=0
+(Here from the Anyrun sandbox)
+
+We can resume all the variables used and the type of the informations
+sent in the C2.
+
+  Variable   Description
+  ---------- -----------------------------------------
+  SNI        Computer name
+  UME        OS Version
+  OPQ        Account name
+  IVR        [Computer name]##[Account name]@@[GUID]
+  st         downloaded file executed successfully ?
+
+Cyber kill chain
+
+This process graph represents the cyber kill chain of Bitter sample.
+
+[alt text]
+
+Cyber Threat Intel
+
+Since the last 2 weeks, the C2 domain have changed (.193 to .198) due to
+this are on the same subnet of the Verdina organization (Bulgaria cloud
+provider).
+
+[alt text]
+
+We can note on the WHOIS information that this registered in Ras
+al-khaimah location.
+
+[alt text]
+
+The location is placed in the business place of the city.
+
+[alt text]
+
+We can note that two phone numbers with the country indicate (Indian and
+Iranian) have the same address for two companies.
+
+[alt text] [alt text]
+
+In Ras al-Khaimah, there is no corporate tax, no profits, no customs
+duties, no inheritance tax, it is not excluding that the group Bitter
+chose this place as a tax haven for their operations.
+
+References MITRE ATT&CK Matrix
+
+List of all the references with MITRE ATT&CK Matrix
+
+  Enterprise tactics   Technics used                                Ref URL
+  -------------------- -------------------------------------------- -------------------------------------------
+  Execution            T1203 - Exploitation for Client Execution    https://attack.mitre.org/techniques/T1203
+  Persistence          T1060 - Registry Run Keys / Startup Folder   https://attack.mitre.org/techniques/T1060
+  Discovery            T1012 - Query Registry                       https://attack.mitre.org/techniques/T1012
+  Lateral Movement     T1105 - Remote File Copy                     https://attack.mitre.org/techniques/T1105
+  C & C                T1105 - Remote File Copy                     https://attack.mitre.org/techniques/T1105
+
+Indicators Of Compromise (IOC)
+
+List of all the Indicators Of Compromise (IOC)
+
+  Indicator                                  Description
+  ------------------------------------------ ------------------------------------------------------------------
+  Urgent Action.docx                         34b53cd683f60800ac4057d25b24d8f083f759d024d22b4e5f2a464bc85de65a
+  smss.exe                                   dcb8531b0879d46949dd63b1ac094f5588c26867805d0795e244f4f9b8077ed1
+  maq.com.pk                                 Domain requested
+  203.124.43.227                             IP requested
+  http[:]//maq.com.pk/                       HTTP/HTTPS requests
+  http[:]//maq.com.pk/wehsd                  HTTP/HTTPS requests
+  http[:]//maq.com.pk/wehs                   HTTP/HTTPS requests
+  http[:]//onlinejohnline99.org/kvs06v.php   HTTP/HTTPS requests
+  onlinejohnline99.org                       Domain C2
+  93.123.73.193                              IP C2
+  93.123.73.198                              IP C2
+
+This can be exported as JSON format Export in JSON
+
+Links
+
+-   Original tweet:
+    https://twitter.com/RedDrip7/status/1164855381052416002
+-   Anyrun Link:
+    -   Urgent Action.docx
+-   Docs :
+    -   Bitter Analysis by Unit42
+    -   Tool for decoding the encoded strings of ArtraDownloader
+    -   YARA Rule Bitter Variant1 (August 2019)
+
+Go
+
+-   © 2019 GitHub, Inc.
+-   Terms
+-   Privacy
+-   Security
+-   Status
+-   Help
+
+-   Contact GitHub
+-   Pricing
+-   API
+-   Training
+-   Blog
+-   About
+
+You can’t perform that action at this time.
+
+You signed in with another tab or window. Reload to refresh your
+session. You signed out in another tab or window. Reload to refresh your
+session.

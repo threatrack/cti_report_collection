@@ -1,0 +1,4 @@
+Trojan.W97M.FLAWEDAMMY.AC
+Trojan.X97M.FLAWEDAMMY.SM
+www.trendmicro.com
+Trojan.X97M.DONOFF.AI

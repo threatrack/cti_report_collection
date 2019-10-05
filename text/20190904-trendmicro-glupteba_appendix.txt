@@ -1,0 +1,134 @@
+Glupteba Campaign Hits Network
+Routers and Updates C&C Servers
+with Data from Bitcoin Transactions
+Appendix
+
+Indicators of Compromise (IoCs)
+File Name
+
+SHA-256 Hash
+
+Attribution
+
+Detection Name
+
+_AMQ4Y13
+HLQAAqRc
+CAERFGQA
+mAFIXOBE
+A.exe
+
+5486f07cccc300dd939b4936daeb37 Glupteba Dropper
+b83d4c818d1735470bf791b6fd112db
+25d
+
+TrojanSpy.Win32.GL
+UPTEBA.A
+
+cloudnet.exe
+
+ab54f3f4851aa06ce6eccafc922f0fba Glupteba
+6e5387bd0220fb2fbd45632a6fe6ace
+7
+
+TrojanSpy.Win32.GL
+UPTEBA.A
+
+vc.exe
+
+20e983e90144c385996eeb2edb584d Glupteba browser TrojanSpy.Win32.GLUP
+654d898c34725e149682170f870ee1 stealer
+TEBA.A
+2870
+
+updateprofil
+e-0218.exe
+
+46f8d4dcdbec752ba57a682d622652 Glupteba browser
+21e0a2db67a37b5ccd851dcb44b907 stealer
+a32d
+
+updateprofil
+e-0321.exe
+
+1e71965e20aa50df21375a1db003e9 Glupteba browser TrojanSpy.Win32.GLUP
+2823abacac1c1850c2d0922d43420e stealer
+TEBA.A
+2d30
+
+updateprofil
+e-srv10520.exe
+
+69c40f971402945d188a66e1fd91179 Glupteba browser TrojanSpy.Win32.GLUP
+65fd7c11af71514e3f8152a9c873b60 stealer
+TEBA.A
+0d
+
+winboxls0225-2.exe
+
+b562ad8c740ba4549be9c7dc693c1f Glupteba Router
+77bd2ba3bac33128769d5a7e079bfd Exploiter
+edec
+
+TrojanSpy.Win32.GLUP
+TEBA.A
+
+winboxls1008-2.exe
+
+0dedb703da8d7aeae5d6f6da3e37b3 Glupteba Router
+d3fc42d0872b8470a81066a4491f245 Exploiter
+5f2
+
+TrojanSpy.Win32.GLUP
+TEBA.A
+
+TrojanSpy.Win32.GL
+UPTEBA.A
+
+winboxls0712.exe
+
+07d1ea5c0b4a1b437d2146fd9c918d Glupteba Router
+72a16c2950d24d4c7f1f95f8409d261 Exploiter
+9b3
+
+TrojanSpy.Win32.GLUP
+TEBA.A
+
+Related URLs, IP Addresses, and Domains
+
+
+
+
+5[.]9[.]157[.]50 (Glupteba C&C IP)
+keepmusic[.]xyz (Glupteba malvertising domain)
+playfire[.]online (Glupteba malvertising domain)
+
+
+
+
+
+
+
+
+
+
+
+venoxcontrol[.]com (Glupteba dropper C&C domain)
+okonewacon[.]com (Glupteba dropper C&C domain)
+blackempirebuild[.]com (Glupteba dropper C&C domain)
+bigtext[.]club (Glupteba dropper C&C domain)
+clubhouse[.]site (Glupteba dropper C&C domain)
+nxtfdata[.]xyz (Glupteba dropper C&C domain)
+lienews[.]world (Glupteba browser data exfiltration domain)
+phonemus[.]net (Glupteba dropper C&C domain)
+takebad1[.]com (Glupteba dropper C&C domain)
+
+TREND MICROTM RESEARCH
+Trend Micro, a global leader in cybersecurity, helps to make the world safe for exchanging digital information.
+Trend Micro Research is powered by experts who are passionate about discovering new threats, sharing key insights, and
+supporting efforts to stop cybercriminals. Our global team helps identify millions of threats daily, leads the industry in
+vulnerability disclosures, and publishes innovative research on new threats techniques. We continually work to anticipate new
+threats and deliver thought-provoking research.
+www.trendmicro.com
+
+

@@ -1,0 +1,3 @@
+cahe.microsofts.org
+System.Net
+update.microsofts.org

@@ -1,0 +1,4 @@
+api.slack.com
+offline-storage.data
+file.io
+offline-storage-ecs.data

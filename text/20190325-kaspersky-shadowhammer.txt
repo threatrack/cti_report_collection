@@ -1,0 +1,818 @@
+Solutions for:
+
+-   Home Products
+-   Small Business 1-50 employees
+-   Medium Business 51-999 employees
+-   Enterprise 1000+ employees
+
+Kaspersky
+
+-   CompanyAccount
+-   Get In Touch
+
+-   Solutions
+    -   -   []
+
+            Endpoint Security
+
+            Learn More
+
+        -   []
+
+            Hybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            Internet of Things & Embedded Security
+
+            Learn More
+
+        -   []
+
+            Threat Management and Defense
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Fraud Prevention
+
+            Learn More
+
+-   Industries
+    -   -   []
+
+            National Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Finance Services Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Healthcare Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Transportation Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Retail Cybersecurity
+
+            Learn More
+
+    -   -   Other Industries
+
+        -   Telecom Cybersecurity
+        -   View all
+
+-   Products
+    -   -   []
+
+            KasperskyEndpoint Security
+
+            Learn More
+
+        -   []
+
+            KasperskyEndpoint Detection and Response
+
+            Learn More
+
+        -   []
+
+            KasperskyHybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            KasperskyAnti Targeted Attack Platform
+
+            Learn More
+
+        -   []
+
+            KasperskyPrivate Security Network
+
+            Learn More
+
+        -   []
+
+            KasperskyEmbedded Systems Security
+
+            Learn More
+
+    -   -   Other Products
+
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View All
+
+-   Services
+    -   -   []
+
+            KasperskyCybersecurity Services
+
+            Learn More
+
+        -   []
+
+            KasperskySecurity Awareness
+
+            Learn More
+
+        -   []
+
+            KasperskyPremium Support
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Intelligence
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Hunting
+
+            Learn More
+
+        -   []
+
+            KasperskyIncident Response
+
+            Learn More
+
+    -   -   Other Services
+
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View All
+
+-   Resource Center
+    -   Case Studies
+    -   White Papers
+    -   Datasheets
+    -   Technologies
+-   Contact Us
+-   GDPR
+
+Menu
+
+Securelist
+
+English
+
+-   
+    English
+-   
+    Pусский
+-   
+    Deutsch
+-   
+    Français
+-   
+    Italiano
+-   
+    Español
+-   
+    Polski
+
+-   Threats
+    -   Mobile threats
+    -   Secure environment (IoT)
+    -   Financial threats
+    -   Spam and phishing
+    -   Industrial threats
+    -   Vulnerabilities and exploits
+    -   Web threats
+-   Categories
+    -   APT reports
+    -   Research
+    -   Incidents
+    -   Security Bulletin
+    -   Publications
+    -   Malware reports
+    -   Spam and phishing reports
+    -   All categories
+-   Tags
+    -   Ransomware
+    -   Targeted Attacks
+    -   Botnets
+    -   Internet Banking
+    -   Mobile Malware
+    -   Social Engineering
+    -   Malware Statistics
+    -   Show all tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+
+-   Solutions for:
+-   Home Users
+    -   Products
+        -   KasperskyTotal Security
+        -   KasperskyInternet Security
+        -   KasperskyAnti-Virus
+        -   KasperskyInternet Security for Mac
+        -   Kaspersky Internet Security for Android
+        -   KasperskySecure Connection
+        -   Free Tools
+        -   Kaspersky Safe Kids
+        -   Kaspersky Password Manager
+        -   Kaspersky Software Updater
+        -   View more
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+    -   My Kaspersky
+        -    My Devices
+        -    My Products / Subscriptions
+        -    My Orders
+-   Small Business(1-50 employees)
+    -   Products
+        -   KasperskySmall Office Security
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   KSOS Portal
+-   Medium Business(51-999 employees)
+    -   Products
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskySecurity for Office 365
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+        -   KasperskySecurity for Business Total
+        -   KasperskyPhysical, Virtual & Cloud Workloads Security
+        -   TARGETED SECURITY SOLUTIONS
+        -   Mail Server
+        -   File Server
+        -   Mobile
+        -   Internet Gateway
+        -   Virtualization and Hybrid Cloud
+        -   Collaboration
+        -   Vulnerability and Patch Management
+        -   Storage
+        -   View More
+    -   Services
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   CompanyAccount
+-   Enterprise(1000+ employees)
+    -   Solutions
+        -   Endpoint Security
+        -   Hybrid Cloud Security
+        -   Internet of Things & Embedded Security
+        -   Threat Management and Defense
+        -   Industrial Cybersecurity
+        -   Fraud Prevention
+    -   Industries
+        -   National Cybersecurity
+        -   Industrial Cybersecurity
+        -   Finance Services Cybersecurity
+        -   Healthcare Cybersecurity
+        -   Transportation Cybersecurity
+        -   Retail Cybersecurity
+        -   Other industries
+        -   Telecom Cybersecurity
+        -   View all
+    -   Products
+        -   KasperskyEndpoint Security
+        -   KasperskyEndpoint Detection and Response
+        -   KasperskyHybrid Cloud Security
+        -   KasperskyAnti Targeted Attack Platform
+        -   KasperskyPrivate Security Network
+        -   KasperskyEmbedded Systems Security
+        -   Other products
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View all
+    -   Services
+        -   KasperskyCybersecurity Services
+        -   KasperskySecurity Awareness
+        -   KasperskyPremium Support
+        -   KasperskyThreat Intelligence
+        -   KasperskyThreat Hunting
+        -   KasperskyIncident Response
+        -   Other Services
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View all
+    -   Resource Center
+        -   Case Studies
+        -   White Papers
+        -   Datasheets
+        -   Technologies
+    -   Contact Us
+    -   GDPR
+    -   CompanyAccount
+-   -   Securelist
+-   Threats
+    -   Financial threats
+    -   Mobile threats
+    -   Web threats
+    -   Secure environment (IoT)
+    -   Vulnerabilities and exploits
+    -   Spam and Phishing
+    -   Industrial threats
+-   Categories
+    -   APT reports
+    -   Incidents
+    -   Research
+    -   Malware reports
+    -   Spam and phishing reports
+    -   Kaspersky Security Bulletin
+    -   Publications
+-   Tags
+    -   Ransomware
+    -   Botnets
+    -   Mobile Malware
+    -   Social Engineering
+    -   Targeted Attacks
+    -   Malware Statistics
+    -   All Tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+-   -   Partners
+    -   Partners
+    -   Find a Partner
+    -   Affiliate
+    -   Technology
+    -   Whitelist Program
+-   About Us
+    -   About Us
+    -   Company
+    -   Team
+    -   Transparency
+        -   Transparency Center
+        -   Policy Blog
+    -   Corporate News
+    -   Press Center
+    -   Careers
+    -   Incubator
+    -   Sponsorships
+
+APT reports
+
+Operation ShadowHammer {.entry-title}
+======================
+
+By GReAT, AMR on March 25, 2019. 1:01 pm
+
+Earlier today, Motherboard published a story by Kim Zetter on Operation
+ShadowHammer, a newly discovered supply chain attack that leveraged ASUS
+Live Update software.
+
+While the investigation is still in progress and full results and
+technical paper will be published during SAS 2019 conference in
+Singapore, we would like to share some important details about the
+attack.
+
+In January 2019, we discovered a sophisticated supply chain attack
+involving the ASUS Live Update Utility. The attack took place between
+June and November 2018 and according to our telemetry, it affected a
+large number of users.
+
+ASUS Live Update is an utility that is pre-installed on most ASUS
+computers and is used to automatically update certain components such as
+BIOS, UEFI, drivers and applications. According to Gartner, ASUS is the
+world’s 5th-largest PC vendor by 2017 unit sales. This makes it an
+extremely attractive target for APT groups that might want to take
+advantage of their userbase.
+
+Based on our statistics, over 57,000 Kaspersky users have downloaded and
+installed the backdoored version of ASUS Live Update at some point in
+time. We are not able to calculate the total count of affected users
+based only on our data; however, we estimate that the real scale of the
+problem is much bigger and is possibly affecting over a million users
+worldwide.
+
+Thegoal of the attack was to surgically target an unknown pool of users,
+which were identified by their network adapters’ MAC addresses. To
+achieve this, the attackers had hardcoded a list of MAC addresses in the
+trojanized samples and this list was used to identify the actual
+intended targets of this massive operation. We were able to extract more
+than 600 unique MAC addresses from over 200 samples used in this attack.
+Of course, there might be other samples out there with different MAC
+addresses in their list.
+
+We believe this to be a very sophisticated supply chain attack, which
+matches or even surpasses the Shadowpad and the CCleaner incidents in
+complexity and techniques. The reason that it stayed undetected for so
+long is partly due to the fact that the trojanized updaters were signed
+with legitimate certificates (eg: “ASUSTeK Computer Inc.”). The
+malicious updaters were hosted on the official liveupdate01s.asus[.]com
+and liveupdate01.asus[.]com ASUS update servers.
+
+[]
+
+  
+ Digital signature on a trojanized ASUS Live Update setup installer  
+ Certificate serial number: 05e6a0be5ac359c7ff11f4b467ab20fc
+
+We have contacted ASUS and informed them about the attack on Jan 31,
+2019, supporting their investigation with IOCs and descriptions of the
+malware.
+
+Although precise attribution is not available at the moment, certain
+evidence we have collected allows us to link this attack to the
+ShadowPad incident from 2017. The actor behind the ShadowPad incident
+has been publicly identified by Microsoft in court documents as BARIUM.
+BARIUM is an APT actor known to be using the Winnti backdoor. Recently,
+our colleagues from ESET wrote about another supply chain attack in
+which BARIUM was also involved, that we believe is connected to this
+case as well.
+
+A victim distribution by country for the compromised ASUS Live Updater
+looks as follows:
+
+[]
+
+It should be noted that the numbers are also highly influenced by the
+distribution of Kaspersky users around the world. In principle, the
+distribution of victims should match the distribution of ASUS users
+around the world.
+
+We’ve also created a tool which can be run to determine if your computer
+has been one of the surgically selected targets of this attack. To check
+this, it compares MAC addresses of all adapters to a list of predefined
+values hardcoded in the malware and alerts if a match was found.
+
+Download an archive with the tool (.exe)
+
+Also, you may check MAC addresses online. If you discover that you have
+been targeted by this operation, please e-mail us at:
+shadowhammer@kaspersky.com
+
+IOCs
+
+Kaspersky Lab verdicts for the malware used in this and related attacks:
+
+-   HEUR:Trojan.Win32.ShadowHammer.gen
+
+Domains and IPs:
+
+-   asushotfix[.]com
+-   141.105.71[.]116
+
+Some of the URLs used to distribute the compromised packages:
+
+-   hxxp://liveupdate01.asus[.]com/pub/ASUS/nb/Apps_for_Win8/LiveUpdate/Liveupdate_Test_VER365.zip
+-   hxxps://liveupdate01s.asus[.]com/pub/ASUS/nb/Apps_for_Win8/LiveUpdate/Liveupdate_Test_VER362.zip
+-   hxxps://liveupdate01s.asus[.]com/pub/ASUS/nb/Apps_for_Win8/LiveUpdate/Liveupdate_Test_VER360.zip
+-   hxxps://liveupdate01s.asus[.]com/pub/ASUS/nb/Apps_for_Win8/LiveUpdate/Liveupdate_Test_VER359.zip
+
+Hashes (Liveupdate_Test_VER365.zip):
+
+-   aa15eb28292321b586c27d8401703494
+-   bebb16193e4b80f4bc053e4fa818aa4e2832885392469cd5b8ace5cec7e4ca19
+
+A full set of IOCs and Yara rules is available to customers of Kaspersky
+Intelligence Reporting service – contact intelreports@kaspersky.com
+
+ASUS Backdoor BIOS Digital Certificates drivers supply-chain attack
+Targeted Attacks UEFI Vulnerabilities and exploits
+
+Share post on:
+
+Facebook
+
+Twitter
+
+Related Posts
+
+-   COMpfun successor Reductor infects files on the fly to compromise
+    TLS traffic
+
+-   Threats to macOS users
+
+-   Incident Response report 2018
+
+[]
+
+There are 16 comments
+
+1.  []
+
+    Ye Man Aung
+
+    Posted on March 25, 2019. 2:44 pm
+
+    support and fix
+
+    Reply
+
+2.  []
+
+    Maurice
+
+    Posted on March 25, 2019. 5:59 pm
+
+    Yes next steps support an fix please….
+
+    Reply
+
+3.  []
+
+    Salam Malanchu
+
+    Posted on March 25, 2019. 8:40 pm
+
+    Any idea if ASUS wireless routers were affected by this as well? I
+    noticed in that same time frame that several of these that I manage
+    required multiple reboots to resolve wireless connectivity issues
+    (wireless signal dropping unexpectedly, unexplained slow internet
+    speeds, etc) when previously these were behaving perfectly.
+
+    Reply
+
+    1.  []
+
+        GO2112
+
+        Posted on March 26, 2019. 10:52 pm
+
+        I have experienced the same issue with my router Asus and the
+        AImesh routers i have. and it seems some clients are not yet
+        connected.  
+         I was expecting my local Wifi to not be “controlled” by Asus
+        servers …. not sure if i’m now confident with Asus anymore.
+
+        Reply
+
+    2.  []
+
+        Jordan
+
+        Posted on March 27, 2019. 1:43 pm
+
+        Im wondering the same thing. Luckily ALL 5 of my ASUS
+        motherboard PCs arent infected, as well as my ASUS laptop. But
+        ironically I had bought a brand new ASUS router last year
+        (RT-N66u) and it happened to be one of the very few routers that
+        were one of the models to get their Firmware infected with
+        malware (possibly even having the malware on the router when I
+        bought it brand new from newegg.com ) Definitely not neweggs
+        fault , but kinda scary knowing that other people and possibly
+        mine as well were shipped brand new with the infected firmware
+        that could be dormant for an indefinite amount of time and then
+        enabled remotely one day to start relaying data to Russia etc.
+        AKa using peoples bandwidth to turn their network into a botnet
+        to give them access to a very large amount of routers to use at
+        their disposal for DDoS attacks etc.
+
+        Reply
+
+        1.  []
+
+            lithor
+
+            Posted on April 1, 2019. 3:06 pm
+
+            This was an exploit to the Asus Live Update software for
+            their Laptops. If this program was uninstalled or not
+            updated after the hack occurred you wouldn’t be affected.
+
+            Reply
+
+4.  []
+
+    Sri Harsha Satish
+
+    Posted on March 26, 2019. 10:21 am
+
+    Well Done Kaspersky.
+
+    Reply
+
+5.  []
+
+    Plausible Deniability
+
+    Posted on March 27, 2019. 4:28 am
+
+    So the DOC grabs their fall guy from ShadowPad 2017 and points the
+    finger at BARIUM to support Russian collusion! Amazing how much
+    Russia comes up these days.
+
+    Reply
+
+    1.  []
+
+        Peter
+
+        Posted on March 31, 2019. 9:00 pm
+
+        Huh?
+
+        Reply
+
+6.  []
+
+    Curiosity
+
+    Posted on March 28, 2019. 1:48 am
+
+    Have 600 Mac addresses been released?
+
+    Reply
+
+    1.  []
+
+        Lorry Mc'doggel
+
+        Posted on March 29, 2019. 10:22 am
+
+        You can find them here:  
+
+        https://skylightcyber.com/2019/03/28/unleash-the-hash-shadowhammer-mac-list/
+
+        Reply
+
+7.  []
+
+    Pradeep Kumar
+
+    Posted on March 31, 2019. 5:03 pm
+
+    My friend’s laptop was affected by this virus in January and after
+    that, his laptop was unable to boot properly. Neither he was able to
+    install a fresh copy of Linux. Is there any solution to it, if
+    anyone knows any then please tell me.
+
+    Reply
+
+8.  []
+
+    x0dx0a
+
+    Posted on April 2, 2019. 3:58 pm
+
+    Is the second HASH recorded actually 2 hashes? Should it read:  
+     aa15eb28292321b586c27d8401703494  
+     bebb16193e4b80f4bc053e4fa818aa4e  
+     2832885392469cd5b8ace5cec7e4ca19
+
+    Reply
+
+    1.  []
+
+        E K
+
+        Posted on April 3, 2019. 8:57 am
+
+        No, there are MD5 and SHA256 hashes of the archive.
+
+        Reply
+
+9.  []
+
+    Gebster
+
+    Posted on April 29, 2019. 3:43 am
+
+    Is it possible that the certificate was left on a server, and then
+    used to sign the malware making it look legitimate? so perhaps ASUS
+    should have secured their certificates better?
+
+    Reply
+
+10. []
+
+    gary mackner
+
+    Posted on May 20, 2019. 6:02 pm
+
+    I have been fighting this virus for over 10 years. Everyone i
+    contacted all told me that a BIOS could not get malware. I built a
+    system using an Asus MB that keep losing its MBR. I reflashed the
+    BIOS and reload Win 7 and it would run as long as you didn’t reboot
+    then I would lose the MBR again. I could see sector 0 was corrupted
+    and copied into hundreds of other sectors. Had to wipe and zero out
+    the entire HD and try again. New HD did no better. I figured it had
+    to coming from the BIOS and contacted Asus. They had me send my MB
+    to them upon they swapped a new BIOS chip on it. Upon reinstalling
+    it, it ran fine for a short time and then just did the same thing
+    again. I contacted Asus and they sent me a brand new MB which also
+    ran fine for a a short time. I still have the 2 MBs and the Asus
+    BIOS flash software. this malware also writes to any write-able
+    software.
+
+    Reply
+
+Leave a Reply Cancel Reply
+
+Your email address will not be published. Required fields are marked *
+
+Name *
+
+Email *
+
+Save my name, email, and website in this browser for the next time I
+comment.
+
+ Notify me when new comments are added.
+
+ 
+
+In the same category
+
+-   []
+
+    Chafer used Remexi malware to spy on Iran-based foreign diplomatic entities
+
+-   []
+
+    GreyEnergy’s overlap with Zebrocy
+
+-   []
+
+    A Zebrocy Go Downloader
+
+-   []
+
+    APT review of the year
+
+-   []
+
+    DarkPulsar FAQ
+
+[]
+
+© 2019 AO Kaspersky Lab. All Rights Reserved.   
+Registered trademarks and service marks are the property of their
+respective owners.
+
+Contact us | Privacy Policy | License Agreement
+
+-   *
+-   *
+    -   I agree to provide my email address to “AO Kaspersky Lab” to
+        receive information about new posts on the site. I understand
+        that I can withdraw this consent at any time via e-mail by
+        clicking the “unsubscribe” link that I find at the bottom of any
+        e-mail sent to me for the purposes mentioned above.
+
+-   Twitter
+-   Facebook
+-   LinkedIn
+-   YouTube
+-   RSS
+-   Email
+
+[] []
+
+[]

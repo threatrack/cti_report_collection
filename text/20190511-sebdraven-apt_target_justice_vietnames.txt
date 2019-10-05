@@ -1,0 +1,159 @@
+Become a member
+
+Sign in
+
+Get started
+
+Chinese Actor APT target Ministry of Justice Vietnamese {.iy .b .iz .jg .fa}
+=======================================================
+
+[Sebdraven]
+
+Sebdraven
+
+Follow
+
+May 10 · 2 min read
+
+With the new RTF exploit using 8.t to store theirs payloads, many
+malicious document have targeted to Vietnam. One document is very
+interesting because its target specifically the Ministry of Justice.
+
+Analyze {#3a0e .ko .kp .fa .bh .bg .fw .kq .kr .ks .kt .ku .kv .kw .kx .ky .kz .la}
+=======
+
+The recipients of the document
+41f0757ca4367f22b0aece325208799135c96ebe1dcafcd752d3f3c8dd4a5ccf 8.t are
+(at the end of the document):
+
+the deputy minister;  
+- the units under the ministry;  
+- police of provinces and cities directly under the central
+government;  
+- Department of Inspection of Legal Documents of the Ministry of
+Justice;  
+- Official Journal, Government Electronic Portal, Ministry of Public
+Security Portal;  
+- Archive: VT, C06 (P1).
+
+The document exploits Equation Editor starts application
+(CVE-2017–11882) to decode the 8.t in memory, after fork to install two
+files:
+
+C:\Users\admin\AppData\Local\Temp\wsc.dll
+4e88f8a3c3be45e0a59a8868f2b2ace51754fcdbfa9ab618e3d9d0e17831990f
+
+and
+
+C:\Users\admin\AppData\Local\Temp\wsc_proxy.exe   
+ 1948bb0df11f768d6dd30ae7ecec5550db7c817d09cb31b5e2cee9b86a4047da
+
+The malware is a dll, it seems to be Gh0st RAT.
+
+https://app.any.run/tasks/5715cfe3-2550-4808-aad0-1ea4c4fc7a88
+
+An to start the malware, it uses a side loading technics with a
+scheduled Task.
+
+The exe call in the entry loads dynamically wsc.dll and call the
+function _run@4
+
+[]
+
+[]
+
+Side Loading
+
+[]
+
+[]
+
+Scheduled Task
+
+The RAT tries to connect to nicetiss54.lflink.com|185.216.35.11.
+
+[]
+
+[]
+
+Threat Intelligence Consideration {#bd95 .ko .kp .fa .bh .bg .fw .kq .kr .ks .kt .ku .kv .kw .kx .ky .kz .la}
+=================================
+
+We have the same TTps and victimology like Goblin Panda:
+
+-   Officials Vietnameses
+-   Side Loading
+-   8.t RTF kit exploit
+-   a dynamic dns name
+
+But the payload has changed and the launch of the backdoor has changed.
+
+It’s used a scheduled task.
+
+Usually this group uses NewCoreRat.
+
+IOCs {#1c74 .ko .kp .fa .bh .bg .fw .kq .kr .ks .kt .ku .kv .kw .kx .ky .kz .la}
+====
+
+Main object-
+“41f0757ca4367f22b0aece325208799135c96ebe1dcafcd752d3f3c8dd4a5ccf”  
+ sha256 41f0757ca4367f22b0aece325208799135c96ebe1dcafcd752d3f3c8dd4a5ccf
+  
+ sha1 6e670a837970a1fb4161d77d5f720d318d7e4dbc   
+ md5 f34514118eb4689560cd6c0c654f26d9
+
+Dropped executable file
+
+sha256 C:\Users\admin\AppData\Local\Temp\wsc.dll
+4e88f8a3c3be45e0a59a8868f2b2ace51754fcdbfa9ab618e3d9d0e17831990f
+
+sha256 C:\Users\admin\AppData\Local\Temp\wsc_proxy.exe
+1948bb0df11f768d6dd30ae7ecec5550db7c817d09cb31b5e2cee9b86a4047da
+
+DNS requests  
+ domain nicetiss54.lflink.com
+
+Connections  
+ ip 185.216.35.11
+
+24
+
+-   Security
+-   Malware
+-   Apt
+-   China
+-   Threat Intelligence
+
+24 claps
+
+[Sebdraven]
+
+Written by
+
+Sebdraven {.bg .fw .fx .fy .fa}
+---------
+
+Follow
+
+OSINT, Python,Malware Analysis, Botnet Tracker, SIEM and IPS/IDS and Threats Expert / co-organizer #BotConf / co-creator of #FastIR/ Researcher at @Epita
+
+Follow
+
+Write the first response
+
+Discover Medium
+
+Welcome to a place where words matter. On Medium, smart voices and
+original ideas take center stage - with no ads in sight. Watch
+
+Make Medium yours
+
+Follow all the topics you care about, and we’ll deliver the best stories
+for you to your homepage and inbox. Explore
+
+Become a member
+
+Get unlimited access to the best stories on Medium — and support writers
+while you’re at it. Just $5/month. Upgrade
+
+AboutHelpLegal

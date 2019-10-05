@@ -1,0 +1,327 @@
+-   Home
+-   Hacks
+    -   Data Breach
+    -   PCI DSS Breach
+    -   Cryptocurrency hack
+    -   Mobile Attacks
+    -   Password Cracking
+-   THREATS
+    -   DDOS
+    -   Malware
+    -   Phishing
+    -   Ransomware
+    -   Torjan Horses/worms
+    -   Viruses
+    -   CVE/vulnerability
+-   PENTEST
+    -   Webapp Pentesting
+        -   OWASP – Top 10
+    -   Network Pentesting
+    -   Android Pentesting
+-   KALI
+-   SOC
+    -   SIEM
+    -   SOC Architecture
+    -   SOC Resources
+-   Infosec
+-   TECH
+    -   Tech News
+-   TOOLS
+    -   Courses
+    -   Tutorials
+-   Courses
+
+Search
+
+Saturday, October 5, 2019
+
+-   Home
+-   kalitutorials
+-   Malware
+-   Ransomware
+-   Cryptocurrency hack
+-   SOC Resources
+-   Advertise
+-   GBH Team
+
+[GBHackers On Security] GBHackers On Security
+
+[GBHackers On Security] [GBHackers On Security]
+
+-   Home
+-   Hacks
+    -   Data Breach
+    -   PCI DSS Breach
+    -   Cryptocurrency hack
+    -   Mobile Attacks
+    -   Password Cracking
+-   THREATS
+    -   DDOS
+    -   Malware
+    -   Phishing
+    -   Ransomware
+    -   Torjan Horses/worms
+    -   Viruses
+    -   CVE/vulnerability
+-   PENTEST
+    -   Webapp Pentesting
+        -   OWASP – Top 10
+    -   Network Pentesting
+    -   Android Pentesting
+-   KALI
+-   SOC
+    -   SIEM
+    -   SOC Architecture
+    -   SOC Resources
+-   Infosec
+-   TECH
+    -   Tech News
+-   TOOLS
+    -   Courses
+    -   Tutorials
+-   Courses
+
+-   Backdoor
+-   Computer Security
+-   Cyber Security News
+
+Chinese APT Hackers Attack Windows Users via FakeNarrator Malware to Implant PcShare Backdoor {.entry-title}
+=============================================================================================
+
+By
+
+BALAJI N
+
+-
+
+September 26, 2019
+
+0
+
+[FakeNarrator Malware]
+
+Chinese APT hackers launching a FakeNarrator malware to attack
+technology companies using windows computers and implant modified
+version of open-source PcShare backdoor.
+
+Threat actors loaded this open-source software in victims machine with
+the help of legitimate NVIDIA application and also deploy the
+FakeNarrator screen reader application to replace the Windows built-in
+Narrator, a free screen reader in Microsoft Windows nad bypass the
+Windows “Easy access” feature.
+
+The malware campaign mainly targeting the tech companies that located in
+south-east Asia successful attack could allow attackers to gain complete
+control of the targetted system and take the remote desktop access
+without any sort of credentials.
+
+Attackers customize the Chinese based opensource backdoor PcShare for
+their operation and used the backdoor as the main foothold on the
+victim’s machine.
+
+They included various features in the backdoor including
+command-and-control (C&C) encryption and proxy bypass functionality and
+they’re removed some of the unused functionality which they feel not
+necessary for this campaign.
+
+PcShare Backdoor Infection Process
+----------------------------------
+
+Once the attacker gains access to the victim’s machine, they start
+deploying the post-exploitation tools which have been developed with the
+help of publicly available source code that can be accessed via the
+Chinese programming portal.
+
+Threat actors use one of the post-exploitation toolcalled bespoke Trojan
+to abusing the Microsoft Accessibility Features to gain SYSTEM-level
+access on the compromised machine.
+
+Here the FakeNarrator comes into play, attacker Trojanize the Narrator
+executable to gain the SYSTEM-level access and maintain the persistence.
+
+According to cylance research” The campaign is characterized by a fair
+level of stealthiness as the threat actor made a concerted effort to
+avoid detection. The use of DLL side-loading technique together with a
+bespoke loader utilizing memory injection ensures that the main backdoor
+binary is never dropped to the disk.”
+
+[]
+
+Loader overview
+
+Also, the malware using an anti-sandbox technique to evade the detection
+by antivirus solutions and protected its command and control server
+communication.
+
+Researchers also find the PcShare backdoor similarities with Tropic
+Trooper which is actively targeting government institutions and heavy
+industry companies in Taiwan and the Philippines.
+
+The backdoor is capable of performing some of following remote
+administration abilities:
+
+-   List, create, rename, delete files and directories
+-   List and kill processes
+-   Edit registry keys and values
+-   List and manipulate services
+-   Enumerate and control windows
+-   Execute binaries
+-   Download additional files from the C&C or provided URL
+-   Upload files to the C&C
+-   Spawn command-line shell
+-   Navigate to URLs
+-   Display message boxes
+-   Reboot or shut down the system
+
+“Once the FakeNarrator is enabled at the logon screen via “Ease of
+Access”, the malware will be executed by winlogon.exe with SYSTEM
+privileges. Typing the attacker’s defined password will allow the
+attacker to spawn any executable, also running under the SYSTEM account,
+at the logon screen” Cylance researchers said.
+
+Its leads to gain the persistence shell on the compromised windows
+machine without having the valid credentials.
+
+IOCs
+
+``` {.wp-block-verse}
+SHA256c5226bfd53d789a895559e8bcbedc4ecdde543e54a427b1cb4e5d7ef90756daa 1899b3d59a9dc693d45410965c40c464224160bbef596f51d35fda099d609744 bd345155aa4baa392c3469b9893a4751c2372ae4923cf05872bcdc159b9596f8 49b86ae6231d44dfc2ff4ad777ea544ae534eb40bd0209defffec1eb1fe66b34 0022508fd02bb23c3a2c4f5de0906df506a2fcabc3e841365b60ba4dd8920e0c
+```
+
+You can follow us on Linkedin, Twitter, Facebook for daily Cybersecurity
+and hacking news updates.
+
+Share and Support Us :
+
+-   Click to share on Facebook (Opens in new window)
+-   Click to share on LinkedIn (Opens in new window)
+-   Click to share on Twitter (Opens in new window)
+-   Click to share on Pinterest (Opens in new window)
+-   Click to share on Telegram (Opens in new window)
+-   Click to share on Reddit (Opens in new window)
+-   Click to share on WhatsApp (Opens in new window)
+-   
+
+-   TAGS
+-   APTgroup
+-   Malware
+-   Windows
+
+[]
+
+BALAJI N
+
+http://www.gbhackers.com
+
+BALAJI is a Security Researcher (Threat Research Labs) at Comodo
+Cybersecurity. Editor-in-Chief, Author & Co-Creator of GBHackers On
+Security
+
+RELATED ARTICLESMORE FROM AUTHOR
+
+[Data Breach]
+
+Cyber Security News
+
+How Hackers Breach Your Corporate Network? – Prevention Packet Guide
+
+[PKPLUG]
+
+Computer Security
+
+PKPLUG -New Research Found Same Chinese Hacking Group Involved with Multiple Cyber Attacks Across Asia
+
+[Turla APT Hackers Using New Malware to Break The TLS Encrypted Web
+Traffic Communication]
+
+Cyber Attack
+
+Turla APT Hackers Using New Malware to Break The TLS Encrypted Web Traffic Communication
+
+Leave a Comment
+
+Newsletter
+
+Signup to get Hacking News & Tutorials to your Inbox
+
+Name  
+
+Email*  
+
+[]
+
+Unified Endpoint Management
+
+[]
+
+Cyber Security Courses
+
+[ethicalhackersacademy]
+
+Computer Security
+
+[PKPLUG]
+
+PKPLUG -New Research Found Same Chinese Hacking Group Involved with Multiple...
+
+October 4, 2019
+
+[PDFex]
+
+PDFex – New Hacking Method to Break the Encrypted PDF Files...
+
+October 2, 2019
+
+[Adwind RAT Malware]
+
+Adwind RAT Malware Attacks on US Petroleum Industry to Steal Sensitive...
+
+October 2, 2019
+
+[Cisco IOS XE Software Vulnerabilities Let Hackers to Execute Arbitrary
+Commands and Gain Root Access in Cisco Devices]
+
+Cisco IOS XE Software Vulnerabilities Let Hackers Gain Root Access...
+
+October 1, 2019
+
+[Beware of Hacking]
+
+Students, Beware of Hacking! How to Prevent Yourself in Online From...
+
+September 30, 2019
+
+Load more
+
+[GBHackers On Security]
+
+ABOUT US
+
+GBHackers on security is a Cyber Security platform that covers daily
+Cyber Security News, Hacking News, Technology updates and Kali Linux
+tutorials. Our mission is to keep the community up to date with
+happenings in the Cyber World.
+
+Contact us: [email protected]
+
+FOLLOW US
+
+-   Home
+-   TECH NEWS
+-   Infosec- Resources
+-   OWASP – Top 10
+-   Privacy Policy
+-   Contact Us
+-   About Us
+
+© GBHackers on Security 2016 - 2019. All Rights Reserved
+
+We use cookies to ensure that we give you the best experience on our
+website. If you continue to use this site we will assume that you are
+happy with it.OKLearn More
+
+Edit with Live CSS
+
+Save
+
+Write CSS OR LESS and hit save. CTRL + SPACE for auto-complete.

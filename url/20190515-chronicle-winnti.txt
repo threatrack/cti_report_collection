@@ -1,0 +1,8 @@
+https://www.novetta.com/wp-content/uploads/2015/04/novetta_winntianalysis.pdf
+https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/20134508/winnti-more-than-just-a-game-130410.pdf
+https://www.scmagazine.com/home/security-news/malware/pharma-firm-bayer-hit-with-winnti-malware/
+https://github.com/chokepoint/azazel
+https://blog.vsec.com.vn/apt/initial-winnti-analysis-against-vietnam-game-company.html
+https://nmap.org/
+https://github.com/TKCERT/winnti-nmap-script
+https://401trg.com/burning-umbrella/

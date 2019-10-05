@@ -1,0 +1,5 @@
+https://attack.mitre.org/techniques/T1203
+https://attack.mitre.org/techniques/T1012
+https://twitter.com/RedDrip7/status/1164855381052416002
+https://attack.mitre.org/techniques/T1060
+https://attack.mitre.org/techniques/T1105

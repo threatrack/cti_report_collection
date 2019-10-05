@@ -1,0 +1,305 @@
+Skip to content
+
+[]
+
+Please note that GitHub no longer supports old versions of Firefox.
+
+We recommend upgrading to the latest Safari, Google Chrome, or Firefox.
+
+Ignore
+
+Learn more
+
+StrangerealIntel / CyberThreatIntel
+
+Sign up
+
+-   Why GitHub?
+    Features →
+    -   Code review
+    -   Project management
+    -   Integrations
+    -   Actions
+    -   Package registry
+    -   Security
+    -   Team management
+    -   Social coding
+    -   Documentation
+    -   Code hosting
+
+    -   Customer stories →
+    -   Security →
+-   Enterprise
+-   Explore
+
+    -   Explore GitHub →
+
+    Learn & contribute
+
+    -   Topics
+    -   Collections
+    -   Trending
+    -   Learning Lab
+    -   Open source guides
+
+    Connect with others
+
+    -   Events
+    -   Community forum
+    -   GitHub Education
+-   Marketplace
+-   Pricing
+    Plans →
+    -   Compare plans
+    -   Contact Sales
+
+    -   Nonprofit →
+    -   Education →
+
+[]
+
+-   
+    []
+    In this repository All GitHub ↵
+    Jump to ↵
+
+-   No suggested jump to results
+
+-   
+    []
+    In this repository All GitHub ↵
+    Jump to ↵
+-   
+    []
+    In this repository All GitHub ↵
+    Jump to ↵
+
+Sign in Sign up
+
+-   
+    Watch 17
+-   
+    Star 116
+-   
+    Fork 23
+
+StrangerealIntel/CyberThreatIntel
+
+Code
+
+Issues 0
+
+Pull requests 0
+
+Projects 0
+
+Security
+
+Insights
+
+Code Issues 0 Pull requests 0 Projects 0 Security Pulse
+
+Permalink
+
+Dismiss
+
+Join GitHub today
+
+GitHub is home to over 40 million developers working together to host
+and review code, manage projects, and build software together.
+
+Sign up
+
+Branch: master
+
+Find file Copy path
+
+CyberThreatIntel/China/APT/Unknown/20-08-19/Malware analysis 20-08-19.md {#blob-path .breadcrumb .flex-auto .min-width-0 .text-normal .flex-md-self-center .ml-md-2 .mr-md-3 .my-2 .my-md-0}
+------------------------------------------------------------------------
+
+Find file Copy path
+
+[@StrangerealIntel] StrangerealIntel Update Malware analysis 20-08-19.md
+6f5b3c6 Aug 25, 2019
+
+1 contributor
+
+Users who have contributed to this file
+
+82 lines (78 sloc) 7.71 KB
+
+Raw Blame History
+
+Malware analysis about unknown Chinese APT campaign
+
+Table of Contents
+
+-   Malware analysis
+    -   Initial vector
+    -   ESET Remote Administrator
+    -   Hijacking DLL
+    -   Cyber kill chain
+-   Cyber Threat Intel
+-   IOC
+-   Links
+    -   Original Tweet
+    -   Links Anyrun
+    -   Documents
+    -   Ref MITRE ATTACK
+
+Malware analysis
+
+Initial vector
+
+The initial PE extract the fake document and a second PE which create a
+Run key as persistence, extract the legit ESET 5 RAT and the hijacking
+dll and shellcode to execute (by folder permissions).
+
+Here, we can see the persistence (Run key) for the dropper.
+
+[alt text]
+
+This detect if the persistence is already pushed and edit the status of
+key in reedit the key.
+
+[alt text]
+
+This use the RichEdit function for push the data on the documentused as
+leur for decoy the victims.
+
+[alt text]
+
+Once this did, this executes it and waits for the command of the
+attacker.
+
+ESET Remote Administrator
+
+The new PE file is ESET Remote Administrator, we can see the
+verification of the validation of the certificate.
+
+[alt text]
+
+This key is after used on the cryptographic function for crypt and
+encypt the differents parts of the legit tool.
+
+[alt text]
+
+This load after the xml configuration for the global parameters on the
+ESET software, this manage the service of the RAT and the status if need
+it.
+
+[alt text]
+
+All this things prove the utilisation of the legit RAT tool of ESET at
+the malicious usage by the attackers.
+
+Hijacking DLL
+
+The dll prepare the shellcode with a localAlloc (content in the dat
+file).
+
+[alt text]
+
+After push it in the memory, this protect it with a Virtualprotect.
+
+[alt text]
+
+We can see all the events on do by the hijacking DLL.
+
+[alt text]
+
+Cyber kill chain
+
+The process graph resume the cyber kill chain used by the attacker.
+
+[alt text]
+
+Cyber Threat Intel
+
+The malware is as well-know RAT, PlugX current used since 2012 on the
+Chinese APT group.The domain used as C2 is based in Canada by the cloud
+provider GoDaddy.
+
+[alt text]
+
+The information put in the domain register has a Chinese provenance.
+
+[alt text]
+
+This operation is done by the Chinese APT group(s) after the visit of
+the U.S. National Security Advisor in Mongolia about the national
+security concept.
+
+[alt text]
+
+The document are a compiled of muliple documents about the national
+security concept available on the web.
+
+[alt text]
+
+The others samples are leurs against Jaish group who have recently
+infiltrate Kashmir. Pakistan and China cooperate against the Jaish
+Association who have increased since the attack foiled in November 2018
+against the Chinese consulate. This infiltration on the Jaish group on
+the Kashmir has give all the cyberattacks who have analysed and military
+deployments observed by d-atis between Pakistan, India and China since
+the last 2 months.
+
+Indicators Of Compromise (IOC)
+
+  Indicator                                                          Description
+  ------------------------------------------------------------------ --------------------------------------------
+  c3159d4f85ceb84c4a0f7ea9208928e729a30ddda4fead7ec6257c7dd1984763   NATIONAL SECURITY CONCEPT OF MONGOLIA.exe
+  918de40e8ba7e9c1ba555aa22c8acbfdf77f9c050d5ddcd7bd0e3221195c876f   DSR & CSR of Special Branch Sind.exe
+  fb3e3d9671bb733fcecd6900def15b9a6b4f36b0a35bdc769b0a69bc5fb7e40d   Daily News (19-8-2019)(Soft Copy).lnk
+  94d55adbc7ec682feca892158af2a85a5e00efa597aa982d2353cae5c9c8e306   http_dll.dll
+  22213496e4613b226f30da3c9f3dd612c9655cdc3fd72bafc3a21d38893879fa   http_dll.dat
+  c3159d4f85ceb84c4a0f7ea9208928e729a30ddda4fead7ec6257c7dd1984763   unsecapp.exe
+  a0385659fe284a85d471da0e909bfbb102bfe184b1466912c1cf41844ce4ee4b   Daily News (19-8-2019)(Soft Copy).doc
+  9555d2ae685a1606cac0992922cecd7872dd0267c8bf8267a137c5a41a14c32c   NATIONAL SECURITY CONCEPT OF MONGOLIA.docx
+  9a8880b4495d103ae30f7b0cd77824c25e2adcbd6f616e01798de6defd1bbfef   DSR.docx
+  167.88.180.148                                                     IP C2
+  www[.]apple-net.com                                                Domain C2
+
+Links
+
+Original tweet: https://twitter.com/h4ckak/status/1163328926573137922
+
+Links Anyrun:
+
+-   NATIONAL SECURITY CONCEPT OF MONGOLIA
+-   Daily News (19-8-2019)(Soft Copy)
+-   DSR & CSR of Special Branch Sind
+
+Documents:
+
+-   The U.S. National Security Advisor pays visit to Mongolia
+-   Meet the Karachi policewoman who foiled terrorist attack on Chinese
+    consulate
+-   Policewoman who defended Chinese consulate in Karachi commended for
+    her courage
+-   5 Jaish terrorists infiltrate Kashmir, high alert sounded in valley
+
+Ref MITRE ATTACK : PlugX RAT
+
+Go
+
+-   © 2019 GitHub, Inc.
+-   Terms
+-   Privacy
+-   Security
+-   Status
+-   Help
+
+-   Contact GitHub
+-   Pricing
+-   API
+-   Training
+-   Blog
+-   About
+
+You can’t perform that action at this time.
+
+You signed in with another tab or window. Reload to refresh your
+session. You signed out in another tab or window. Reload to refresh your
+session.

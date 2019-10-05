@@ -1,0 +1,10 @@
+http://lua-users.org/wiki/MathLibraryTutorial,
+https://www.rfc-editor.org/rfc/pdfrfc/rfc8446.txt.pdf,
+https://github.com/TKCERT/winnti-nmap-script,
+https://in.reuters.com/article/bayer-cyber/bayer-says-has-detected-contained-cyber-attack-idINKCN1RG0NF,
+https://www.novetta.com/wp-content/uploads/2015/04/novetta_winntianalysis.pdf,
+https://401trg.com/burning-umbrella/,
+https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/20134508/winnti-more-than-just-a-game-130410.pdf,
+https://medium.com/chronicle-blog/winnti-more-than-just-windows-and-gates-e4f03436031a,
+https://t.co/PFvRXR6p9g
+https://t.co/UlogKVA35m

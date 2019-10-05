@@ -1,0 +1,790 @@
+-   
+    Software
+-   
+    Vulnerability  
+     Information
+    -   
+
+        Vulnerability Information
+        =========================
+
+    -   BACK
+    -   Vulnerability Reports
+    -   Microsoft Advisories
+
+-   
+    Reputation  
+     Center
+    -   
+
+        Reputation Center
+        =================
+
+    -   BACK
+    -   IP & Domain Reputation
+    -   Talos File Reputation
+    -   Reputation Support
+    -   AMP Threat Naming Conventions
+    -   IP Blacklist Download
+    -   AWBO Exercises
+    -   Categories
+
+-   
+    Library
+-   
+    Support  
+     Communities
+    -   
+
+        Support Communities
+        ===================
+
+    -   BACK
+    -   Snort Community
+    -   ClamAV Community
+    -   Reputation Center Support
+    -   SpamCop
+
+-   
+    Careers
+-   
+    Blog
+-   
+    About
+
+Wednesday, March 13, 2019 {.date-header}
+-------------------------
+
+GlitchPOS: New PoS malware for sale
+
+[]
+
+  
+   
+ Warren Mercer and Paul Rascagneres authored this post with
+contributions from Ben Baker.  
+   
+
+Executive summary {#h.o88vlpb5bz5u}
+-----------------
+
+  
+ Point-of-sale malware is popular among attackers, as it usually leads
+to them obtaining credit card numbers and immediately use that
+information for financial gain. This type of malware is generally
+deployed on retailers' websites and retail point-of-sale locations with
+the goal of tracking customers' payment information. If they
+successfully obtain credit card details, they can use either the
+proceeds from the sale of that information or use the credit card data
+directly to obtain additional exploits and resources for other malware.
+Point-of-sale terminals are often forgotten about in terms of
+segregation and can represent a soft target for attackers. Cisco Talos
+recently discovered a new PoS malware that the attackers are selling on
+a crimeware forum. Our researchers also discovered the associated
+payloads with the malware, its infrastructure and control panel. We
+assess with high confidence that this is not the first malware developed
+by this actor. A few years ago, they were also pushing the DiamondFox
+L!NK botnet. Known as "GlitchPOS," this malware is also being
+distributed on alternative websites at a higher price than the
+original.  
+   
+ The actor behind this malware created a video, which we embedded below,
+showing how easy it is to use it. This is a case where the average user
+could purchase all the tools necessary to set up their own credit
+card-skimming botnet.  
+   
+   
+   
+
+GlitchPOS {#h.3x4g00b9czo4}
+---------
+
+  
+
+Packer overview
+
+  
+ A packer developed in VisualBasic protects this malware. It's, on the
+surface, a fake game. The user interface of the main form (which is not
+displayed at the execution) contains various pictures of cats:  
+
+[]
+
+  
+ The purpose of the packer is to decode a library that's the real
+payload encoded with the UPX packer. Once decoded, we gain access to
+GlitchPOS, a memory grabber developed in VisualBasic.  
+   
+
+Payload analysis
+
+  
+ The payload is small and contains only a few functions. It can connect
+to a command and control (C2) server to:  
+   
+
+-   Register the infected systems
+
+-   Receive tasks (command execution in memory or on disk)
+-   Exfiltrate credit card numbers from the memory of the infected
+    system
+-   Update the exclusion list of scanned processes
+-   Update the "encryption" key
+-   Update the User Agent
+-   Clean itself
+
+  
+   
+
+Tasks mechanism
+
+  
+ The malware receives tasks from the C2 server. Here is the task pane:  
+
+[]
+
+  
+ The commands are executed via a shellcode directly sent by the C2
+server. Here is an example in Wireshark:  
+
+[]
+
+  
+ The shellcode is encoded with base64. In our screenshot, the shellcode
+is a RunPE:  
+
+[]
+
+"Encryption" key
+
+  
+ The "encryption" key of the communication can be updated in the panel.
+The communication is not encrypted but simply XORed:  
+
+[]
+
+Credit card grabber
+
+  
+ The main purpose of this malware is to steal credit card numbers
+(Track1 and Track2) from the memory of the infected system. GlitchPOS
+uses a regular expression to perform this task:  
+
+[]
+
+  
+
+-   (%B)\d{0,19}\^[\w\s\/]{2,26}\^\d{7}\w*\?  
+     The purpose of this regular expression is to detect Track 1 format
+    B  
+     Here is an example of Track 1:  
+     Cardholder : M. TALOS  
+     Card number*: 1234 5678 9012 3445  
+     Expiration: 01/99  
+     %B1234567890123445^TALOS/M.
+
+  
+
+-   ;\d{13,19}=\d{7}\w*\?  
+     The purpose of this regular expression is to detect Track 2  
+     Here is an example of Track 2 based on the previous example:  
+     ;1234567890123445=99011200XXXX00000000?*
+
+  
+   
+ If a match is identified in memory, the result is sent to the C2
+server. The malware maintains an exclusion list provided by the server.
+Here is the default list: chrome, firefox, iexplore, svchost, smss,
+csrss, wininit, steam, devenv, thunderbird, skype, pidgin, services,
+dwn, dllhost, jusched, jucheck, lsass, winlogon, alg, wscntfy, taskmgr,
+taskhost, spoolsv, qml, akw.  
+   
+
+Panel
+
+  
+ Here are some additional screenshots of the GlitchPOS panel. These
+screenshots were provided by the seller to promote the malware.  
+   
+ The "Dashboard:"  
+
+[]
+
+  
+ The "Clients" list:  
+
+[]
+
+  
+ The "Cards Date:"  
+
+[]
+
+  
+
+Linked with DiamondFox L!NK botnet {#h.5gbso7jx0pp}
+----------------------------------
+
+  
+
+Author: Edbitss
+
+  
+ The first mention of GlitchPOS was on Feb. 2, 2019 on a malware
+forum:  
+
+[]
+
+  
+ Edbitss is allegedly the developer of the DiamondFox L!NK botnet in
+2015/2016 and 2017 as explained in a report by CheckPoint.   
+
+[]
+
+[]
+
+  
+ The developer created this video to promote GlitchPOS, as well. In this
+video, you can see the author set up the malware and capture the data
+from a swiped card. We apologize for the quality, shakiness, music, and
+generally anything else with this video, again, it's not ours.  
+   
+   
+ The built malware is sold for $250, the builder $600 and finally, the
+gate address change is charged at $80.  
+   
+
+Panel similarities
+
+  
+ In addition to the malware language (VisualBasic), we identified
+similarities between the DiamondFox panel and the GlitchPOS panel. In
+this section, the DiamondPOS screenshots come from the CheckPoint report
+mentioned previously.  
+   
+ Both dashboards' world map are similar (image, code and color):  
+
+[]
+
+  
+ The author used the same terminology such ask "Clients" or "Tasks" on
+the left menu:  
+
+[]
+
+  
+ The icons are the same too in both panels, as well as the infected
+machine list (starting with the HWID). The PHP file naming convention is
+similar to DiamondFox, too.  
+   
+ The author clearly reused code from DiamondFox panel on the GlitchPOS
+panel.  
+   
+
+Comparison of GlitchPOS and the DiamondFox POS module
+
+  
+ In 2017, the DiamondFox malware included a POS plugin. We decided to
+check if this module was the same as GlitchPOS, but it is not. For
+DiamondFox, the author decided to use the leaked code of BlackPOS to
+build the credit card grabber. On GlitchPOS, the author developed its
+own code to perform this task and did not use the previously leaked
+code.  
+   
+
+Bad guys are everywhere {#h.azndvmehl885}
+-----------------------
+
+  
+ It's interesting to see that someone else attempted to push the same
+malware 25 days after edbitss on an alternative forum:  
+
+[]
+
+  
+ This attacker even tried to cash in by increasing some prices.   
+
+[]
+
+  
+ Some members even attempted to call out the unscrupulous behaviour:  
+
+[]
+
+  
+ With the different information we have, we think that Chameleon101 has
+taken the previous malware created by Edbitss to sell it on an
+alternative forum and with a higher price.  
+
+[]
+
+  
+
+Conclusion {#h.nlf8wgwgkc6f}
+----------
+
+  
+ This investigation shows us that POS malware is still attractive and
+some people are still working on the development of this family of
+malware. We can see that edbitss developed malware years even after
+being publicly mentioned by cybersecurity companies. He left DiamondFox
+to switch on a new project targeting point-of-sale. The sale opened a
+few weeks ago, so we don't know yet how many people bought it or use it.
+We also see that bad guys steal the work of each other and try to sell
+malware developed by other developers at a higher price. The final word
+will be a quote from Edbitss on a DiamondFox screenshot published by
+himself "In the future, even bank robbers will be replaced."  
+
+[]
+
+  
+
+Coverage {#h.6i86xkbp2smh}
+--------
+
+  
+ Additional ways our customers can detect and block this threat are
+listed below.  
+
+[]
+
+  
+ Advanced Malware Protection (AMP) is ideally suited to prevent the
+execution of the malware used by these threat actors. Below is a
+screenshot showing how AMP can protect customers from this threat. Try
+AMP for free here.   
+
+[]
+
+  
+ Cisco Cloud Web Security (CWS) orWeb Security Appliance (WSA) web
+scanning prevents access to malicious websites and detects malware used
+in these attacks.  
+   
+ Email Security can block malicious emails sent by threat actors as part
+of their campaign.  
+   
+ Network Security appliances such asNext-Generation Firewall
+(NGFW),Next-Generation Intrusion Prevention System (NGIPS), andMeraki MX
+can detect malicious activity associated with this threat.  
+   
+ AMP Threat Grid helps identify malicious binaries and build protection
+into all Cisco Security products.  
+   
+ Umbrella, our secure internet gateway (SIG), blocks users from
+connecting to malicious domains, IPs, and URLs, whether users are on or
+off the corporate network.  
+   
+ Open Source SNORTⓇ Subscriber Rule Set customers can stay up to date by
+downloading the latest rule pack available for purchase on Snort.org.  
+   
+
+Indicators of Compromise (IOCs) {#h.57ejqrrdgqmm}
+-------------------------------
+
+  
+ The following IOCs are associated to this campaign:  
+   
+
+GlitchPOS samples
+
+ed043ff67cc28e67ba36566c340090a19e5bf87c6092d418ff0fd3759fb661ab
+(SHA256)  
+ abfadb6686459f69a92ede367a2713fc2a1289ebe0c8596964682e4334cee553
+(SHA256)  
+   
+
+C2 server
+
+coupondemo[.]dynamicinnovation[.]net  
+   
+
+URLs
+
+hxxp://coupondemo[.]dynamicinnovation[.]net/cgl-bin/gate.php  
+ hxxp://coupondemo[.]dynamicinnovation[.]net/admin/gate.php  
+ hxxp://coupondemo[.]dynamicinnovation[.]net/glitch/gate.php  
+   
+
+Posted by Paul Rascagneres at 10:52 AM []
+
+Labels: botnet, crimeware, DiamondFox, edbitss, GlitchPOS, Malware,
+Malware Analysis, POS
+
+Share This Post
+
+[Facebook share] [Twitter share] [Reddit share] [Email This]
+
+No comments:
+
+Post a Comment
+
+Newer Post Older Post Home
+
+Subscribe to: Post Comments (Atom)
+
+[]
+
+Subscribe To Our Feed {.title}
+---------------------
+
+[] Posts
+
+[] Comments
+
+[] Subscribe via Email
+
+[]
+
+Blog Archive
+------------
+
+-   ▼  2019 (202)
+    -   ►  October (1)
+
+    -   ►  September (28)
+
+    -   ►  August (21)
+
+    -   ►  July (23)
+
+    -   ►  June (16)
+
+    -   ►  May (25)
+
+    -   ►  April (25)
+
+    -   ▼  March (24)
+        -   Registration for the 2019 Talos Threat Research Su...
+        -   Threat Roundup for March 22 to March 29
+        -   Cyber Security Week in Review (March 28)
+        -   Vulnerability Spotlight: Multiple vulnerabilities ...
+        -   Cisco Talos adds new Content Category
+        -   Threat Roundup for March 15 to March 22
+        -   Cyber Security Week in Review (March 22)
+        -   Ransomware or Wiper? LockerGoga Straddles the Line...
+        -   Beers with Talos Ep. #49: POS Malware, RSA Highlig...
+        -   Vulnerability Spotlight: Multiple Vulnerabilities ...
+        -   IPv6 unmasking via UPnP
+        -   Threat Roundup for March 8 to March 15
+        -   Cyber Security Week in Review (March 15)
+        -   GlitchPOS: New PoS malware for sale
+        -   Microsoft Patch Tuesday — March 2019: Vulnerabilit...
+        -   Vulnerability Spotlight: Privilege escalation bug ...
+        -   The sights and sounds of Cisco Talos at RSA 2019
+        -   Threat Roundup for Mar. 1 to Mar. 8
+        -   Cyber Security Week in Review (March 8)
+        -   Vulnerability Spotlight: Multiple local vulnerabil...
+        -   Cisco, Talos tout importance of IoT security at RS...
+        -   Beers with Talos Ep. #48: Loaders or trojans, plus...
+        -   Threat Roundup for Feb. 22 to March 1
+        -   Cyber Security Week in Review (March 1)
+
+    -   ►  February (19)
+
+    -   ►  January (20)
+
+-   ►  2018 (198)
+    -   ►  December (16)
+
+    -   ►  November (15)
+
+    -   ►  October (26)
+
+    -   ►  September (16)
+
+    -   ►  August (12)
+
+    -   ►  July (20)
+
+    -   ►  June (15)
+
+    -   ►  May (15)
+
+    -   ►  April (21)
+
+    -   ►  March (10)
+
+    -   ►  February (14)
+
+    -   ►  January (18)
+
+-   ►  2017 (171)
+    -   ►  December (9)
+
+    -   ►  November (11)
+
+    -   ►  October (15)
+
+    -   ►  September (17)
+
+    -   ►  August (16)
+
+    -   ►  July (14)
+
+    -   ►  June (14)
+
+    -   ►  May (19)
+
+    -   ►  April (17)
+
+    -   ►  March (17)
+
+    -   ►  February (12)
+
+    -   ►  January (10)
+
+-   ►  2016 (98)
+    -   ►  December (9)
+
+    -   ►  November (8)
+
+    -   ►  October (11)
+
+    -   ►  September (8)
+
+    -   ►  August (8)
+
+    -   ►  July (9)
+
+    -   ►  June (10)
+
+    -   ►  May (6)
+
+    -   ►  April (12)
+
+    -   ►  March (7)
+
+    -   ►  February (6)
+
+    -   ►  January (4)
+
+-   ►  2015 (62)
+    -   ►  December (3)
+
+    -   ►  November (3)
+
+    -   ►  October (6)
+
+    -   ►  September (6)
+
+    -   ►  August (5)
+
+    -   ►  July (4)
+
+    -   ►  June (6)
+
+    -   ►  May (3)
+
+    -   ►  April (7)
+
+    -   ►  March (8)
+
+    -   ►  February (7)
+
+    -   ►  January (4)
+
+-   ►  2014 (67)
+    -   ►  December (4)
+
+    -   ►  November (5)
+
+    -   ►  October (6)
+
+    -   ►  September (10)
+
+    -   ►  August (4)
+
+    -   ►  July (3)
+
+    -   ►  June (6)
+
+    -   ►  May (4)
+
+    -   ►  April (10)
+
+    -   ►  March (4)
+
+    -   ►  February (3)
+
+    -   ►  January (8)
+
+-   ►  2013 (30)
+    -   ►  December (3)
+
+    -   ►  November (2)
+
+    -   ►  October (5)
+
+    -   ►  September (2)
+
+    -   ►  August (2)
+
+    -   ►  July (3)
+
+    -   ►  June (1)
+
+    -   ►  May (2)
+
+    -   ►  April (1)
+
+    -   ►  March (1)
+
+    -   ►  February (3)
+
+    -   ►  January (5)
+
+-   ►  2012 (53)
+    -   ►  December (3)
+
+    -   ►  November (1)
+
+    -   ►  October (2)
+
+    -   ►  September (6)
+
+    -   ►  August (7)
+
+    -   ►  July (7)
+
+    -   ►  June (4)
+
+    -   ►  May (6)
+
+    -   ►  April (5)
+
+    -   ►  March (3)
+
+    -   ►  February (7)
+
+    -   ►  January (2)
+
+-   ►  2011 (23)
+    -   ►  December (1)
+
+    -   ►  November (4)
+
+    -   ►  October (3)
+
+    -   ►  September (1)
+
+    -   ►  August (2)
+
+    -   ►  July (3)
+
+    -   ►  June (1)
+
+    -   ►  May (2)
+
+    -   ►  April (1)
+
+    -   ►  March (2)
+
+    -   ►  February (1)
+
+    -   ►  January (2)
+
+-   ►  2010 (93)
+    -   ►  December (4)
+
+    -   ►  November (2)
+
+    -   ►  October (4)
+
+    -   ►  September (7)
+
+    -   ►  August (9)
+
+    -   ►  July (11)
+
+    -   ►  June (12)
+
+    -   ►  May (5)
+
+    -   ►  April (12)
+
+    -   ►  March (10)
+
+    -   ►  February (7)
+
+    -   ►  January (10)
+
+-   ►  2009 (146)
+    -   ►  December (14)
+
+    -   ►  November (10)
+
+    -   ►  October (12)
+
+    -   ►  September (13)
+
+    -   ►  August (9)
+
+    -   ►  July (19)
+
+    -   ►  June (11)
+
+    -   ►  May (13)
+
+    -   ►  April (10)
+
+    -   ►  March (11)
+
+    -   ►  February (13)
+
+    -   ►  January (11)
+
+-   ►  2008 (37)
+    -   ►  December (12)
+
+    -   ►  November (6)
+
+    -   ►  October (7)
+
+    -   ►  September (6)
+
+    -   ►  August (3)
+
+    -   ►  May (3)
+
+[]
+
+Recommended Blogs {.title}
+-----------------
+
+-   Cisco Blog
+    Weakness at your boundaries (Episode 4 Cisco Manufacturing Leaders)
+-   ClamAV® blog
+    ClamAV 0.102.0 has been released
+-   Snort Blog
+    Snort rule update for Oct. 1, 2019
+
+[]
+
+-   -   -   Software
+        -   Reputation Center
+        -   Vulnerability Information
+        -   Microsoft Advisory Snort Rules
+    -   -   IP Blacklist Download
+        -   AMP Naming Conventions
+        -   Talos File Reputation
+        -   AWBO Exercises
+
+-   -   -   Library
+        -   Support Communities
+        -   About
+        -   Careers
+    -   -   Blog
+        -   ThreatSource Newsletter
+        -   Beers with Talos Podcast
+
+Connect With Us
+
+-   [Follow us on Twitter]
+-   [Watch our informational videos on YouTube]
+-   [Connect with us on LinkedIn]
+
+[Cisco]
+
+© Cisco Systems, Inc. and/or its affiliates. All rights reserved. View
+our Privacy Policy here.

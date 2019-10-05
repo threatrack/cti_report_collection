@@ -1,0 +1,13 @@
+https://medium.com/@Sebdraven/malicious-document-targets-vietnamese-officials-acb3b9d8b80a
+https://medium.com/@Sebdraven/goblin-panda-changes-the-dropper-and-reused-the-old-infrastructure-a35915f3e37a
+https://viettimes.vn/nhom-hacker-trung-quoc-dung-sau-cuoc-tan-cong-co-chu-dich-vao-da-nang-300128.html
+https://www.crowdstrike.com/blog/meet-crowdstrikes-adversary-of-the-month-for-august-goblin-panda/
+https://media.kaspersky.com/en/icefog-apt-threat.pdf
+https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/rpt-malware-supply-chain.pdf
+https://medium.com/@Sebdraven/apt-sidewinder-changes-theirs-ttps-to-install-their-backdoor-f92604a2739
+https://medium.com/@Sebdraven/apt-sidewinder-tricks-powershell-anti-forensics-and-execution-side-loading-5bc1a7e7c84c
+https://brica.de/alerts/alert/public/1221860/apt-sidewinder-tricks-powershell-anti-forensics-and-execution-side-loading/;
+https://www.fireeye.com/blog/threat-research/2018/03/suspected-chinese-espionage-group-targeting-maritime-and-engineering-industries.html
+https://ui.threatstream.com/tip/262672/
+https://s.tencent.com/research/report/479.html;
+https://medium.com/@Sebdraven/gobelin-panda-against-the-bears-1f462d00e3a4

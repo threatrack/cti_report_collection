@@ -1,0 +1,8 @@
+System.IO
+ntservicepack.microsoft.com
+tvs2.trafficmanager.live
+tbs2.microsoftonline.services
+windowsupdate.microsoft.com
+gogle.co
+update.microsoft.com
+download.microsoft.com

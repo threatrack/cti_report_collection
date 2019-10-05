@@ -1,0 +1,274 @@
+Skip to content
+
+Menu
+
+-   RESEARCH
+-   SERVICES
+-   ABOUT US
+
+Posted on March 28, 2019April 9, 2019 by ThreatRecon Team
+
+Threat Actor Group using UAC Bypass Module to run BAT File {.entry-title}
+==========================================================
+
+Overview
+
+Our Threat Recon team continues to collect and analyze activity-related
+data from multiple APT groups. We analyzed malware used in hacking
+activities targeting organizations located in South Korea, the US, and
+East Asia earlier this year. They use a CAB file that compresses the
+malware, separate configuration files and a specific User Access Control
+(UAC) bypass module. This article briefly describes the infection method
+of the malware that they were using at the time and the UAC bypass
+module used.
+
+Infection Method
+
+The attackers used quite a few steps to generate their malware, and the
+initial infection comes from malicious documents attached to spear
+phishing emails. When a user executes a file attached to the email, a
+batch file for downloading a base64-encoded CAB file from a remote site
+is downloaded through a script included in the document.
+
+[]
+
+Infection method using CAB file
+
+The following is the sequence of the infection method that they use.
+
+1.  Download base64 encoded data 1.txt via script embedded in malicious
+    documents
+2.  Decode “1.txt” to create “1.bat” and run “1.bat”
+3.  “1.bat” downloads 2.txt (32-bit) or 3.txt (64-bit) according to the
+    Windows platform environment (32bit / 64bit)
+4.  Decode “2.txt” or “3.txt” to create “setup.cab”
+
+Each file looks like an SSL certificate using the string “—– BEGIN
+CERTIFICATE —–“, but this is actually a base64 encoded cab and bat file.
+
+[]
+
+Left: The 1.bat file used to decompress the CAB file and run the main
+payload  
+Right: The 2.txt CAB file for 32-bit Windows systems
+
+The CAB file is created according to the Windows platform environment
+through the following files:
+
+1.  BAT file for main payload file execution
+2.  INI file containing attacker server address
+3.  DLL file for UAC bypass
+4.  Main EXE payload
+
+Why does UAC Run?
+
+This malware’s first batch file (1.bat) executes a second batch file
+which installs the main payload. A UAC pop-up will normally be shown to
+the user and this is caused by the code in the BAT file that installs
+the main payload. It copies the INI configuration file and the main
+payload EXE into the System32 folder.
+
+In general, when files are copied to the System32 folder, a UAC pop-up
+will run for security reasons. This folder should not be modified in
+normal situations because it contains important files used to operate
+the system.
+
+[]
+
+Why UAC runs
+
+BAT File Details
+
+The first batch file (1.bat) downloads the file from a remote server and
+uses the “net session> nul” command to verify the current user rights
+and perform the following actions:
+
+-   If admin : Delete UAC bypass DLL, execute main payload and BAT file
+-   If not admin : Execute the following command using rundll32.exe  
+    Command : “[UAC Bypass Module], EntryPoint [Main Payload execution
+    BAT file]”.
+
+[]
+
+Batch Code
+
+The batch file used to install the main payload copies the main payload
+executable and INI configuration files into the System32 folder, and
+then runs the main payload which was moved to the System32 folder.
+
+[]
+
+BAT file running Main Payload Code
+
+About UAC
+
+User Account Control (UAC) is a Windows operating system security
+control function based on the concept of access tokens. It displays a
+screen informing the user when a program requires administrator level
+privileges, acting as a warning prompt for user consent of unknown
+privileged activity.
+
+[]
+
+UAC popped up on screen
+
+How it works
+
+When a user logs into Windows, each user is given an access token. This
+access token has information on the security identifier (SID), the
+Windows operating system privilege, and the access level granted to the
+user, and the Windows system uses the access token to verify the user’s
+privilege. The access tokens generated at login are:
+
+-   standard user : Generates a standard user access token
+-   administrator : Generate standard user access token, administrator
+    access token
+
+The system allocates the following integrity levels according to the
+token privileges of the logged-in user. System performs access control
+by comparing the access rights of the security descriptor of the object
+with the user’s SID.
+
+[]
+
+Processes that run at Medium Level
+
+Issued tokens are used for events such as process creation. The
+important thing here is that when a process is created after issuing a
+token, the administrator also executes the new process using the
+standard user access token.
+
+Generally, explorer.exe which is the parent process of most user
+processes operates at medium integrity level, so most processes run at
+the same level to explorer.exe. But when a process requires a high
+integrity level, processes can obtain an elevated privilege if the user
+approves it.
+
+This basically means that a process typically uses a standard user
+access token and uses the UAC to get the user’s authorization if an
+administrator access token is needed.
+
+The following such actions are examples of events which trigger UAC:
+
+  -------------------------------------------------------------------------------------------------------------------------------------
+  Running an Application as an Administrator  
+  Changes to system-wide settings  
+  Changes to files in folders that standard users don’t have permissions for (such as %SystemRoot% or %ProgramFiles% in most cases)  
+  Changes to an access control list (ACL), commonly referred to as file or folder permissions  
+  Installing device drivers  
+  Installing ActiveX controls  
+  Changing settings for Windows Firewall  
+  Changing UAC settings  
+  Configuring Windows Update  
+  Adding or removing user accounts  
+  Changing a user’s account type  
+  Turning on Guest account (Windows 7 and 8.1)  
+  Turning on file sharing or media streaming  
+  Configuring Parental Controls  
+  -------------------------------------------------------------------------------------------------------------------------------------
+
+UAC Bypass Module
+
+However, the attackers in this case use a particular DLL module for
+bypassing UAC. It seems to have been created by referring to the source
+code of a file named UAC-TokenMagic.ps1 which is open source on GitHub.
+
+First, it creates a wusa.exe process (an auto-elevatable process) that
+runs at a High Integrity Level. This process is the Windows Update
+Standalone installer, and it has an auto-elevate attribute so it does
+not pop up UAC if the system UAC popup setting is “Notify me only when
+programs / apps try to make changes to my computer”.
+
+After creating wusa.exe, it copies that token and run the cmd.exe
+process via CreateProcessWithLogonW using the copied token. Finally,
+cmd.exe runs at a High Integrity Level and executes “/c EntryPoint”
+%Temp%\[bat file install main payload]” and this batch file inherits the
+elevated privilege of cmd.exe.
+
+[]
+
+Part of the UAC Bypass module code
+
+If the attacker is using the UAC bypass module, the batch file that runs
+the main payload will work through the cmd.exe generated by copying the
+access token from wusa.exe. In conclusion, the UAC will not pop up even
+if the code that moves the file into the System32 folder in batch file
+is executed.
+
+Summary
+
+The attackers compress the UAC Bypass Module with other components and
+distributes them in a CAB file format. We have seen this threat actor
+group mainly use decoy documents written in Russian, English and Korean
+and used the BABYFACE, SYSCON malware variants as the main payload. Such
+activity may be related in part to the activities of the previously
+known threat actor groups. Our Threat Recon team will continue to
+monitor these Cyber Threat.
+
+Indicators of Compromise
+
+Hashes(SHA-256)
+
+2b94c694a6279eaa08ce4a17fb848c8431c14beb9f811f1b2732b778c1703fbf  
+1df5cd85693dc2ce2ba5f7f251785b00b542d93f8e067539cadb550aa673759d  
+afdf1960a5c372b815475807ff1ad1d16874d2802ce4ee71da484d61220f7a65  
+4b825d310a305728b7a57d9eb6731db87e8da9cef4bc7917fca7f4503bcb3272  
+dd9bb177732197539bdb9167fb3dd784df10d6746a9b77255d62dfaccb092640  
+036567c36aaaabefcd222456b536bffee1ce4ccf279593048d62c9ef42b57472  
+4b825d310a305728b7a57d9eb6731db87e8da9cef4bc7917fca7f4503bcb3272   
+5c9773c3b4cf58839a476d469c6a705d66df95a2a8cc6ad72a3d914beff2eff5
+
+IP Addresses
+
+103[.]249[.]31[.]159  
+88[.]99[.]13[.]69  
+154[.]16[.]201[.]104
+
+References
+
+PowerShell-Suite/UAC-TokenMagic.ps1  
+Reading Your Way Around UAC (Part 1)  
+User Account Control  
+
+Share this:
+
+-   Twitter
+-   LinkedIn
+-   Facebook
+-   
+
+CategoriesUncategorized
+
+Tagsmalware, uac
+
+Post navigation {.screen-reader-text}
+---------------
+
+Previous PostPrevious
+
+SectorM04 Targeting Singapore – An Analysis
+
+Next PostNext SectorB06 using Mongolian language in lure document
+
+Address {.widget-title}
+-------
+
+International Headquarters  
+ NSHC  
+ 8 Shenton Way  
+ #04-01 AXA Tower  
+ Singapore 068811​
+
+Search {.widget-title}
+------
+
+Search for:
+
+Search
+
+-   Twitter
+-   Email
+-   GitHub
+-   Facebook
+
+2019 NSHC Pte Ltd. All rights reserved.

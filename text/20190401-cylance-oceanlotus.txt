@@ -1,0 +1,130 @@
+We use cookies to provide you a relevant user experience, analyze our
+traffic, and provide social media features. Read More Got it
+
+Menu
+
+-   Research & Intel
+-   Videos
+-   Webcasts
+-   Podcasts
+-   News
+-   Resources
+-   |
+-   Cylance.com
+
+Report: OceanLotus APT Group Leveraging Steganography {#page_title}
+=====================================================
+
+ThreatVector > Research & Intelligence
+
+Share It:
+
+ by Cylance Research and Intelligence Team | April 02, 2019
+
+During an incident response investigation in the final quarter of 2017,
+BlackBerry Cylance incident responders and threat researchers uncovered
+several bespoke backdoors deployed by the OceanLotus APT Group (a.k.a.
+APT32, Cobalt Kitty), as well as evidence of the threat actor using
+obfuscated CobaltStrike Beacon payloads to perform command and control
+(C2).
+
+[]While continuing to monitor activity of the OceanLotus APT Group, our
+researchers uncovered a novel payload loader that utilizes steganography
+to read an encrypted payload concealed within a .png image file.
+
+The steganography algorithm appears to be bespoke and utilizes a least
+significant bit approach to minimize visual differences when compared
+with the original image to prevent analysis by discovery tools.
+
+Once decoded, decrypted, and executed, an obfuscated loader will load
+one of the APT32 backdoors.
+
+Thus far, BlackBerry Cylance has observed two backdoors being used in
+combination with the steganography loader – a version of Denes backdoor
+(bearing similarities to the one described by ESET), and an updated
+version of Remy backdoor.
+
+However, this can be easily modified by the threat actor to deliver
+other malicious payloads. The complexity of the shellcode and loaders
+shows the group continues to invest heavily in development of bespoke
+tooling.
+
+This new white paper describes the steganography algorithm used in two
+distinct loader variants and looks at the launcher of the backdoor that
+was encoded in one of the .png cover images.
+
+DOWNLOAD THE FULL REPORT HERE {style="text-align: center;"}
+-----------------------------
+
+Share It:
+
+Research & Intelligence
+
+About The Author
+
+[] Cylance Research and Intelligence Team The Cylance Research and
+Intelligence team explores the boundaries of the information security
+field identifying emerging threats and remaining at the fore front of
+attacks. With insights gained from these endeavors, Cylance stays ahead
+of the threats. Author's Bio
+
+Get the ThreatVector Newsletter
+
+SUGGESTED READING
+
+Adversarial ML: How AI is Enabling Cyber Resilience
+
+Greg Fitzgerald: Why SMBs Deserve the Same Security Love as Large
+Enterprises
+
+Book Review: AI Superpowers: China, Silicon Valley, and the New World
+Order
+
+Book Review: Understanding Privacy
+
+PcShare Backdoor Attacks Targeting Windows Users with FakeNarrator
+Malware
+
+[BlackBerry Cylance]
+
+-   400 Spectrum Center Dr., Suite #900  
+     Irvine, CA 92618
+-   1-844-CYLANCE
+-   1-844-295-2623
+
+©2019 Cylance Inc. All Rights Reserved.
+
+-   
+-   
+-   
+-   
+-   
+
+-   Blog
+-   Home
+-   News Bites
+-   Videos
+-   Resources
+-   Cylance News
+-   Webcasts
+-   Podcasts
+-   Contributors
+
+-   Company
+-   Who We Are
+-   Resource Center
+-   Cylance News
+-   Press Releases
+-   Privacy Notice
+-   Terms of Service
+
+-   Products
+-   CylancePROTECT
+-   CylanceOPTICS
+-   Cylance ThreatZERO
+-   Cylance Smart Antivirus
+
+-   Services
+-   Consulting Overview
+-   Industry Overview
+

@@ -1,0 +1,4 @@
+https://paper.seebug.org/papers/APT/APT_CyberCriminal_Campagin/2012/NormanShark-MaudiOperation.pdf
+https://threatrecon.nshc.net/2019/04/30/sectorb06-using-mongolian-language-in-lure-document/
+https://www.anomali.com/blog/analyzing-digital-quartermasters-in-asia-do-chinese-and-indian-apts-have-a-shared-supply-chain
+https://speakerdeck.com/ashley920/into-the-fog-the-return-of-icefog-apt

@@ -1,0 +1,6 @@
+Wscript.Shell
+WScript.Shell
+Bit.ly
+VB.NET
+www.cyberthreatalliance.org
+bit.ly

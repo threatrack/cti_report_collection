@@ -1,0 +1,284 @@
+[Wayback Machine]
+
+success
+
+fail
+
+Mar
+
+APR
+
+Jun
+
+[Previous capture]
+
+28
+
+[Next capture]
+
+2018
+
+2019
+
+2020
+
+32 captures
+
+11 Mar 2019 - 18 Jul 2019
+
+About this capture
+
+COLLECTED BY
+
+Organization: Internet Archive
+
+The Internet Archive discovers and captures web pages through many
+different web crawls. At any given time several distinct crawls are
+running, some for months, and some every day or longer. View the web
+archive through the Wayback Machine.
+
+Collection: Live Web Proxy Crawls
+
+Content crawled via the Wayback Machine Live Proxy mostly by the Save
+Page Now feature on web.archive.org.   
+  
+ Liveweb proxy is a component of Internet Archive’s wayback machine
+project. The liveweb proxy captures the content of a web page in real
+time, archives it into a ARC or WARC file and returns the ARC/WARC
+record back to the wayback machine to process. The recorded ARC/WARC
+file becomes part of the wayback machine in due course of time.   
+  
+
+TIMESTAMPS
+
+[loading]
+
+[Company logo]
+
+[Company logo]
+
+[]
+
+-   Products
+    -   Context TM  
+        Cyber Threat Intelligence
+    -   Risk TM  
+        Digital Risk Monitoring
+-   Services
+-   Company
+    -   About Us
+    -   Company Leadership
+    -   Mission Statement
+-   News
+-   Blog
+
++ (800) 781-5698
+
+Contact Us
+
+post
+
+<< ALL POSTS
+
+Supply Chain – The Major Target of Cyberespionage Groups
+
+Mar 08, 2019
+
+Cyberespionage
+
+The Iranian-linked group known as IRIDIUM has hit more than 200
+government agencies, oil and gas companies and technology companies
+including Citrix Systems, Inc.
+
+Resecurity has shared the acquired intelligence with law enforcement and
+partners for mitigation.
+
+Friday, December 28, 2018 at 10:25 AM – Resecurity reached out to Citrix
+and shared an early warning notification about a targeted attack and
+data breach. Based on the timing and further dynamics, the attack was
+planned and organized specifically during Christmas period.
+
+The incident has been identified as a part of a sophisticated
+cyberespionage campaign supported by nation-state due to strong
+targeting against government, military-industrial complex, energy
+companies, financial institutions and large enterprises involved in
+critical areas of economy.
+
+Based our recent analysis, the threat actors leveraged a combination of
+tools, techniques and procedures (TTPs) allowing them to conduct a
+targeted network intrusion to access at least 6 terabytes of sensitive
+data stored in the Citrix enterprise network, including e-mail
+correspondence, files in network shares and other services used for
+project management and procurement.
+
+The arsenal of IRIDIUM includes proprietary techniques allowing to
+bypass 2FA authorization for critical applications and services for
+further unauthorized access to VPN (Virtual Private Networks) channels
+and SSO (Single Sign-On).
+
+We forecast a continued growth of targeted cyber-attacks on supply
+chains of government and large enterprises organized by state-actors and
+sophisticated cyberespionage groups.
+
+Updated (4:49 PM Monday, March 11, 2019 PDT)
+
+Below are the indicators of IRIDIUM activity available for disclosure
+(for today). We will update the list with new information once it
+becomes available.
+
+We would like to thank the following organizations for their timely
+assistance and collaboration regarding the malicious network activity
+during the Winter 2018 period: DHL, NBC (National Bank of Canada),
+Skrill, PayPal and Canadian Centre for Cyber Security.
+
+Source IPs:
+
+178.131.21[].19[] (Iran)  
+5.115.23[].11[] (Iran)  
+5.52.14[].23[] (Iran)
+
+Used proxies:
+
+23.237.104.90 – Canada (VPN)  
+194.59.251.12 – USA (VPN)  
+185.244.214.198 – Poland  
+138.201.142.113 – Germany  
+92.222.252.193 – France (Nov 29, 2018)  
+51.15.240.100 – France (Dec 7, 2018) x 3 times  
+185.220.70.135 – Germany (Dec 7, 2018) x 5 times
+
+(The list will be updated)
+
+Updated (5:09 PM Monday, March 11, 2019 PDT)
+
+The Global Access List (GAL) acquired as the result of password-spraying
+(on Citrix employee accounts), which is a type of attack for
+brute-forcing and credential-stuffing, includes 31,738 records. The
+threat actors leveraged it for further reconnaissance and accounts
+compromise. Based on our analysis, one of these elevated actions was
+conducted on Monday, October 15, 2018 at 1:57 AM.
+
+[]
+
+Password-spraying was one of the most commonly used techniques by Mabna
+Institute hackers and their associates during the early stage of the
+attacks to gain a foothold in the victim’s environment. More information
+about their techniques is available in FBI Flash Alert (ME-000092-TT):
+
+-   Leveraging the initial group of compromised accounts, download the
+    Global Address List (GAL) from a target’s email client, and perform
+    a larger password spray against legitimate accounts.
+-   Using the compromised access, malicious actors attempt to expand
+    laterally (e.g., via Remote Desktop Protocol or other means) within
+    the network, and perform mass data exfiltration.
+
+  
+ Updated (8:55 PM Monday, March 11, 2019 PDT)
+
+As a result, threat actors conducted network intrusion to access data in
+Citrix infrastructure remotely.
+
+ 
+
+[]
+
+[]
+
+Mitigation Measures:
+
+– Azure AD and ADFS best practices: Defending against password spray
+attacks  
+
+https://www.microsoft.com/en-us/microsoft-365/blog/2018/03/05/azure-ad-and-adfs-best-practices-defending-against-password-spray-attacks/
+
+– Spray you, spray me: defending against password spraying attacks  
+
+https://www.ncsc.gov.uk/blog-post/spray-you-spray-me-defending-against-password-spraying-attacks
+
+2FA
+
+Data Breach
+
+IRIDIUM
+
+SSO (Single Sign-On)
+
+Supply Chain
+
+VPN (Virtual Private Network)
+
+Share Article
+
+-   
+-   
+
+Latest Posts
+
+Cyberespionage
+
+Parliament Races – Cyberespionage Groups Are Targeting Political Elite
+
+The Australian government recently announced that a cyberattack had
+targeted its Parliamen...
+
+Feb 28, 2019
+
+read more
+
+Resecurity International, Inc.   
+© All rights reserved 2019
+
+Contact Us
+----------
+
+First Name
+
+Last Name
+
+Email
+
+Phone
+
+Company
+
+Job Title
+
+Submit
+
+Request A Demo
+--------------
+
+Full Name
+
+Job Title
+
+Email
+
+Phone
+
+Company Name
+
+Number of Employees
+
+1-1010-2020-3030-5050-100
+
+Comment
+
+Submit
+
+See Demo
+--------
+
+First Name
+
+Last Name
+
+Email
+
+Phone
+
+Company
+
+Job Title
+
+Submit
