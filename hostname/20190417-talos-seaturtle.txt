@@ -1,1 +1,6 @@
-
+ns1.lcjcomputing.com
+i.root-server.net
+ns2.lcjcomputing.com
+ns2.intersecdns.com
+sa1.dnsnode.net
+ns1.intersecdns.com

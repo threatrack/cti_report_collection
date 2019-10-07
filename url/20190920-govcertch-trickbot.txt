@@ -1,12 +1,3 @@
-https://www.fortinet.com/
-https://www.virustotal.com
-https://www.fidelissecurity.com/threatgeek/
-https://abuse.ch/
-https://blog.malwarebytes.com/
-https://www.cybereason.com/blog/
-https://securelist.com/
 https://securityintelligence.com/
-https://www.fireeye.com/blog/threat-research/2019/01/
-https://www.botconf.eu/wp-content/uploads/2018/12/
 https://www.
-https://blog.trendmicro.com/trendlabs-security-intelligence
+https://abuse.ch/

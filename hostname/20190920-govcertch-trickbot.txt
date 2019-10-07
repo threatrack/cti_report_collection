@@ -1,14 +1,4 @@
-blog.trendmicro.com
-securityintelligence.com
-www.botconf.eu
 govcert.admin.ch
-www.virustotal.com
-www.cybereason.com
-www.fortinet.com
-securelist.com
-GovCERT.ch
-www.fidelissecurity.com
-Abuse.CH
-www.fireeye.com
+securityintelligence.com
+govcert.ch
 abuse.ch
-blog.malwarebytes.com

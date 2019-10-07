@@ -1,4 +1,5 @@
-threatrecon.nshc.net
-speakerdeck.com
-www.anomali.com
-paper.seebug.org
+yahoo.co
+f1news.vzglagtime.net
+mtanews.vzglagtime.net
+vzglagtime.net
+news.vzglagtime.net

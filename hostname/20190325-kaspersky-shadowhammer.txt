@@ -1,7 +1,9 @@
-VER365.zip
-newegg.com
+ver360.zip
+ver362.zip
 skylightcyber.com
-VER362.zip
-VER359.zip
-VER360.zip
-kaspersky.com
+ver359.zip
+liveupdate01s.asus.com
+asushotfix.com
+liveupdate01.asus.com
+ver365.zip
+newegg.com

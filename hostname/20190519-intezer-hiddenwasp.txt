@@ -1,2 +1,1 @@
-Intezer.com
 ld.so

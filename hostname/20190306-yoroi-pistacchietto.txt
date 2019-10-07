@@ -1,9 +1,9 @@
+pec.it
 paner.altervista.org
-Office.py
+config02.addns.org
+office.py
+visionstore.info
+woffice.py
 verifiche.ddns.net
 config01.homepc.it
-drive.google
 certificates.ddns.net
-PEC.IT
-config02.addns.org
-woffice.py

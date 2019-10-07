@@ -1,11 +1,10 @@
 webhamster.ru
-Intezer.com
-gamework.ddns.net
-setup.sh
-kotl.space
 makeself.sh
-clsass.ddns.net
 gnome-shell-ext.sh
-workan.ddns.net
-AS.sa
+gamework.ddns.net
 rnbo-ua.ddns.net
+kotl.space
+setup.sh
+clsass.ddns.net
+workan.ddns.net
+as.sa

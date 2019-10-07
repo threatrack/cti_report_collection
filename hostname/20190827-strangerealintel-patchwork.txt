@@ -1,6 +1,3 @@
 go.affec.tv
 server-99-84-194-39.lax3.r.cloudfront.net
-attack.mitre.org
-Amazon.com
-twitter.com
 27-08-19.md

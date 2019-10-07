@@ -1,1 +1,1 @@
-https://symc.ly/2lV4Ovn
+file:%Windir%\temp\rconfig.xml

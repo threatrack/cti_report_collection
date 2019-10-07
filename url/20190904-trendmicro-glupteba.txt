@@ -1,1 +1,3 @@
-http://ip-api[.]com/json”,
+http://localhost:3433/,
+http://nxtfdata.xyz/cl.exe,
+http://ip-api.com/json”,

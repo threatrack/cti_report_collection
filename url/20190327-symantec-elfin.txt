@@ -1,1 +1,7 @@
+http://192.119.15.36:880/ftp.exe
+http://192.119.15.36:880/ftp.exe.
+http://89.34.237.118:808/Rar32.exe
+http://mynetwork.ddns.net:880/st-36-p4578.ps1
+https://217.147.168.46:8088/index.jpg'
 ftp://89.34.237.118:2020
+http://mynetwork.ddns..net:880.

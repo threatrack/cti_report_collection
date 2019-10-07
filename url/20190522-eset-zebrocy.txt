@@ -1,2 +1,2 @@
-http://45.124.132[.]127/action-center/centerforserviceandaction/service-and-action.php
-http://45.124.132[.]127/DOVIDNIK
+http://45.124.132.127/action-center/centerforserviceandaction/service-and-action.php
+http://45.124.132.127/DOVIDNIK

@@ -1,7 +1,3 @@
-https://www.trendmicro.com/vinfo/jp/threat-enc
-https://www.fireeye.com/blog
-https://blog.trendmicro.co.jp/archives/16893
-http://[C&CServer
 http://」が含まれている
-https://www.trendmicro.co.kr/cloud-content/us/pdfs/
+http://[C&CServer
 http://…」が含まれ、この

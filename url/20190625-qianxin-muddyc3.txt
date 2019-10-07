@@ -1,4 +1,1 @@
-https://github.com/0xffff0800/muddyc3.
-https://github.com/kennethreitz-archive/pyinstaller/blob/master/ArchiveViewer.py
-https://github.com/countercept/python-exe-unpacker
-https://blog.trendmicro.com/trendlabs-security-intelligence/muddywater-resurfaces-uses-multi-stage-backdoor-powerstats-v3-and-new-post-exploitation-tools/
+

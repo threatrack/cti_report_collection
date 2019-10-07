@@ -1,7 +1,9 @@
-www.bitdefender.com
 ibm-cert.com
+www.bitdefender.com
+enterprise.bitdefender.com
+notice.com
+swift-fraud.com
+spamhuas.com
 ibm-warning.com
 dns-verifon.com
-notice.com
-spamhuas.com
-enterprise.bitdefender.com
+cloud.yourdocument.biz

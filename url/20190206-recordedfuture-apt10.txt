@@ -1,6 +1,1 @@
-https://www.us-cert.gov/ncas/alerts/TA17-117A,
-https://www.us-cert.gov/APTs-Targeting-IT-Service-Provider-Customers,
-https://www.ncsc.gov.uk/content/files/protected_files/article_files/APT10%20alert%20v2_0.pdf
-https://blogs.jpcert.or.jp/en/2017/04/redleaves—malware-based-on-open-source-rat.html
-https://www.carbonblack.com/2017/05/09/carbon-black-threat-research-dissects-red-leaves-malware-leverages-dll-side-loading/,
-https://www.us-cert.gov/ncas/alerts/TA18-276B
+

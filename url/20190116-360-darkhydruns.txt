@@ -1,6 +1,2 @@
-https://twitter.com/craiu/status/1083305994652917760
-https://unit42.paloaltonetworks.com/unit42-new-threat-actor-group-darkhydrus-targets-middle-east-government/
-https://www.googleapis.com/upload/drive/v3/files/
-https://ti.qianxin.com/blog/articles/analysis-of-settingcontent-ms-file/
-https://ti.qianxin.com/
 file://w+
+https://www.googleapis.com/upload/drive/v3/files/

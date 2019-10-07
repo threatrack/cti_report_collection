@@ -1,2 +1,5 @@
-ncsc.gov.uk
-blog.talosintelligence.com
+ns1.intersecdns.com
+rootdnservers.com
+ns2.rootdnservers.com
+ns1.rootdnservers.com
+ns2.intersecdns.com

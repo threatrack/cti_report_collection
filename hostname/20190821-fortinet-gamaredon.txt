@@ -1,4 +1,11 @@
+bits-tor.host
+bits-tor.site
+librework.ddns.net
+pterodo.sv
+wifc.website
 google.com
-Generic.VA
-Pterodo.SV
-Agent.GP
+wifu.site
+agent.gp
+lisingrout.ddns.net
+generic.va
+usbqueshions.ddns.net

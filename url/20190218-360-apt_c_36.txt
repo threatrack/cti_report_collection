@@ -1,10 +1,9 @@
+http://ceoseguros.com/css/d.jpg
 http://ceoseguros.com/css/c.jpg
-http://diangovcomuiscia.com/media/a.jpg
 http://dianportalcomco.com/bin/w.jpg
-https://cloudblogs.microsoft.com/microsoftsecure/2018/05/10/enhancing-office-365-advanced-threat-protection-with-detonation-based-heuristics-and-machine-learning/
-http://ceoempresarialsas.com/js/d.jpg
-http://ismaboli.com/js/i.jpg
 http://ismaboli.com/dir/i.jpg
 http://www.pwncode.club/2018/09/mhtml-macro-documents-targeting.html
-http://ceoseguros.com/css/d.jpg
+http://ismaboli.com/js/i.jpg
 http://dianmuiscaingreso.com/css/w.jpg
+http://ceoempresarialsas.com/js/d.jpg
+http://diangovcomuiscia.com/media/a.jpg

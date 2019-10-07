@@ -1,4 +1,3 @@
-RA.global
+reportview.do
 www.krcert.or.kr
-nshc.net
-reportView.do
+ra.global

@@ -1,6 +1,1 @@
-www.anomali.com
-attack.mitre.org
-yahoo.com
-unit42.paloaltonetworks.com
 wscript.shell
-portal.msrc.microsoft.com

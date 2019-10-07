@@ -1,3 +1,19 @@
+import "pe"
+rule uninstall_exe {
+meta:
+    description = "Yara rule for uninstall SFX archive"
+    author = "Cybaze - Yoroi ZLab"
+    last_updated = "2019-05-22"
+    tlp = "white"
+    category = "informational"
+strings:
+    $a1 = { E8 68 BA 01 00 51 }
+    $a2 = { 58 E9 8B C6 4F 6F 7A }
+    $a3 = { D9 4E D5 FA D4 34 }
+
+condition:
+    pe.number_of_resources == 24 and all of them
+}
 rule excel_dropper {
 meta:
     description = "Yara rule for excel dropper"
@@ -30,22 +46,6 @@ strings:
 
 condition:
     all of them and pe.version_info["CompanyName"] contains "tox"
-}
-import "pe"
-rule uninstall_exe {
-meta:
-    description = "Yara rule for uninstall SFX archive"
-    author = "Cybaze - Yoroi ZLab"
-    last_updated = "2019-05-22"
-    tlp = "white"
-    category = "informational"
-strings:
-    $a1 = { E8 68 BA 01 00 51 }
-    $a2 = { 58 E9 8B C6 4F 6F 7A }
-    $a3 = { D9 4E D5 FA D4 34 }
-
-condition:
-    pe.number_of_resources == 24 and all of them
 }
 import "pe"
 rule veter_random {

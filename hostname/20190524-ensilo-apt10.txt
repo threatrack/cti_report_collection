@@ -1,3 +1,12 @@
 cahe.microsofts.org
-System.Net
+microsofts.org
+smsapi.tencentchat.net
+ffca.caibi379.com
+update.kaspresksy.com
+kaspresksy.com
+download.kaspresksy.com
+ppit.microsofts.org
+system.net
+api.kaspresksy.com
 update.microsofts.org
+onedrive.miscrosofts.com

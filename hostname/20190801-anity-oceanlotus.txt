@@ -1,6 +1,5 @@
-mtk.baimind.com
 ckoen.dmkatti.com
+mtk.baimind.com
+com.android
 jang.goongnam.com
 ws.yingyonghui.com
-com.android
-mediafire.com

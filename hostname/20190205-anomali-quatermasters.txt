@@ -1,8 +1,3 @@
-brica.de
-media.kaspersky.com
-viettimes.vn
-www.crowdstrike.com
 ui.threatstream.com
-medium.com
-www.fireeye.com
-s.tencent.com
+viettimes.vn
+brica.de

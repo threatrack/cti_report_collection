@@ -1,8 +1,4 @@
 www.scmagazine.com
-github.com
-blog.vsec.com.vn
 libxselinux.so
-media.kasperskycontenthub.com
+blog.vsec.com.vn
 nmap.org
-401trg.com
-www.novetta.com

@@ -1,1 +1,1 @@
-https://github.com/mubix/netview
+https://185.12.45.134:443/ajax

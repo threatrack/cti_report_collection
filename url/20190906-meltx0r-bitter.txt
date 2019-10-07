@@ -1,7 +1,1 @@
-https://unit42.paloaltonetworks.com/multiple-artradownloader-variants-used-by-bitter-to-target-pakistan/
-https://www.anomali.com/blog/suspected-bitter-apt-continues-targeting-government-of-china-and-chinese-organizations
-https://twitter.com/RedDrip7/status/1164855381052416002
-https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2017-11882
-https://unit42.paloaltonetworks.com/unit42-analysis-of-cve-2017-11882-exploit-in-the-wild/
-https://en.wikipedia.org/wiki/Kashmir_conflict
-https://cert.360.cn/report/detail?id=137867e159331b7a968aa45050502d13
+

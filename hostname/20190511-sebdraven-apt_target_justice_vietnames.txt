@@ -1,2 +1,1 @@
-app.any.run
 nicetiss54.lflink.com

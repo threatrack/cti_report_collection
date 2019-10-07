@@ -1,1 +1,3 @@
+http://linksysdatakeys.se
+http://www.gestomarket.co/hqpi64.exe”，然后把hqpi64.exe更名为2XC2DF0S.exe并保存在临时目录下。
 file:///，即指向的资源是本地计算机上的文件，而后面紧跟的路径便是复制过去新文件的全路径。通过此方法则可实现开机自启动以达到长期控制主机的目的。

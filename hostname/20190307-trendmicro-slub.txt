@@ -1,4 +1,3 @@
-api.slack.com
+offline-storage-ecs.data
 offline-storage.data
 file.io
-offline-storage-ecs.data

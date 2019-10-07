@@ -1,2 +1,1 @@
 https://elixir.bootlin.com/zephyr/v1.13.0/source/subsys/net/lib/http/http_parser.c
-https://github.com/wolfSSL/wolfssl

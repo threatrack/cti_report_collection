@@ -13,6 +13,7 @@ mkdir -p hash
 mkdir -p hostname
 mkdir -p url
 mkdir -p ipv4
+mkdir -p email
 
 tmp="$(mktemp)"
 
@@ -35,6 +36,7 @@ cat reports.csv | while read line; do
 	hostname="hostname/${filename}.txt"
 	urls="url/${filename}.txt"
 	ipv4="ipv4/${filename}.txt"
+	email="email/${filename}.txt"
 
 	echo "[$] Processing ${filename} ------------------"
 
@@ -131,6 +133,20 @@ esac
 			python3.6 ruleextract.py "${text}" url > "${urls}"
 		else
 			echo "	[.] URLs already extracted to: ${urls}"
+		fi
+
+		if [ ! -f "${ipv4}" ]; then
+			echo "	[+] Extracting IPv4s to: ${ipv4}"
+			python3.6 ruleextract.py "${text}" ipv4 > "${ipv4}"
+		else
+			echo "	[.] IPv4s already extracted to: ${ipv4}"
+		fi
+
+		if [ ! -f "${email}" ]; then
+			echo "	[+] Extracting emails to: ${email}"
+			python3.6 ruleextract.py "${text}" email > "${email}"
+		else
+			echo "	[.] Emails already extracted to: ${email}"
 		fi
 
 	else

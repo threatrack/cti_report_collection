@@ -1,7 +1,3 @@
-uio.hognoob.se
-fid.hognoob.se
-Snort.org
-raw.githubusercontent.com
-Microsoft.NET
 is.gd
-pastebin.com
+fid.hognoob.se
+uio.hognoob.se

@@ -1,2 +1,1 @@
-https://www.microsoft.com/en-us/microsoft-365/blog/2018/03/05/azure-ad-and-adfs-best-practices-defending-against-password-spray-attacks/
-https://www.ncsc.gov.uk/blog-post/spray-you-spray-me-defending-against-password-spraying-attacks
+

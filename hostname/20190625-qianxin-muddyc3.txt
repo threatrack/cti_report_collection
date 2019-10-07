@@ -1,4 +1,2 @@
-github.com
-ArchiveViewer.py
 web.py
-blog.trendmicro.com
+archiveviewer.py

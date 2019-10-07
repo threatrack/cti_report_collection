@@ -1,2 +1,1 @@
-kaspersky.com
-HCK.cab
+hck.cab

@@ -1,2 +1,1 @@
-kaspersky.com
-Provider.Name
+provider.name

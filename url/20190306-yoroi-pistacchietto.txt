@@ -1,2 +1,5 @@
-http://
-https://drive.google
+http://verifiche.ddns.net/{some_files}
+http://paner.altervista.org
+http://config02.addns.org
+http://config01.homepc.it
+http://verifiche.ddns.net
