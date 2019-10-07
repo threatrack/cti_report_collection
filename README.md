@@ -32,7 +32,7 @@ Then run **`./process.sh`** to automagically:
 3. convert the reports to plaintext into `text/`
 4. extract various IOCs and rules into `yara/`, `snort/`, `ipv4/`, `url/`, `hostname/`, etc.
 
-Optionally, you can run **./webarchive.sh** to safe the URLs via <http://sweb.archive.org/safe/>.
+Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.archive.org/save/>.
 
 ## Issues
 
@@ -50,5 +50,6 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <http://sweb.ar
 - `process.sh`: Handle `txt` and `yara` `filetype`s in `reports.csv`.
 - Add 2018, 2017, 2016, ...
 - Add victimology
-- Make `webarchive.sh` only safe URLs to <http://sweb.archive.org/safe/> if not already safed.
+- Make `webarchive.sh` only safe URLs to <https://web.archive.org/save/> if not already safed.
+- Extract URLs without scheme
 
