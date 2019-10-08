@@ -52,4 +52,7 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Add victimology
 - Make `webarchive.sh` only safe URLs to <https://web.archive.org/save/> if not already safed.
 - Extract URLs without scheme
+- Find alternative to `wkhtmltopdf` to get PDFs of webpages.
+- Find method to compress vendor supplied PDFs better.
+- Fallback to web.archive.org links in case original source URL is down.
 

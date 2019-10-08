@@ -46,14 +46,14 @@ cat reports.csv | while read line; do
 
 case "${filetype}" in
 	"html")
-		if [ ! -f "${text}" ] && [ ! -f "${html}" ]; then
+		if [ ! -f "${html}" ]; then
 			echo "	[+] Downloading: ${html}"
 			eval "${curlcmd} \"${url}\" -o \"${html}\""
 		else
 			echo "	[.] We already have: ${html}"	
 		fi
 
-		if [ ! -f "${text}" ] && [ ! -f "${pdf}" ]; then
+		if [ ! -f "${pdf}" ]; then
 			echo "	[+] wkthmltopdf to: ${tmp}"
 			wkhtmltopdf -gl -s A4 -T 2 -B 2 -n "${url}" "${tmp}"
 			echo "	[+] Shrinking PDF to: ${pdf}"
@@ -73,7 +73,7 @@ case "${filetype}" in
 		;;
 
 	"pdf")
-		if [ ! -f "${text}" ] && [ ! -f "${pdf}" ]; then
+		if [ ! -f "${pdf}" ]; then
 			echo "	[+] Downloading: ${tmp}"
 			eval "${curlcmd} \"${url}\" -o \"${tmp}\""
 			echo "	[+] Shrinking PDF to: ${pdf}"
