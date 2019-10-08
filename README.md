@@ -52,9 +52,9 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Add 2018, 2017, 2016, ...
 - Add victimology
 - Make `webarchive.sh` only safe URLs to <https://web.archive.org/save/> if not already safed.
-- Extract URLs without scheme
+- Extract URLs without scheme; needs fix in threatrack_iocextract
 - Find alternative to `wkhtmltopdf` to get PDFs of webpages.
 - Find method to compress vendor supplied PDFs better.
 - Fallback to web.archive.org links in case original source URL is down.
 - Test and fix extracted snort rules
-
+- CIDRs are detected as IPs; needs fix in threatrack_iocextract
