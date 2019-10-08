@@ -1,4 +1,5 @@
 **This is a preliminar work in progress. The IOCs in `url`, `hostname`, `ipv4`, etc. folders are full of false positives! DO NOT USE!**
+**Snort rules are extracted but untested. Mostly won't work due to linebreaks. Adjust manually.**
 
 # Threat Intelligence Report Repository
 
@@ -55,4 +56,5 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Find alternative to `wkhtmltopdf` to get PDFs of webpages.
 - Find method to compress vendor supplied PDFs better.
 - Fallback to web.archive.org links in case original source URL is down.
+- Test and fix extracted snort rules
 
