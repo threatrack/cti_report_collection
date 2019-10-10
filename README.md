@@ -58,3 +58,5 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Fallback to web.archive.org links in case original source URL is down.
 - Test and fix extracted snort rules
 - CIDRs are detected as IPs; needs fix in threatrack_iocextract
+- IOCs in tables with linebreaks are not parsed correctly (see 20191010-amnesty-morocco_nso for problem)
+
