@@ -59,4 +59,5 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Test and fix extracted snort rules
 - CIDRs are detected as IPs; needs fix in threatrack_iocextract
 - IOCs in tables with linebreaks are not parsed correctly (see 20191010-amnesty-morocco_nso for problem)
+- Extract `-----BEGIN PUBLIC KEY-----`; needs implementation in threatrack_iocextract
 
