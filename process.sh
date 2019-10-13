@@ -64,8 +64,8 @@ case "${filetype}" in
 
 		if [ ! -f "${text}" ]; then
 			echo "	[+] Converting to: ${text}"
-			#cat "${html}" | html2text > "${text}"
-			pandoc -f html "${html}" -t plain > "${text}"
+			#cat "${html}" | html2text -ascii | sed 's/^|\(.*\)|$/\1/g' > "${text}"
+			pandoc -f html "${html}" --no-wrap --columns=512 -t plain | sed 's/^|\(.*\)|$/\1/g' > "${text}"
 		else
 			echo "	[.] Already converted to: ${text}"
 		fi

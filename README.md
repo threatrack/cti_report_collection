@@ -60,4 +60,7 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - CIDRs are detected as IPs; needs fix in threatrack_iocextract
 - IOCs in tables with linebreaks are not parsed correctly (see 20191010-amnesty-morocco_nso for problem)
 - Extract `-----BEGIN PUBLIC KEY-----`; needs implementation in threatrack_iocextract
+- Fix `yara/20191010-fireeye-mahalo_fin7.yar(4): error: non-ascii character` (see broken-yara/20191010-fireeye-mahalo_fin7.yar for problem)
+- Eventually regenerate all IOCs with processing bugs fixed
+
 
