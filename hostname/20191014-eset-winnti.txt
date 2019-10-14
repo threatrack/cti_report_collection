@@ -1,0 +1,17 @@
+packed.vmprotect.fi
+xp101.dyn-dns.com
+ssl.dyn-dns.com
+hitcon.org
+ssl.dyn-dns.co
+xp101.dyn-dns.co
+docs.google.com
+dns1-1.7release.com
+injector.bs
+www.jpcert.or.jp
+svn-dns.ahnlabinc.com
+winnti.bn
+steamcommunity.com
+trojandropper.agent.am
+posts.specterops.io
+social.msdn.microsoft.com
+injector.bt
