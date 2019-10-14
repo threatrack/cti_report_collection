@@ -49,6 +49,7 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Automagically download samples to `samples/$date-$source-$name/*`
 - Fix sources that protect against scraping.
 - `process.sh`: Handle `txt` and `yara` `filetype`s in `reports.csv`.
+- **Add extraction for IOCs in Github** (see <https://github.com/eset/malware-ioc/tree/master/winnti_group>)
 - Add 2018, 2017, 2016, ...
 - Add victimology
 - Make `webarchive.sh` only safe URLs to <https://web.archive.org/save/> if not already safed.
@@ -62,5 +63,4 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Extract `-----BEGIN PUBLIC KEY-----`; needs implementation in threatrack_iocextract
 - Fix `yara/20191010-fireeye-mahalo_fin7.yar(4): error: non-ascii character` (see broken-yara/20191010-fireeye-mahalo_fin7.yar for problem)
 - Eventually regenerate all IOCs with processing bugs fixed
-
 
