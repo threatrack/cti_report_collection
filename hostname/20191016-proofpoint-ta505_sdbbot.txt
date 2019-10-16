@@ -1,0 +1,16 @@
+office365-update-eu.com
+windows-cnd-update.com
+office365-update-en.com
+news-server-drm-google.com
+en-gb-facebook.com
+static-google-analtyic.com
+windows-se-update.com
+update365-office-ens.com
+windows-fsd-update.com
+windows-sys-update.com
+windows-wsus-en.com
+windows-msd-update.com
+office365-eu-update.com
+drm-server13-login-microsoftonline.com
+windows-update-sdfw.com
+windows-me-update.com
