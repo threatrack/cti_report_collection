@@ -46,21 +46,20 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 
 ## TODO
 
+- Make `webarchive.sh` only safe URLs to <https://web.archive.org/save/> if not already saved. Workaround: Just Ctrl+C after the entries are saved.
 - Automagically download samples to `samples/$date-$source-$name/*`
 - Fix sources that protect against scraping.
 - `process.sh`: Handle `txt` and `yara` `filetype`s in `reports.csv`.
-- **Add extraction for IOCs in Github** (see <https://github.com/eset/malware-ioc/tree/master/winnti_group>)
-- Add 2018, 2017, 2016, ...
-- Add victimology
-- Make `webarchive.sh` only safe URLs to <https://web.archive.org/save/> if not already safed.
-- Extract URLs without scheme; needs fix in threatrack_iocextract
-- Find alternative to `wkhtmltopdf` to get PDFs of webpages.
-- Find method to compress vendor supplied PDFs better.
 - Fallback to web.archive.org links in case original source URL is down.
-- Test and fix extracted snort rules
-- CIDRs are detected as IPs; needs fix in threatrack_iocextract
-- IOCs in tables with linebreaks are not parsed correctly (see 20191010-amnesty-morocco_nso for problem)
-- Extract `-----BEGIN PUBLIC KEY-----`; needs implementation in threatrack_iocextract
-- Fix `yara/20191010-fireeye-mahalo_fin7.yar(4): error: non-ascii character` (see broken-yara/20191010-fireeye-mahalo_fin7.yar for problem)
+- Add 2018, 2017, 2016, ...
 - Eventually regenerate all IOCs with processing bugs fixed
+- Add victimology
+- Find method to compress vendor supplied PDFs better.
+- Test and fix extracted snort rules
+- Fix `yara/20191010-fireeye-mahalo_fin7.yar(4): error: non-ascii character` (see broken-yara/20191010-fireeye-mahalo_fin7.yar for problem)
+- Partially addressed (needs check if fully fixed): IOCs in tables with linebreaks are not parsed correctly (see 20191010-amnesty-morocco_nso for problem)
+- Extract `-----BEGIN PUBLIC KEY-----`; needs implementation in threatrack_iocextract
+- CIDRs are detected as IPs; needs fix in threatrack_iocextract
+- **Extract URLs without scheme; needs fix in threatrack_iocextract**
+- **Add extraction for IOCs in Github** (see <https://github.com/eset/malware-ioc/tree/master/winnti_group>)
 
