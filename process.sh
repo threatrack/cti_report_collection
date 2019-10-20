@@ -99,7 +99,7 @@ esac
 	if [ -f "${text}" ]; then
 		if [ ! -f "${yara}" ] && [ ! -f "${brokenyara}" ]; then
 			echo "	[+] Extracting YARA rules: ${yara}"
-			python3.6 ruleextract.py "${text}" yara > "${yara}"
+			python3.6 ruleextract.py "${text}" yara | iconv -f utf-8 -t ascii//TRANSLIT > "${yara}"
 			if ! yara "${yara}" /dev/null || [ $(wc -c < ${yara}) -lt 3 ]; then
 				mv "${yara}" "${brokenyara}"
 			fi

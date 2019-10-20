@@ -57,11 +57,13 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Add victimology
 - Find method to compress vendor supplied PDFs better.
 - Test and fix extracted snort rules
-- Fix `yara/20191010-fireeye-mahalo_fin7.yar(4): error: non-ascii character` (see broken-yara/20191010-fireeye-mahalo_fin7.yar for problem)
 - Partially addressed (needs check if fully fixed): IOCs in tables with linebreaks are not parsed correctly (see 20191010-amnesty-morocco_nso for problem)
 - Extract `-----BEGIN PUBLIC KEY-----`; needs implementation in threatrack_iocextract
 - CIDRs are detected as IPs; needs fix in threatrack_iocextract
 - Maybe remove Twitter and Github domains from whitelist to extract as IOCs in case malware uses them as C&C (see 20191017-eset-apt29)
+- Extract user-agent strings (see text/20190809-chronicle-gossipgirl_duqu15.txt); needs support in threatrack_iocextract
+- Fix misc yara extraction error (see yara/20190809-chronicle-gossipgirl_stuxshop.yar(7): error: unterminated string), needs fix in threatrack_iocextract
+- Fix yara not detecting imports (see yara/20191010-fireeye-mahalo_fin7.yar(8): error: undefined identifier "pe"), needs fix in threatrack_iocextract
 - **Extract URLs without scheme; needs fix in threatrack_iocextract**
 - **Add extraction for IOCs in Github** (see <https://github.com/eset/malware-ioc/tree/master/winnti_group>)
 
