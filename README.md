@@ -50,6 +50,7 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Automagically download samples to `samples/$date-$source-$name/*`
 - Fix sources that protect against scraping.
 - `process.sh`: Handle `txt` and `yara` `filetype`s in `reports.csv`.
+- `process.sh`: Handle `github` IOC repositories (see "20191017","eset","apt29","github","https://github.com/eset/malware-ioc/tree/master/dukes")
 - Fallback to web.archive.org links in case original source URL is down.
 - Add 2018, 2017, 2016, ...
 - Eventually regenerate all IOCs with processing bugs fixed
@@ -60,6 +61,7 @@ Optionally, you can run **./webarchive.sh** to safe the URLs via <https://web.ar
 - Partially addressed (needs check if fully fixed): IOCs in tables with linebreaks are not parsed correctly (see 20191010-amnesty-morocco_nso for problem)
 - Extract `-----BEGIN PUBLIC KEY-----`; needs implementation in threatrack_iocextract
 - CIDRs are detected as IPs; needs fix in threatrack_iocextract
+- Maybe remove Twitter and Github domains from whitelist to extract as IOCs in case malware uses them as C&C (see 20191017-eset-apt29)
 - **Extract URLs without scheme; needs fix in threatrack_iocextract**
 - **Add extraction for IOCs in Github** (see <https://github.com/eset/malware-ioc/tree/master/winnti_group>)
 
