@@ -1,0 +1,239 @@
+-   CheckPoint.com
+-   [Facebook]
+-   [Google Plus]
+-   [LinkedIn]
+-   [E-Mail Checked Point Research]
+-   [RSS]
+-   [Twitter]
+
+[Check Point Research]
+
+-   Publications
+    -   Threat Research
+    -   Attack Reports
+-   Tools
+    -   SandBlast File Analysis
+    -   How-To Guides
+    -   URL Categorization
+    -   Instant Security Assessment
+    -   Live Threat Map
+-   About Us
+-   Contact Us
+-   Subscribe
+-   [Are You Under Attack?]
+
+ MENU
+
+[]
+
+Inside the Hacking Community Market – Reselling RIG EK Services
+===============================================================
+
+October 24, 2019
+
+Introduction
+
+HackForums.net is an underground forum that plays a significant role in the hacking market community. On this site, hackers can buy and sell various malware, tools for implementing and spreading it, and more.
+
+One of the best-known tools for spreading malware is the RIG Exploit Kit (EK), a service that utilizes exploits in popular applications.
+
+In this article, we present how we found a malware sample spread by RIG EK, tracked it back to the HackForums thread where the malware is sold, and what we learned about the hacking community and RIG EK in the process:
+
+-   Joining the hacking community and creating a business is easy.
+-   The quality of malware distributed by RIG EK varies widely.
+-   Rig actors re-sell the exploitation service to other customers.
+
+ 
+
+Some unusual strings
+
+Recently, we came across a sample that was spread via RIG EK and was flagged by VirusTotal as malicious, but wasn’t detected with a specific name.
+
+The sample is not packed or obfuscated in any way and does not include any anti-debugging or sandbox evasion techniques. Overall, it seems pretty amateurish. We decided to take a closer look.
+
+We started with static analysis. When we opened the sample in IDA, we found a couple of interesting strings:
+
+[]
+
+It seems strange to include a hardcoded Pastebin link inside a malicious binary. By browsing to https://pastebin[.]com/RCw33291, we found the following string: “EQKv4vx/Q0GD9AjrLI+LrnXEfUVrs+52mPHvY4VaPHnt+A1TGg==”
+
+This appeared to be a Base64 string, although decoding it did not result in any readable text.
+
+The second string which appears in the above code looks like a hash, but searching for it did not yield any results in Google.
+
+We continued with dynamic analysis, and observed the following behavior:
+
+1.  The sample performs an HTTP request to the Pastebin URL.
+2.  It creates a Base64-encoded POST request to the Command and Control (C&C) server.
+3.  It then receives a plaintext response that includes a download link for a binary file. In our case: hxxp://advcash[.]network/bin.exe
+4.  It saves and runs the downloaded binary.
+
+We concluded that the value in Pastebin is probably used to derive a key used to decrypt the hard-coded C&C address.
+
+The downloaded binary turned out to be almost identical to the original sample, but the two respective strings were different:
+
+[]
+
+ 
+
+The link to the seller
+
+The Pastebin link pointed to what seems to be another Base64 encoded key, but the other unique string, “DE4E24E3E9DEF1F54C1816AC26C18”, had one search result in Google:
+
+[]
+
+Another Pastebin link, https://pastebin[.]com/0rGZd789.
+
+This link contains a Jabber conversation between “rbtmarty@exploit.im”, who seems to be a seller, and “proxygod” (“qp@exploit.im”), a (disgruntled) buyer.
+
+The account from which the conversation was uploaded contains a few more conversations between the two, as well as other relevant information. From those conversations, we learned that rbtmartysold the client some “bots”, and from there it was easy to get to the seller’s sales thread on HackForums.net: https://hackforums[.]net/showthread.php?tid=5985264.
+
+In the documented conversations, we see that rbtmarty provided the buyer with a link to the bots’ control panel, hxxp://advcash[.]network/login, along with default credentials. We browsed to the control panel and saw the title – “DarkRat”.
+
+The RIG connection
+
+The thread contains some very interesting information that links the seller to the infamous RIG Exploit Kit.
+
+ 
+
+According to the advertisements, rbtmartysells a distribution service. The client provides a malicious binary, selects the number of bots (infected machines), and rbtmartyguarantees to provide the requested bots.
+
+[]
+
+It’s stated explicitly that the binary is spread using the infamous RIG Exploit Kit.
+
+Screenshot of the RIG control panel:
+
+[]
+
+Additionally, in one of the disputes opened against rbtmarty, the client attached a link to the RIG public statistics page for their bots. This is strong evidence that rbtmartyindeed has access to the Exploit Kit, and is either a user or a reseller of RIG.
+
+In the above screenshot, the title “Flow” suggests that this is only one of several flows in which different binaries from different clients are distributed.
+
+ 
+
+The transactions trace
+
+Diving into rbtmarty’s profile, we see that they are a new user in the forums, having joined about one month ago. Their first purchase is a phone verification for creating a telegram account, and most of their other transactions are sales from their bot shop.
+
+There are some disputes against rbtmarty in the different forums. In one of them, we see that the buyer provided conversations with rbtmartyas evidence, which were the Pastebin links we previously came across.
+
+After further investigation into rbtmarty’s interactions with other users, we found another interesting user: Dark Spider, who joined the forum 3.5 years ago, and sells DarkRat.
+
+[]
+
+Observing rbtmarty’s activity also provides a lesson about the hacking community: it is easy to join the community, and easy to start a business very quickly. By purchasing some existing tools from other forum members, and combining them into a new distribution network, anyone can start making a profit.
+
+ 
+
+DarkRat Source
+
+We managed to find a leaked source code of an earlier version of DarkRat: https://github[.]com/Tlgyt/The-Collection/tree/master/Source%20Codes/Botnets/DarkRat%20Loader
+
+Taking a look at DarkRat source code, we see some ‘unusual’ comments and strings:
+
+[]
+
+[]
+
+The version of the source code is 2.0, while our sample version is 2.1.3.
+
+Further inspection of the source code shows how the Pastebin link was used differently than in the previous version. The Pastebin holds a plaintext URL to the C&C server:
+
+[]
+
+In the screenshot: The orange section highlights the DarkRAT source code version  2.0.
+
+The red section highlights the hardcoded Pastebin link that holds the URL for the C&C server.
+
+In the newer version, the Pastebin stores the key used to derive the C&C server address. For some reason, the DarkRat author decided it was a good idea to store the key in Pastebin.
+
+An outline of the communication flow in the newer version can be seen in the following screenshots.
+
+HTTP response from Pastebin.com that contains the Base64-encoded key used to derive the C&C server address:
+
+[]
+
+HTTP request to the C&C server that contains Base64-encoded data about the infected machine, and the request for the malicious binary:
+
+[]
+
+HTTP response from the C&C that contains the URL to the malicious binary to be dropped:
+
+[]
+
+Another difference we noticed between the two versions is that the data uploaded to the C&C is encoded twice in Base64 in the newer version. Perhaps the author thought this improves security.
+
+All in all, the code seems like it was created by an amateur. It does not contain any obfuscation, and it is written poorly and in a non-professional way. It appears that Dark Spider created DarkRat, and probably sold a builder to rbtmarty, as rbtmartyuses it to sell their bots.
+
+ 
+
+Summary
+
+It’s very easy for a would-be hacker to start from scratch. The first step is to join the forum and purchase some different products (anonymous Telegram account, RAT builder, or EK access), and eventually combine them into a business. Finding customers is not difficult.
+
+The quality of the payload binaries that are distributed by RIG EK varies widely. RIG EK spreads some notorious malware families such as AZORult, Ramnit, various ransomware, miners, and more. On the other hand, it is also used to spread DarkRat, which is a rather amateur RAT.
+
+RIG EK actors are actively re-selling the exploitation service to different customers on different RIG “flows”, and provide them with a RIG public statistics link. This allows customers, such as rbtmartyin our case, to re-resell this service to their own customers and distribute whatever binary they have.
+
+ 
+
+Samples hashes
+
+The original sample – 3C22EBCD3A5E418A23A9073120A93DDB39063270
+
+The dropped binary – A1F45860E22F2DC99A445ABA221E1108BA1CF6E0
+
+Related Articles
+----------------
+
+[]
+
+21th October – Threat Intelligence Bulletin
+
+[]
+
+TCP SACK Security Issue in OpenBSD – CVE-2019-8460
+
+[]
+
+Pony’s C&C servers hidden inside the Bitcoin blockchain
+
+[]
+
+In the Footsteps of a Sextortion Campaign
+
+[]
+
+14th October – Threat Intelligence Bulletin
+
+Publications
+
+-   GLOBAL CYBER ATTACK REPORTS
+-   RESEARCH PUBLICATIONS
+-   INCIDENT RESPONSE
+-   IPS ADVISORIES
+-   CHECK POINT BLOG
+-   DEMOS
+
+Tools
+
+-   SANDBLAST FILE ANALYSIS
+-   URL CATEGORIZATION
+-   INSTANT SECURITY ASSESSMENT
+-   LIVE THREAT MAP
+
+About Us
+
+Contact Us
+
+Subscribe
+
+© 1994
+
+Check Point Software Technologies LTD. All rights reserved.   
+Property of CheckPoint.com | Privacy Policy
+
+×
+
+[Call For Papers]
