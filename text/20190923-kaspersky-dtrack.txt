@@ -1,0 +1,604 @@
+Solutions for:
+
+-   Home Products
+-   Small Business 1-50 employees
+-   Medium Business 51-999 employees
+-   Enterprise 1000+ employees
+
+Kaspersky
+
+-   CompanyAccount
+-   Get In Touch
+
+-   Solutions
+    -   -   []
+
+            Endpoint Security
+
+            Learn More
+
+        -   []
+
+            Hybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            Internet of Things & Embedded Security
+
+            Learn More
+
+        -   []
+
+            Threat Management and Defense
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Fraud Prevention
+
+            Learn More
+
+-   Industries
+    -   -   []
+
+            National Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Finance Services Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Healthcare Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Transportation Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Retail Cybersecurity
+
+            Learn More
+
+    -   -   Other Industries
+
+        -   Telecom Cybersecurity
+        -   View all
+
+-   Products
+    -   -   []
+
+            KasperskyEndpoint Security
+
+            Learn More
+
+        -   []
+
+            KasperskyEndpoint Detection and Response
+
+            Learn More
+
+        -   []
+
+            KasperskyHybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            KasperskyAnti Targeted Attack Platform
+
+            Learn More
+
+        -   []
+
+            KasperskyPrivate Security Network
+
+            Learn More
+
+        -   []
+
+            KasperskyEmbedded Systems Security
+
+            Learn More
+
+    -   -   Other Products
+
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View All
+
+-   Services
+    -   -   []
+
+            KasperskyCybersecurity Services
+
+            Learn More
+
+        -   []
+
+            KasperskySecurity Awareness
+
+            Learn More
+
+        -   []
+
+            KasperskyPremium Support
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Intelligence
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Hunting
+
+            Learn More
+
+        -   []
+
+            KasperskyIncident Response
+
+            Learn More
+
+    -   -   Other Services
+
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View All
+
+-   Resource Center
+    -   Case Studies
+    -   White Papers
+    -   Datasheets
+    -   Technologies
+-   Contact Us
+-   GDPR
+
+Menu
+
+Securelist
+
+English
+
+-   
+    English
+-   
+    Pусский
+-   
+    Deutsch
+-   
+    Français
+-   
+    Italiano
+-   
+    Español
+-   
+    Polski
+
+-   Threats
+    -   Mobile threats
+    -   Secure environment (IoT)
+    -   Financial threats
+    -   Spam and phishing
+    -   Industrial threats
+    -   Vulnerabilities and exploits
+    -   Web threats
+-   Categories
+    -   APT reports
+    -   Research
+    -   Incidents
+    -   Security Bulletin
+    -   Publications
+    -   Malware reports
+    -   Spam and phishing reports
+    -   All categories
+-   Tags
+    -   Ransomware
+    -   Targeted Attacks
+    -   Botnets
+    -   Internet Banking
+    -   Mobile Malware
+    -   Social Engineering
+    -   Malware Statistics
+    -   Show all tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+
+-   Solutions for:
+-   Home Users
+    -   Products
+        -   KasperskyTotal Security
+        -   KasperskyInternet Security
+        -   KasperskyAnti-Virus
+        -   KasperskyInternet Security for Mac
+        -   Kaspersky Internet Security for Android
+        -   KasperskySecure Connection
+        -   Free Tools
+        -   Kaspersky Safe Kids
+        -   Kaspersky Password Manager
+        -   Kaspersky Software Updater
+        -   View more
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+    -   My Kaspersky
+        -    My Devices
+        -    My Products / Subscriptions
+        -    My Orders
+-   Small Business(1-50 employees)
+    -   Products
+        -   KasperskySmall Office Security
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   KSOS Portal
+-   Medium Business(51-999 employees)
+    -   Products
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskySecurity for Office 365
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+        -   KasperskySecurity for Business Total
+        -   KasperskyPhysical, Virtual & Cloud Workloads Security
+        -   TARGETED SECURITY SOLUTIONS
+        -   Mail Server
+        -   File Server
+        -   Mobile
+        -   Internet Gateway
+        -   Virtualization and Hybrid Cloud
+        -   Collaboration
+        -   Vulnerability and Patch Management
+        -   Storage
+        -   View More
+    -   Services
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   CompanyAccount
+-   Enterprise(1000+ employees)
+    -   Solutions
+        -   Endpoint Security
+        -   Hybrid Cloud Security
+        -   Internet of Things & Embedded Security
+        -   Threat Management and Defense
+        -   Industrial Cybersecurity
+        -   Fraud Prevention
+    -   Industries
+        -   National Cybersecurity
+        -   Industrial Cybersecurity
+        -   Finance Services Cybersecurity
+        -   Healthcare Cybersecurity
+        -   Transportation Cybersecurity
+        -   Retail Cybersecurity
+        -   Other industries
+        -   Telecom Cybersecurity
+        -   View all
+    -   Products
+        -   KasperskyEndpoint Security
+        -   KasperskyEndpoint Detection and Response
+        -   KasperskyHybrid Cloud Security
+        -   KasperskyAnti Targeted Attack Platform
+        -   KasperskyPrivate Security Network
+        -   KasperskyEmbedded Systems Security
+        -   Other products
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View all
+    -   Services
+        -   KasperskyCybersecurity Services
+        -   KasperskySecurity Awareness
+        -   KasperskyPremium Support
+        -   KasperskyThreat Intelligence
+        -   KasperskyThreat Hunting
+        -   KasperskyIncident Response
+        -   Other Services
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View all
+    -   Resource Center
+        -   Case Studies
+        -   White Papers
+        -   Datasheets
+        -   Technologies
+    -   Contact Us
+    -   GDPR
+    -   CompanyAccount
+-   -   Securelist
+-   Threats
+    -   Financial threats
+    -   Mobile threats
+    -   Web threats
+    -   Secure environment (IoT)
+    -   Vulnerabilities and exploits
+    -   Spam and Phishing
+    -   Industrial threats
+-   Categories
+    -   APT reports
+    -   Incidents
+    -   Research
+    -   Malware reports
+    -   Spam and phishing reports
+    -   Kaspersky Security Bulletin
+    -   Publications
+-   Tags
+    -   Ransomware
+    -   Botnets
+    -   Mobile Malware
+    -   Social Engineering
+    -   Targeted Attacks
+    -   Malware Statistics
+    -   All Tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+-   -   Partners
+    -   Partners
+    -   Find a Partner
+    -   Affiliate
+    -   Technology
+    -   Whitelist Program
+-   About Us
+    -   About Us
+    -   Company
+    -   Team
+    -   Transparency
+        -   Transparency Center
+        -   Policy Blog
+    -   Corporate News
+    -   Press Center
+    -   Careers
+    -   Incubator
+    -   Sponsorships
+
+Malware descriptions
+
+Hello! My name is Dtrack {.entry-title}
+========================
+
+By Konstantin Zykov on September 23, 2019. 10:00 am
+
+Our investigation into the Dtrack RAT actually began with a different activity. In the late summer of 2018, we discovered ATMDtrack, a piece of banking malware targeting Indian banks. Further analysis showed that the malware was designed to be planted on the victim’s ATMs, where it could read and store the data of cards that were inserted into the machines. Naturally, we wanted to know more about that ATM malware, so we used YARA and Kaspersky Attribution Engine to uncover more interesting material: over 180 new malware samples of a spy tool that we now call Dtrack.
+
+All the Dtrack samples we initially found were dropped samples, as the real payload was encrypted with various droppers — we were able to find them because of the unique sequences shared by ATMDtrack and the Dtrack memory dumps. After that, it got very interesting, because once we decrypted the final payload and used Kaspersky Attribution Engine again, we saw similarities with the DarkSeoul campaign, dating back to 2013 and attributed to the Lazarus group. It seems that they reused part of their old code to attack the financial sector and research centers in India. According to our telemetry, the last activity of DTrack was detected in the beginning of September 2019.
+
+Technical details
+-----------------
+
+The dropper has its encrypted payload embedded as an overlay of a PE file as extra data that will never be used in normal execution steps. Its decryption routine, part of an executable physical patch, begins somewhere between the start() and WinMain() functions. A fun fact is that the malware authors embedded their malicious code into a binary that was a harmless executable. In some cases, it was the default Visual Studio MFC project, but it could be any other program.
+
+The decrypted overlay data contains the following artifacts:
+
+-   an extra executable;
+-   process hollowing shellcode;
+-   a list of predefined executable names, which the malware uses as a future process name.
+
+After decryption of the data, the process hollowing code is started, taking the name of the process to be hollowed as an argument. The name comes from the predefined list found within the decrypted overlay. All the names come from the %SYSTEM32% folder, as you can see in the decrypted file list below.
+
+-   fontview.exe
+-   dwwin.exe
+-   wextract.exe
+-   runonce.exe
+-   grpconv.exe
+-   msiexec.exe
+-   rasautou.exe
+-   rasphone.exe
+-   extrac32.exe
+-   mobsync.exe
+-   verclsid.exe
+-   ctfmon.exe
+-   charmap.exe
+-   write.exe
+-   sethc.exe
+-   control.exe
+-   presentationhost.exe
+-   napstat.exe
+-   systray.exe
+-   mstsc.exe
+-   cleanmgr.exe
+
+What is inside the dropper?
+
+After execution, the target of the process hollowing is suspended until its memory is overwritten with the decrypted executable payload from the dropper overlay. After this, the target process resumes.
+
+The droppers contain a variety of executables, all of these intended for spying on the victim. Below is an incomplete functionality list for the various Dtrack payload executables found:
+
+-   keylogging,
+-   retrieving browser history,
+-   gathering host IP addresses, information about available networks and active connections,
+-   listing all running processes,
+-   listing all files on all available disk volumes.
+
+At this point, the design philosophy of the framework becomes a bit unclear. Some of the executables pack the collected data into a password protected archive and save it to the disk, while others send the data to the C&C server directly.
+
+Aside from the aforementioned executables, the droppers also contained a remote access Trojan (RAT). The RAT executable allows criminals to perform various operations on a host, such as uploading/downloading, executing files, etc. For a full list of operations, see the table below.
+
+  ------------ ----------------------------------------------------------------------------
+  command id   description
+  1003         upload a file to the victim’s computer
+  1005         make target file persistent with auto execution on the victim’s host start
+  1006         download a file from the victim’s computer
+  1007         dump all disk volume data and upload it to a host controlled by criminals
+  1008         dump a chosen disk volume and upload it to a host controlled by criminals
+  1011         dump a chosen folder and upload it to a host controlled by criminals
+  1018         set a new interval timeout value between new command checks
+  1023         exit and remove the persistence and the binary itself
+  default      execute a process on the victim’s host
+  ------------ ----------------------------------------------------------------------------
+
+Dtrack and ATMDTrack malware similarities
+-----------------------------------------
+
+ATMDTrack is a subset of the DTrack family. They naturally look different despite their similarities. For example, Dtrack’s payload is encrypted within a dropper—unlike the ATMDTrack samples, which were not encrypted at all. But after decrypting the Dtrack payload, it becomes clear that the developers are the same group of people: both projects have the same style and use the same implemented functions. The most obvious function they have in common is the string manipulation function. It checks if there is a CCS_substring at the beginning of the parameter string, cuts it out and returns a modified one. Otherwise, it uses the first byte as an XOR argument and returns a decrypted string.
+
+[Functions common to the two families (the functions/arguments were named by the researchers)]
+
+Functions common to the two families (the functions/arguments were named by the researchers)
+
+Conclusions
+-----------
+
+When we first discovered ATMDtrack, we thought we were just looking at another ATM malware family, because we see new ATM malware families appearing on a regular base. However, this case proved once again that it is important to write proper YARA rules and have a solid working attribution engine, because this way you can uncover connections with malware families that have appeared in the past. One of the most memorable examples of this was the WannaCry attribution case. Now we can add another family to the Lazarus group’s arsenal: ATMDtrack and Dtrack.
+
+The vast amount of Dtrack samples that we were able to find shows that the Lazarus group is one of the most active APT groups in terms of malware development. They continue to develop malware at a fast pace and expand their operations. We first saw early samples of this malware family in 2013, when it hit Seoul. Now, six years later, we see them in India, attacking financial institutions and research centers. And once again, we see that this group uses similar tools to perform both financially-motivated and pure espionage attacks.
+
+To succeed in spying, the criminals should be able to gain at least partial control over the internal network. This means that the target organizations may have a number of security issues, such as:
+
+-   weak network security policies,
+-   weak password policies,
+-   lack of traffic monitoring.
+
+We therefore advise the companies to:
+
+-   tighten their network and password policies,
+-   use traffic monitoring software, such as Kaspersky Anti Targeted Attack Platform (KATA),
+-   use antivirus solutions.
+
+IoCs
+----
+
+-   8f360227e7ee415ff509c2e443370e56
+-   3a3bad366916aa3198fd1f76f3c29f24
+-   F84de0a584ae7e02fb0ffe679f96db8d
+
+ATM Dropper Financial malware Lazarus Malware Descriptions RAT Trojan
+
+Share post on:
+
+Facebook
+
+Twitter
+
+Related Posts
+
+-   COMpfun successor Reductor infects files on the fly to compromise TLS traffic
+
+-   HQWar: the higher it flies, the harder it drops
+
+-   Threats to macOS users
+
+[]
+
+There is 1 comment
+
+1.  []
+
+    saassdd
+
+    Posted on October 24, 2019. 9:41 am
+
+    I want to know which is Dtrack? When I debuged 3a3ba…c29f24, then I get the Rat, but where is the Dtrack? The Rat is Dtrack?
+
+    Reply
+
+Leave a Reply Cancel Reply
+
+Your email address will not be published. Required fields are marked *
+
+Name *
+
+Email *
+
+Save my name, email, and website in this browser for the next time I comment.
+
+ Notify me when new comments are added.
+
+ 
+
+In the same category
+
+-   []
+
+    Fully equipped Spying Android RAT from Brazil: BRATA
+
+-   []
+
+    Riltok mobile Trojan: A banker with global reach
+
+-   []
+
+    God horses are floating clouds: The story of a Chinese banker Trojan
+
+-   []
+
+    PimpMyWindow – Brazilian adware
+
+-   []
+
+    Vidro: How deep and mobile is the rabbit hole?
+
+[]
+
+© 2019 AO Kaspersky Lab. All Rights Reserved.   
+Registered trademarks and service marks are the property of their respective owners.
+
+Contact us | Privacy Policy | License Agreement
+
+-   *
+-   *
+    -   I agree to provide my email address to “AO Kaspersky Lab” to receive information about new posts on the site. I understand that I can withdraw this consent at any time via e-mail by clicking the “unsubscribe” link that I find at the bottom of any e-mail sent to me for the purposes mentioned above.
+
+-   Twitter
+-   Facebook
+-   LinkedIn
+-   YouTube
+-   RSS
+-   Email
+
+[] []
+
+[]

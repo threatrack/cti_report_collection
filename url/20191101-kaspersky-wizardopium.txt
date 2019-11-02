@@ -1,0 +1,1 @@
+http://code.jquery.cdn.behindcorona.com/.
