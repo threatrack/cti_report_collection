@@ -1,0 +1,271 @@
+X
+
+This website uses cookies to enhance your browsing experience. Please note that by continuing to use this site you consent to the terms of our Privacy Notice.
+
+ACCEPT
+
+[]
+
+ BLOG
+
+-   Featured
+    -   -   [wizard spider graphic]WIZARD SPIDER Adds New Features to Ryuk for Targeting Hosts on LANNovember 1, 2019
+    -   -   [Forrester TEI 2019 Banner]Forrester Total Economic Impact™ Study Shows 316% ROI for CrowdStrike FalconOctober 31, 2019
+    -   -   [finger pointing at blue graph icon]Is Measurable Security Possible?October 28, 2019
+    -   -   [CrowdStrike banner for Gartner Critical Capabilities for EPP]CrowdStrike Scores Highest Overall for Use Case Type A or “Forward-Leaning” Organizations in Gartner’s 2019 Critical Capabilities for Endpoint Protection PlatformsOctober 24, 2019
+
+-   Recent
+    -   -   [wizard spider graphic]WIZARD SPIDER Adds New Features to Ryuk for Targeting Hosts on LANNovember 1, 2019
+    -   -   [Forrester TEI 2019 Banner]Forrester Total Economic Impact™ Study Shows 316% ROI for CrowdStrike FalconOctober 31, 2019
+    -   -   [finger pointing at blue graph icon]Is Measurable Security Possible?October 28, 2019
+    -   -   [CrowdStrike banner for Gartner Critical Capabilities for EPP]CrowdStrike Scores Highest Overall for Use Case Type A or “Forward-Leaning” Organizations in Gartner’s 2019 Critical Capabilities for Endpoint Protection PlatformsOctober 24, 2019
+
+-   Videos
+    -   -   [CrowdStrike spring 2016 release]The Power of The Platform: Spring Release Extends The CrowdStrike Falcon PlatformMay 25, 2016
+    -   -   [ransomware]Can’t Protect Your Data from Ransomware? Think Again.February 24, 2016
+    -   -   [rackspace-screenie]Brian Kelly, CSO of Rackspace, Shares Why He Chose CrowdStrikeAugust 14, 2015
+    -   -   [cardinal-innovations-video-screenie]Avoiding the Cyber Security Blindside: Cardinal Innovation’s CIO Talks Endpoint ProtectionMay 21, 2015
+
+-   Categories
+    -   -   Endpoint Protection
+            -    ENDPOINT PROTECTION
+
+                * * * * *
+
+                -   -   [Forrester TEI 2019 Banner]Forrester Total Economic Impact™ Study Shows 316% ROI for CrowdStrike FalconOctober 31, 2019
+                -   -   [CrowdStrike banner for Gartner Critical Capabilities for EPP]CrowdStrike Scores Highest Overall for Use Case Type A or “Forward-Leaning” Organizations in Gartner’s 2019 Critical Capabilities for Endpoint Protection PlatformsOctober 24, 2019
+                -   -   [Cyber Catalyst banner]Falcon Complete and CrowdStrike Adversary Emulation Pen Testing Recognized as “Cyber Catalysts” in Marsh Cyber Risk EvaluationOctober 17, 2019
+                -   -   [CrowdStrike Banner for Forrester Wave for Endpoint Security Suites Q3 2019]CrowdStrike Named a Leader in the 2019 Forrester Wave for Endpoint Security SuitesSeptember 23, 2019
+        -   Engineering & Tech
+            -    ENGINEERING & TECHNOLOGY
+
+                * * * * *
+
+                -   -   [finger pointing at blue graph icon]Is Measurable Security Possible?October 28, 2019
+                -   -   [an abstract of a brain over a computer circuit]Hardening Neural Networks for Computer Security Against Adversarial AttackOctober 18, 2019
+                -   -   [silhouette of person with communication icons in the background]How CrowdStrike Uses SHAP to Enhance Machine Learning ModelsOctober 3, 2019
+                -   -   [nested boxes behind code]Using Docker to Do Machine Learning at ScaleSeptember 13, 2019
+        -   Executive Viewpoint
+            -    EXECUTIVE VIEWPOINT
+
+                * * * * *
+
+                -   -   [Fal Con Unite 2019 banner]CrowdStrike Fal.Con 2019 “UNITES” Cybersecurity Professionals From All Over the WorldOctober 10, 2019
+                -   -   [George Kurtz, CrowdStrike Co-founder and CEO]Video: How CrowdStrike’s Vision Redefined Endpoint SecuritySeptember 20, 2019
+                -   -   [CrowdStrike Faloon Fund Banner]New Falcon Fund Helps Startups Develop Innovative Apps for the Falcon PlatformAugust 26, 2019
+                -   -   [CrowdScore]Introducing CrowdScore: A New Approach to Eliminate Alert Fatigue and Provide CxO-Level Real-Time Threat Metrics [VIDEO]August 6, 2019
+        -   From The Front Lines
+            -    FROM THE FRONT LINES
+
+                * * * * *
+
+                -   -   [Mac computers with command-line code]Saved by the Shell: Reconstructing Command-Line Activity on MacOSOctober 1, 2019
+                -   -   [CrowdStrike banner of 2019 Falcon OverWatch Mid-Year Report]Falcon OverWatch Threat Hunting Report Finds an Increase in eCrime as Adversaries Mature Their SkillsOctober 1, 2019
+                -   -   [white and black arrows becoming one]5 Tips for a Happy Marriage Between IT Cybersecurity and Operational Technology TeamsJuly 15, 2019
+                -   -   [calendar with SPIDER ADVERSARY figure]Unraveling the Spiderweb: Timelining ATT&CK Artifacts Used by GRIM SPIDERMay 30, 2019
+        -   Research & Threat Intel
+            -    RESEARCH & THREAT INTEL
+
+                * * * * *
+
+                -   -   [wizard spider graphic]WIZARD SPIDER Adds New Features to Ryuk for Targeting Hosts on LANNovember 1, 2019
+                -   -   [Turbine Panda Graphic]Huge Fan of Your Work: How TURBINE PANDA and China’s Top Spies Enabled Beijing to Cut Corners on the C919 Passenger JetOctober 14, 2019
+                -   -   [student looking at three computer screens with ransomware]Ransomware Increases the Back-to-School BluesSeptember 17, 2019
+                -   -   [SPIDER adversary image in front of red code]Who is Salty Spider (Sality)?September 6, 2019
+        -   Tech Center
+            -    TECH CENTER
+
+                * * * * *
+
+                -   -   [Blue]CrowdStrike API & IntegrationsJanuary 31, 2019
+                -   -   [CrowdStrike Tech Center]CrowdStrike for Security OperationsJanuary 2, 2019
+                -   -   [CrowdStrike Tech Center]Five Second Enterprise VisibilityJuly 27, 2016
+                -   -   [CrowdStrike Tech Center]Getting Access to the CrowdStrike APIJuly 27, 2016
+
+-   Featured
+    -   [Dynamic Posts]
+-   Recent
+    -   [Dynamic Posts]
+-   Videos
+    -   [Dynamic Posts]
+-   Categories
+    -   [Tabs]
+        -   Endpoint Protection
+            -   [Custom]
+                -   [Dynamic Posts]
+        -   Engineering & Tech
+            -   [Custom]
+                -   [Dynamic Posts]
+        -   Executive Viewpoint
+            -   [Custom]
+                -   [Dynamic Posts]
+        -   From The Front Lines
+            -   [Custom]
+                -   [Dynamic Posts]
+        -   Research & Threat Intel
+            -   [Custom]
+                -   [Dynamic Posts]
+        -   Tech Center
+            -   [Custom]
+                -   [Dynamic Posts]
+
+WIZARD SPIDER Adds New Features to Ryuk for Targeting Hosts on LAN {.single-post-title .entry-title}
+==================================================================
+
+-   November 1, 2019
+-   Alexander Hanel and Brett Stone-Gross
+-   Research & Threat Intel
+
+[Wizard Spider Graphic]
+
+CrowdStrike® Intelligence analyzed variants of Ryuk (a ransomware family distributed by WIZARD SPIDER) with new functionality for identifying and encrypting files on hosts in a local area network (LAN). These features target systems that have recently been placed in a standby power state, as well as online systems on the LAN.
+
+Magic Packet
+------------
+
+The first new Ryuk feature attempts to wake LAN hosts that are in a standby power state by sending them a Wake-on-LAN (WoL) magic packet. The affected machine must support WoL, and its network card must have the setting configured in the BIOS. To identify machines on the LAN, Ryuk reads entries in the host Address Resolution Protocol (ARP) cache; in addition, for each address in the cache, it sends a WoL magic packet. The packet is sent over a User Datagram Protocol (UDP) socket with the socket option SO_BROADCAST using destination port 7. The WoL magic packet starts with FF FF FF FF FF FF, followed by the target’s computer MAC address. An example WoL packet is highlighted in blue in Figure 1.
+
+[Chart showing datagram protocol and code]
+
+Figure 1. Ryuk Wake-on-LAN Packet Example
+
+UDP packets observed being sent specifically to destination port 7 during a ransomware incident may be an indication that Ryuk is present.
+
+This Wake-On-LAN implementation is somewhat naive, because the default ARP cache timeout is short-lived on modern versions of Windows. Thus, the number of systems that may be impacted by this current implementation is likely to be limited, since only systems that have  recently been put to sleep would still have their MAC address present in a remote system’s ARP cache.
+
+ARP Ping Scanner
+----------------
+
+The second Ryuk feature uses ARP ping scanning to identify hosts on the LAN. To identify the proper subnet to scan, it checks each entry in the ARP cache to see whether it contains an IP address with the substrings “10.,” “172.16.,” or “192.168.” in it. If an IP address contains one of these strings, it starts sending ARP and PING requests to all IP addresses in the Class C network starting with that string value. For example, if the ARP cache entry contained the IP address 192.168.240[.]57, it would start scanning at 192.168.240[.]1 and increment the last octet by 1 until reaching the IP address 192.168.240[.]254. If a host responds, Ryuk attempts to mount it as a network drive, using Server Message Block (SMB), and encrypt its contents.
+
+Conclusion
+----------
+
+By attempting to wake systems and using ARP ping scanning combined with network drive mounting, WIZARD SPIDER is seeking to maximize the number of systems that can be impacted by Ryuk’s file encryption. The Wake-on-LAN feature is a novel technique that demonstrates WIZARD SPIDER’s continued focus on increasing the monetization of infections via ransomware.
+
+CrowdStrike Intelligence will continue to monitor any further development to Ryuk by WIZARD SPIDER. The CrowdStrike Falcon® endpoint protection platform detects and prevents against Ryuk. For Falcon endpoint customers, prevention settings should be set at a minimum to the following:
+
+-   Next-Gen Antivirus:  Cloud/Sensor Machine Learning: Set “Prevention” slider to “Moderate”
+-   Malware Protection: Execution Blocking: Toggle “Prevent Suspicious Processes” to “Enabled”
+-   Add any hashes to your custom blacklist for added protection
+
+  ------------------------------------------------------------------ ---------------------
+  SHA256 HASH                                                        BUILD TIME
+  74654957ba3c9f1ce8bb513954b9deea68a5a82217806977a1247fb342db109f   2019-10-09 22:09:27
+  7dc3fc208c41c946ac8238405fce25e04f0c2a7a9e1d2701986217bd2445487a   2019-10-10 09:18:33
+  ------------------------------------------------------------------ ---------------------
+
+Additional Resources
+
+-   For more information on how to incorporate intelligence on dangerous threat actors into your security strategy, please visit the Falcon X product page.
+-   Read the 2019 Global Threat Report:“Adversary Tradecraft and the Importance of Speed.”
+-   Read the 2019 Falcon OverWatch Report: “Observations From the Front Lines of Threat Hunting.”
+-   Learn more about theCrowdStrike Falcon® Platform by visiting the product webpage.
+-   Test CrowdStrike next-gen AV for yourself. Start yourfree trial of Falcon Prevent™ today.
+
+ 
+
+-   Tweet
+-   Share
+
+[CrowdStrike Falcon Free Trial]
+
+Related Content
+
+[Turbine Panda Graphic]
+
+Huge Fan of Your Work: How TURBINE PANDA and China’s Top Spies Enabled Beijing to Cut Corners on the C919 Passenger Jet
+
+Rarely in the infosec industry do cyber investigators get the luxury of knowing the full scope…
+
+[Student Looking At Three Computer Screens With Ransomware]
+
+Ransomware Increases the Back-to-School Blues
+
+As students all over the United States donned their backpacks and packed their lunches to go…
+
+[SPIDER Adversary Image In Front Of Red Code]
+
+Who is Salty Spider (Sality)?
+
+Common Aliases SALTY SIDER is most commonly identified with the botnet it maintains (Sality) and it’s…
+
+Categories
+
+-   Endpoint Protection (181)
+-   Engineering & Tech (8)
+-   Executive Viewpoint (97)
+-   From The Front Lines (88)
+-   Research & Threat Intel (140)
+-   Tech Center (59)
+
+CONNECT WITH US
+
+-   
+-   
+-   
+-   
+-   
+
+[CrowdStrike Falcon Free Trial]
+
+Featured Articles
+
+-   WIZARD SPIDER Adds New Features to Ryuk for Targeting Hosts on LAN November 1, 2019
+-   Forrester Total Economic Impact™ Study Shows 316% ROI for CrowdStrike Falcon October 31, 2019
+-   Is Measurable Security Possible? October 28, 2019
+-   CrowdStrike Scores Highest Overall for Use Case Type A or “Forward-Leaning” Organizations in Gartner’s 2019 Critical Capabilities for Endpoint Protection Platforms October 24, 2019
+
+SUBSCRIBE {.white .section-header}
+---------
+
+Sign up now to receive the latest notifications and updates from CrowdStrike.
+
+SIGN UP
+
+See CrowdStrike Falcon in Action
+
+Detect, prevent, and respond to attacks— even malware-free intrusions—at any stage, with next-generation endpoint protection.
+
+SEE DEMO
+
+-   Huge Fan of Your Work: How TURBINE PANDA and China’s Top Spies Enabled Beijing to Cut Corners on the C919 Passenger Jet
+
+-   Recent Articles
+-   Featured Articles
+-   Videos
+-   Categories
+-   See Demo
+-   Request Info
+-   CrowdStrike Main Site
+
+ 
+
+Try CrowdStrike Free for 15 Days Get Started with A Free Trial
+
+X
+
+-   
+-   
+-   
+-   
+
+* * * * *
+
+-   Copyright © 2019 CrowdStrike
+-   Privacy
+-   Request Info
+-   Blog
+-   Join Our Team
+-   Sitemap
+-   Contact Us
+-   1.888.512.8906
+
+English
+
+-   Español
+-   Italiano
+-   Français
+-   Deutsch
+-   日本語
+
