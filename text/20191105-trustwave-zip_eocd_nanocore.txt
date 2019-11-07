@@ -1,0 +1,567 @@
+[Trustwave]
+
+menu
+
+search
+
+search
+
+-   Contact
+-   Support
+-   Login
+
+-   Services
+    -   Managed Security
+        keyboard_arrow_down
+    -   Security Testing
+        keyboard_arrow_down
+    -   Technology
+        keyboard_arrow_down
+    -   Consulting
+        keyboard_arrow_down
+    -   Education
+        keyboard_arrow_down
+-   Capabilities
+    -   By Industry
+        keyboard_arrow_down
+    -   By Mandate
+        keyboard_arrow_down
+    -   By Topic
+        keyboard_arrow_down
+-   Resources itemprop="url">
+    -   Blogs & Stories
+        keyboard_arrow_down
+    -   Resource Library
+        keyboard_arrow_down
+    -   Security Resources
+        keyboard_arrow_down
+    -   Events & Live Webinars
+        keyboard_arrow_down
+-   Company
+    -   About Trustwave
+        keyboard_arrow_down
+    -   Careers
+        keyboard_arrow_down
+    -   Partners
+        keyboard_arrow_down
+    -   Newsroom
+        keyboard_arrow_down
+    -   Contact
+        keyboard_arrow_down
+
+-   Contact
+-   Support
+-   Login
+    -   Login to your Fusion   
+        Platform Account
+
+        Trustwave Fusion Platform
+
+    -   -   What is the Trustwave Fusion Platform?
+        -   Login to SEG Cloud Portal
+        -   Legacy TrustKeeper Login
+
+-   Services
+
+    -   Managed Security
+    -   Security Testing
+    -   Technology
+    -   Consulting
+    -   Education
+
+    -   Managed Application Control Endpoint whitelisting with real-time threat intelligence and monitoring
+    -   Managed Detection & ResponseAdvanced monitoring of your endpoints to identify and stop threats
+    -   Managed DetectionA 24x7 service that monitors for and detects threats
+    -   Managed Web Application FirewallKeep your mission critical web applications secure with a Managed WAF
+    -   Proactive Threat HuntingIdentify existing attackers in your environment and reduce dwell time
+    -   Security Technology ManagementAn arrangement to handle the day-to-day management of your infosec
+    -   Security and Compliance BundlesSolution packages to address needs from validation to full network security
+    -   Telco SecurityDDOS & broadband protection for APAC businesses and delivered by Singtel
+
+    May 06, 2019
+
+    2019 Gartner Magic Quadrant for Managed Security Services, Worldwide
+
+    Analyst Report
+
+    -   DbProtect Scalable enterprise platform to monitor & protect databases and big data stores
+    -   AppDetectivePRO Database and big data scanner to find weaknesses that could lead to compromise
+    -   Security Testing Services Comprehensive suite of security testing capabilities managed within a unified portal
+
+    Apr 29, 2019
+
+    Database Security in the Cloud
+
+    White Paper
+
+    -   Secure Email Gateway Full protection against email threats and sensitive data from exiting
+    -   Secure Web Gateway Flexible solution to guard in real time against internet-borne threats
+    -   Intrusion Detection & Prevention A high-speed solution that monitors your network & helps fortify the perimeter
+    -   Next Generation Firewall Comprehensive network security with a low total cost of ownership
+    -   SIEM Technology that powers our Managed Detection service
+    -   Technology & Implementation Experts help determine the right assortment of technologies for your business
+    -   Technology Partners Key Partners who augment the broad portfolio of security services
+
+    Aug 05, 2019
+
+    The Underground Economy
+
+    Ebook
+
+    -   Digital Forensics & IR Service that provides breach training and immediate response to incidents
+    -   Intelligent Security Operations Advisory, transformation, and operations enablement consulting services
+    -   Data Protection Complete lifecycle management services for database security
+    -   Cybersecurity & Risk Advisors determine your security gaps and risk appetite to make better decisions
+    -   Trustwave SpiderLabs An elite group of researchers, penetration testers and incident responders
+    -   Technology & Implementation Experts help determine the right assortment of technologies for your business
+
+    Apr 13, 2017
+
+    Evaluating Your IT Risk Assessment Process: Does it Stand Up to Current Best Practices?
+
+    White Paper
+
+    -   Executive Training Programs Programs and services to help senior leaders make risk-based security decisions
+    -   Cybersecurity Awareness Training Industry-leading course content for general employees and developers
+    -   Tactical Training Programs Instruction for building attack defense and response that excels in the real world
+
+    Oct 30, 2017
+
+    The Complete Guide to Building a Security Culture
+
+    Ebook
+
+    Oct 07, 2015
+
+    9 Ways to Create a Security Awareness Program People Won’t Hate
+
+    Tips & Tricks
+
+-   Capabilities
+
+    -   By Industry
+    -   By Mandate
+    -   By Topic
+
+    -   Education Enterprise-grade security designed to fill gaps in K-12 & higher ed
+    -   Financial Sector Tech and services for protecting the world’s most asset-heavy sector
+    -   Government Services to help federal, state & local overcome resource shortages
+    -   Health Care Solutions for health care to protect infrastructure and ensure compliance
+    -   Hotels Solutions & service packages for the customer-facing lodging industry
+    -   Legal A solution set designed for a client-driven industry & hot target
+    -   Payment Services Digital protection across an evolving, complex & heavily targeted space
+    -   Restaurants Order up data protection through managed security bundles
+    -   Retail Convenient packages to prevent, detect & respond, and address PCI
+
+    -   Data Privacy Data protection and breach notification laws have become universal
+    -   FISMA Federal agencies must get up to speed on securing IT systems
+    -   GDPR Flagship law out of the EU is a wake-up call to businesses everywhere
+    -   GLBA Federal law forces financial firms to act on information security
+    -   HIPAA Regulations to protect patient data & prevent health care threats
+    -   ISO Satisfy the 27000 series of standards & keep data assets protected
+    -   POPI South Africa’s new regulation addresses personal data processing
+    -   PCI The most prescriptive security standard requires constant vigilance
+    -   SOX Publicly traded firms must show accountability, including around security
+
+    -   Detecting & Responding to Threats Monitor, proactively hunt for, investigate and remediate cyberthreats, 24x7
+    -   Securing Email & Web Gateways Protect against threats that strike when users encounter malicious content
+    -   Securing the Cloud Safely navigate to and stay protected in the cloud
+    -   Scanning & Testing Get insights on your risk exposure
+    -   Securing the IoT LandscapeTest, monitor and secure everyday objects connected to your company’s network
+
+    Nov 04, 2018
+
+    Internet of Things Cybersecurity Readiness
+
+    Research Report
+
+-   Resources
+
+    -   Blogs & Stories
+    -   Resource Library
+    -   Security Resources
+    -   Events & Live Webinars
+
+    -   Trustwave Blog A collection of tips and perspective on security hot topics that matter to you
+    -   SpiderLabs Blog Researchers & ethical hackers deliver malware analysis and vulnerability insight
+    -   Trustwave Stories A set of stories about how Trustwave is changing the way you do security
+
+    Nov 05, 2019
+
+    Double Loaded Zip File Delivers Nanocore
+
+    SpiderLabs Blog
+
+    Oct 30, 2019
+
+    The Cybersecurity Maturity Model Certification: 5 Important Facts to Know and Prepare For
+
+    -   Documents White papers, e-books, infographics and other practical resources.
+    -   Webinars Webinar replays around the hottest cybersecurity topics today
+    -   Videos A library of informative and engaging videos on various security subjects
+    -   Case Studies Stories of our customers’ infosec challenges and how they overcame them
+    -   Infographics Illustrative storytelling helping you more easily digest security trends and topics
+    -   Global Security Reports The industry's most comprehensive account of cyberthreat and attack data
+    -   Analyst Reports As a market leader, experts regularly assess our services and technologies
+
+    Oct 28, 2019
+
+    Trustwave Managed Web Application Firewall
+
+    Data Sheet
+
+    -   Security Advisories An archive of vulnerability discoveries and details from Trustwave SpiderLabs
+    -   Software Updates The latest updates to our products and services all in one place
+    -   Security Statistics The ultimate list of security facts and figures based on breach investigations
+    -   Trial Software Take a free test drive and see how we can improve your security posture
+
+    Dec 12, 2018
+
+    AppDetectivePRO Trial
+
+    Trial Software
+
+    Jul 18, 2019
+
+    Trustwave Secure Email Gateway Trial
+
+    Trial Software
+
+    -   Upcoming Webinars Join the conversation by participating in live informative security webinars
+    -   Upcoming Events Where in the world is Trustwave? Extensive list of upcoming events
+    -   Webinar Replays Webinar replays around the hottest cybersecurity topics today
+
+    Feb 24 - Feb 28, 2020
+
+    RSA Conference 2020
+
+    Upcoming Event
+
+    Nov 13 - Nov 14, 2019
+
+    SecureWorld Seattle
+
+    Upcoming Event
+
+-   Company
+
+    -   About Trustwave
+    -   Careers
+    -   Partners
+    -   Newsroom
+    -   Contact
+
+    -   Our Story Trustwave fights cybercrime, protects data and reduces security risk. This is our story
+    -   Our History Explore the major milestones of Trustwave and see how the company has evolved
+    -   Trustwave Fusion Platform Cloud-native platform that gives enterprises unprecedented visibility and control over their security resources
+    -   SpiderLabs Fusion Center The epicenter - a cybersecurity command center in the heart of Chicago
+    -   Security Operations Centers Distributed worldwide nodes defend our customers from the latest advanced threats
+    -   SpiderLabs An elite security team of more than 250 researchers, ethical hackers and incident responders
+    -   Leadership Experienced and impassioned experts make up our executive team
+    -   Accolades Trustwave is honored to be recognized for some of the industry’s biggest awards
+
+    Part of the   
+    Singtel group of companies
+
+    [Singtel Logo]
+
+    [Optus Logo]
+
+    -   All Opportunities Trustwave is ready to challenge and inspire you
+    -   Career Paths Find your path. Or carve your own
+    -   Around the Globe We're looking for extraordinary people to join us
+    -   Why Trustwave? We think you’ll love working at Trustwave. This is why
+
+    -   Partner Ecosystem Offerings tailored to your organization’s unique security needs and challenges
+    -   Trusted Advisor Program Strong, transparent relationships, based on mutual commitment
+    -   Technology Partners Key partners who augment our broad portfolio of security services
+    -   Telecommunications Partners Trustwave can be found globally powering many of the world's top telco providers
+
+    -   News Releases Written newsworthy announcements from our communications team
+    -   Media Coverage News and activity around the world focusing and highlighting Trustwave
+    -   Blogs Security advice, research and more – all meant to help you do your job better
+
+    Nov 04, 2019
+
+    Trustwave Launches Advanced Threat Detection and Response Services for Microsoft Azure
+
+    News Release
+
+    Oct 30, 2019
+
+    Trustwave Positioned as a Leader Among Cybersecurity Consulting Services in Asia Pacific
+
+    News Release
+
+    -   Global Contact Have a question? Let’s get in touch.
+    -   Global Locations A directory of our global offices and contact information
+    -   Support Support for Trustwave services and solutions
+
+    Experiencing a Security Breach?
+
+    Access to immediate incident response assistance.
+
+    24 Hour Hotline: +1 (866) 659-9097 Option 5
+
+    International: +1 (312) 873-7500 Option 4
+
+    Recommended Actions
+
+    General
+
+    To speak to a Trustwave representative.
+
+    +1 (312) 873-7500
+
+    Monday - Friday   
+    8:00 AM - 6:00 PM CT (UTC -6)
+
+    Sales
+
+    Contact a Trustwave solution specialist.
+
+    +1 (888) 878-7817
+
+    Monday - Friday   
+    8:30 AM - 5:30 PM CT (UTC -6)
+
+Loading...
+
+Blogs & Stories
+
+SpiderLabs Blog {.page-intro-title}
+===============
+
+Attracting more than a half-million annual readers, this is the security community's go-to destination for technical breakdowns of the latest threats, critical vulnerability disclosures and cutting-edge research.
+
+Double Loaded Zip File Delivers Nanocore {.blog-post-title .mbm itemprop="name"}
+========================================
+
+access_timeNovember 05, 2019
+
+person_outlineDiana Lopera
+
+share
+
+-   [Twitter]
+-   [LinkedIn]
+-   [Facebook]
+-   email
+
+Most malware sent via emails is packaged in archives such as ZIP, RAR, and 7z (7-Zip). Occasionally, we encounter some clever and creative ways these malicious archives are crafted. Here we will examine an example of an oddly formatted ZIP archive hiding the NanoCore malware.
+
+THE SPAM
+
+We spotted a courier themed spam campaign on our Secure Email Gateway (SEG) cloud recently. The message claimed to be from an Export Operation Specialist of USCO Logistics and that it was sent as per their customer request. Aside from this, there were several other suspicious items we noted:
+
+-   Headers mismatched: The Reply-To and From email address were different. Furthermore, the email address used in Reply-To is from a free email client Gmail.
+-   Suspicious message body: The attachment was mentioned in the message body twice, making sure to direct the reader’s attention towards the attachment.
+-   Suspicious attachment name:The name of attachment “SHIPPING_MX00034900_PL_INV_pdf.zip” ends with “pdf.zip”. That usually means that the name of the file inside the archive ends with 2 known file extensions “pdf.<extension>”(archiving tools usually defaults the <extension> to the archive’s format e.g. zip)
+
+[Email sample]
+
+Figure 1: Trustwave Security Email Gateway (SEG) console displaying the spam containing NanoCore RAT
+
+ 
+
+THE ATTACHMENT
+
+The attachment “SHIPPING_MX00034900_PL_INV_pdf.zip“makes this message stand out. The ZIP file had a file size significantly greater than that of its uncompressed content. Typically, the size of the ZIP file should be less than the uncompressed content or, in some cases, ZIP files will grow larger than the original files by a reasonable number of bytes.
+
+[ZIP_attachment]
+
+Figure 2: The attachment “SHIPPING_MX00034900_PL_INV_pdf.zip“
+
+ 
+
+ZIP archives are supposed to have one “End of Central Directory” (EOCD) signifying the end of the archive. Looking deeper into the structure of “SHIPPING_MX00034900_PL_INV_pdf.zip“, the attachment has two EOCDs. After the first EOCD comes some extra data – another ZIP file structure. It turns out that the first ZIP structure is for the image file “order.jpg”while the second one is for an executable file “SHIPPING_MX00034900_PL_INV_pdf.exe“.  Both are compressed when archived, and both indicate that they are the only file in their ZIP structures as indicated in their local file headers and EOCDs respectively.
+
+The Decoy
+
+The image file “order.jpg” contained in the first ZIP structure is actually a non-malicious PNG formatted image file. This serves as a decoy, an attempt to hide the content of the other ZIP structure. The image file has been correctly identified by SEG as a PNG when its file extension is“.jpg” denoting a JPEG formatted image.
+
+The NanoCore RAT
+
+The second ZIP structure contains “SHIPPING_MX00034900_PL_INV_pdf.exe“, which is a NanoCore RAT. This remote access trojan has the capability that allows an attacker to completely take control of the compromised machine. It connects to its command and control server at 194.5.98.85 on port 11903. This NanoCore RAT is version 1.2.2.0 which has been found to be offered for free on the Dark Web just a few months ago.
+
+[Process flow]
+
+Figure 3: Process flow of the NanoCore RAT
+
+[Memory dump]
+
+Figure 4: Memory dump of NanoCore RAT captured from the last process in figure 3
+
+ 
+
+The ZIP Content as viewed by different Archiving Tools
+
+Obviously the attacker is trying to evade scanning gateways with this dual archive trick. But how do various archive utilities handle the unpacking of this sample?
+
+We used different archiving tools such as PowerArchiver 2019, WinZip, WinRar, 7Zip, and Unzip that is built into the Windows OS in attempting to extract the content of the attachment “SHIPPING_MX00034900_PL_INV_pdf.zip”. Among these 5 tools, only WinZip and Windows’ Unzip were not able to extract anything from the ZIP file as they encountered an error at the start of the extraction process. The other archiving tools were able to extract one file from the ZIP attachment – either “order.jpg”or “SHIPPING_MX00034900_PL_INV_pdf.exe”.  
+
+WinZip version 11.2 and 24.0, and the built-in Unzip tool in Windows, recognized that the attachment “SHIPPING_MX00034900_PL_INV_pdf.zip“ is an invalid archive. Only WinZip gave an explicit reason – the start of central directory of the ZIP was not found. The central directory it pertained to is the one in the second ZIP structure. At figure 2, the second EOCD indicates that its only central directory is located at file offset 0xd148f whereas it is at 0xd40d41. (The size of the first  ZIP structure was not considered.)
+
+[WinZip 11.2 error prompt]
+
+Figure 5: WinZip 11.2 error prompt and the snippet of the 2nd ZIP structure’s central directory and EOCD
+
+[Unzip]
+
+Figure 6: Windows’ Unzip prompted an error that the attachment in this spam is invalid
+
+ 
+
+Meanwhile, the archiving tools PowerArchiver 2019, WinRar, and 7Zip were able to extract a file from the attachment “SHIPPING_MX00034900_PL_INV_pdf.zip“. Below is the matrix:
+
+[The ZIP content as per the archiving tools]
+
+ 
+
+The latest versions of PowerArchiver 2019 and WinRar displayed in their respective UI the executable “SHIPPING_MX00034900_PL_INV_pdf.exe” as the only content of the ZIP attachment. No error or warning was prompted during the extraction.
+
+[PowerArchiver2019 extracted the executable]
+
+Figure 7: Process monitor tool displaying the PowerArchiver 2019 executable extracting “SHIPPING_MX00034900_PL_INV_pdf.exe”
+
+ 
+
+Older versions of 7Zip also behave like PowerArchiver and WinRAR. 7Zip version 9.22 and older saw the executable as well. However, starting from 7Zip version 9.34 (next available installer after version 9.22) up to its latest version 19.0, 7zip saw and was able to extract the image file “order.jpg” instead. The second ZIP structure was treated as extra data; hence, a warning was added to the extracted image file’s properties.
+
+[7Zip extracted the image file]
+
+Figure 8: 7Zip version 19.0 extracted “order.jpg” from the ZIP attachment and a warning has been made. The Tail Size from the image’s properties is the size of the second ZIP structure.
+
+ 
+
+Among the archiving tools we tried, WinRar 3.30 behaved differently and unexpectedly. The content of the ZIP attachment it displayed in its UI was not the one it extracted!
+
+[WinRar 3.30]
+
+Figure 9: WinRar version 3.30 displays in its UI “order.jpg” as the sole content of the ZIP attachment. However, it extracts “SHIPPING_MX00034900_PL_INV_pdf.exe”
+
+ 
+
+SUMMARY
+
+This sample challenges gateways scanners. Depending on the type of decompression engine used, there is a good probability that only the decoy file may be scrutinized and vetted, and the malicious content unnoticed – just like how some of the most popular archiving tools failed to notice the second ZIP structure. 
+
+Despite what the gateway does, this attack would only succeed if the message got through the gateway and a particular archive utility is used by the end-user, such as certain versions of PowerArchiver, WinRar, and older 7Zip as described above.
+
+In this case, the Trustwave Secure Email Gateway flagged the message as suspicious and it did not get through. Nevertheless, this case does highlight the types of tricks the bad guys are using in an attempt to deliver malware through email.
+
+ 
+
+IOC
+
+SHIPPING_MX00034900_PL_INV_pdf.zip (868,519 bytes)  
+SHA1: 9474e1517c98d4165300a49612888d16643efbf6
+
+SHIPPING_MX00034900_PL_INV_pdf.exe (1,276,928 bytes)  
+SHA1: 06b80f9a0fba1d830dcf2ecf225ed1d19060589a 
+
+order.jpg (11,247 bytes)  
+SHA1: 0429b924e7cdbaf9f9b6aec6744eda19e8131d08
+
+Recent SpiderLabs Blog Posts {.text-center .text-white}
+----------------------------
+
+Nov 05, 2019
+
+Double Loaded Zip File Delivers Nanocore
+
+SpiderLabs Blog
+
+Oct 23, 2019
+
+Windows Debugging & Exploiting Part 1 - Environment Setup
+
+SpiderLabs Blog
+
+Oct 18, 2019
+
+Messing with Azorult Part 2: Command and Control
+
+SpiderLabs Blog
+
+[Trustwave]
+
+-   [LinkedIn]
+-   [Twitter]
+-   [Facebook]
+-   [YouTube]
+
+Services
+
+-   Managed Security
+-   Security Testing
+-   Technology
+-   Consulting
+-   Education
+
+Capabilities
+
+-   By Topic
+-   By Industry
+-   By Mandate
+
+Resources
+
+-   Blogs & Stories
+-   Resource Library
+-   Security Resources
+-   Events & Webinars
+
+Company
+
+-   About Trustwave
+-   Careers
+-   Newsroom
+-   Contact
+-   Support
+
+Stay Informed
+
+Sign up to receive the latest security news and trends from Trustwave.
+
+Subscribe
+
+No spam, unsubscribe at any time.
+
+-   Legal
+-   Terms of Use
+-   Privacy Policy
+
+United States - English Germany - German [Deutsche] Japan - Japanese [日本語]
+
+Copyright ©
+
+Trustwave Holdings, Inc.   
+All rights reserved.
+
+Loading
+
+Help Us Stop the Robot Uprising {.text-center}
+-------------------------------
+
+This is a bot-free zone. Please check the box to let us know you're human.
+
+Thank You {.text-center}
+---------
+
+Download Now
+
+* * * * *
+
+Read complimentary reports and insightful stories in the   
+Trustwave Resource Center
+
+Thank You {.text-center}
+---------
+
+One of our sales specialists will be in touch shortly.
+
+* * * * *
+
+Read complimentary reports and insightful stories in the   
+Trustwave Resource Center
