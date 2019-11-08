@@ -1,0 +1,3 @@
+http://70.39.115.196/payment/confirm.gif?f=1
+http://70.39.115.196/payment/confirm.gif
+http://70.39.115.196/payment/confirm.gif?f=2
