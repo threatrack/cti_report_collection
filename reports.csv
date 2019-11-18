@@ -12,6 +12,7 @@
 "20191021","fireeye","shikata_ga_nai","html","https://www.fireeye.com/blog/threat-research/2019/10/shikata-ga-nai-encoder-still-going-strong.html"
 "20191021","ncsc","turla_falseflag","pdf","https://s3.eu-west-1.amazonaws.com/ncsc-content/files/Advisory%20Turla%20group%20exploits%20Iranian%20APT.pdf"
 "20191021","talos","gustuff","html","https://blog.talosintelligence.com/2019/10/gustuffv2.html"
+"20191017","checkpoint","pony_cc_btc","html","https://research.checkpoint.com/ponys-cc-servers-hidden-inside-the-bitcoin-blockchain/"
 "20191017","eset","apt29_github","github","https://github.com/eset/malware-ioc/tree/master/dukes"
 "20191017","eset","apt29","pdf","https://www.welivesecurity.com/wp-content/uploads/2019/10/ESET_Operation_Ghost_Dukes.pdf"
 "20191016","proofpoint","ta505_sdbbot","html","https://www.proofpoint.com/us/threat-insight/post/ta505-distributes-new-sdbbot-remote-access-trojan-get2-downloader"
