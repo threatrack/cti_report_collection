@@ -1,0 +1,294 @@
+Intego Logo
+
+-   Buy Now
+
+Menu ☰ {#menu-button .title}
+------
+
+-   Home Products
+
+    Intego Home Products
+
+    Compatible with macOS Mojave!
+
+    Upgrade Renew
+
+    -   
+        Intego Mac Internet Security X9
+    -   
+        Best Buy!
+        Intego Mac Premium Bundle X9
+    -   
+        Intego ContentBarrier Secure X9
+    -   
+        Mac Washing Machine Secure X9
+-   Business Products
+-   Renew
+-   Support
+    -   Customer Support
+    -   Knowledge Base
+    -   Downloads
+    -   Submit Malware
+    -   Contact Support
+    -   Check Your Requests
+    -   Upgrade
+    -   Renew
+    -   Request A Quote
+-   Company
+    -   News
+    -   Careers
+    -   Awards
+    -   Partners
+    -   Privacy Policy
+    -   Terms of Use
+    -   Submission Policy
+    -   Contact Us
+    -   Press Kit
+-   Blog
+-   Buy Now
+
+Follow @IntegoSecurity
+
+The Mac Security Blog
+=====================
+
+Search for:
+
+Share
+
+Shares
+
+Tweets
+
+Shares
+
+Shares
+
+Pins
+
+Print
+
+​
+
+Malware + Recommended
+
+Operation AppleJeus and OSX/Lazarus: Rise of a Mac APT
+------------------------------------------------------
+
+Posted on August 27th, 2018 by Joshua Long []
+
+[Operation AppleJeus and OSX/Lazarus: Rise of a Mac APT]
+
+Security researchers have uncovered a new strain of malware, identified by Intego VirusBarrier as OSX/Lazarus. The discovery of Lazarus Mac malware, produced by a threat actor known as the Lazarus Group, has breathed new life into an infrequently discussed topic in Mac security: advanced persistent threats (APT).
+
+What Is an APT?
+
+[]Advanced persistent threats (APTs) usually involve malware that is designed by nation-state caliber threat actors, engineered to evade anti-virus protection, and usually targeted at a particular organization or individual. APTs often leverage zero-day vulnerabilities in systems known to be used by an intended target.
+
+Who Is the Lazarus Group?
+
+[]The Lazarus Group is believed to have ties to North Korea for a variety of reasons, having been linked to attacks on the government of South Korea as far back as 2009. Other attacks attributed to the Lazarus Group have included the Sony Pictures breach in 2014 and a variety of attacks on banks and cryptocurrency exchanges in recent years.
+
+In an analysis of the Windows version of the recently discovered Lazarus malware (also known as "Fallchill"), system language codes were found that hint that the malware was created on a system that prefers only Korean dialects. This discovery alone is not conclusive evidence of ties to North Korea, but malware analysts say that the language code is not something they have seen in the past, and could therefore indicate a slip-up by the developer.
+
+[]
+
+The Windows variant has an string that hints at North Korea ties. Image: Securelist
+
+Definitively attributing an APT to a threat actor can be challenging, because there is always the possibility that a sophisticated developer has planted "false flags" to mislead researchers, or has borrowed code or techniques from another threat actor to throw researchers off their scent. In this case, however, there is an abundance of evidence linking the recent malware to previous Fallchill malware that has been attributed to the Lazarus Group, including the reuse of command-and-control server IP addresses and the same hard-coded encryption key baked into the malware's code.
+
+What Is Known About OSX/Lazarus?
+
+[]The recently discovered malware campaign (codename "jeus," also known as "Operation AppleJeus") appears to have launched publicly in late April 2018, as a Trojan horse under the guise of a cryptocurrency trading application going by the name "Celas Trade Pro" by the company "Celas Limited" (or Celas LLC). Windows and Mac versions of the software installer were available to download through the company's site.
+
+[]
+
+The Celas Limited homepage implies that the Trojan horse was released in late April 2018. Image: Securelist
+
+Upon installation, Celas Trade Pro's auto-update functionality would activate, acting as a malicious dropper that would install an unwanted backdoor payload on the victim's computer. []The Mac version's autoupdater is invoked by a LaunchDaemon file named ".com.celastradepro.plist" (with or without a period at the beginning, depending on the version; the preceding period makes a file or folder invisible in the Finder).
+
+When the malware phones home to a command-and-control server, it uses a hard-coded User Agent string that identifies itself as "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36" — in other words, it pretends to be Chrome 66 running on macOS Sierra. The specific browser version string hints that the Mac version of OSX/Lazarus was likely developed sometime after April 26, 2018, the date this exact Chrome version was released, which aligns nicely with the April 29 launch date indicated on the Celas Limited homepage.
+
+The discovery of OSX/Lazarus is significant because it marks the first time the Lazarus Group is known to have branched out into targeting Macs. Previously, the Lazarus Group has primarily focused on targeting the Windows platform.
+
+How to Tell If Your Mac Is Infected
+
+If you know that Celas Trade Pro has never been installed on your Mac, then you're probably safe from this particular threat. If you share a computer with others, or if you are uncertain whether the app might have been installed in the past, you can check for the presence of the following files on your Mac to identify whether it might be infected.
+
+-   ~/Downloads/celastradepro_mac_installer_1.00.00.dmg or CelasTradePro-Installer.dmg — The installer disk image; it may appear in download folders in other user accounts
+-   /Applications/CelasTradePro.app (the ".app" may not be visible) — This is the main Trojan, which contains the malicious updater
+-   /Library/LaunchDaemons/.com.celastradepro.plist or com.celastradepro.plist (the former will be hidden by default in the Finder; you can view hidden files by pressing Command-Shift-period if you use mac OS Sierra 10.12 or later) — This file makes the malicious auto-updater app relaunch after every reboot
+-   /var/zdiffsec — This is the malicious payload downloaded and installed by the Trojan updater app
+
+Network administrators can look for potentially infected systems by checking logs for computers attempting to connect to the following domain or IP addresses:
+
+-   celasllc[.]com
+-   80.82.64[.]91
+-   185.142.236[.]226
+-   185.142.239[.]173
+-   196.38.48[.]121
+
+Intego VirusBarrier detects and eradicates this threat as OSX/Lazarus.
+
+Who Is John Broox?
+
+The name "John Broox" appears in several places associated with the new Lazarus malware, including the Get Info window of the Mac app, and the WHOIS record for the Celas LLC domain name (in both the Registrant Name and Registrant Email fields).
+
+[]
+
+The malware app's Get Info window claims that it was developed by "John Broox."
+
+Interestingly, we also discovered that an EXE file from the Windows variant of the malware was uploaded to the multi-engine VirusTotal scanning site on June 13, 2018, just three hours after the app had been compiled. Within minutes, the file was marked as "Safe" by two community members: johnbroox200 (which matches the username portion of the WHOIS e-mail address) and waliydarwish222. Evidently, someone involved with the creation of the malware was testing to see whether it would be flagged by any popular anti-virus engines before releasing the malware to the public, and they tried to increase the file's credibility by adding positive reviews.
+
+Is John Broox a real name? No, it almost certainly is not. According to various name information sites, the surname Broox with that spelling is extremely uncommon; only a handful of people worldwide are believed to have it.
+
+[]But what about the second name, Waliy Darwish? It is unclear what Mr. Darwish's involvement is. He seems to have fairly legitimate-looking profiles on LinkedIn and Twitter identifying himself as "Business Developer at CELAS LLC" since February 2018. It  is possible that he may have been hired to assist with the development of the legitimate portions of the Celas Trade Pro app, before "John Broox" added the malicious components. If Darwish is a real person, it's unclear whether he knew about the malicious component of the app.
+
+What Do "Celas" and "Jeus" Mean?
+
+Although it is unknown what the creators' intentions were when naming the app and the campaign's code name, there are some interesting potential etymological meanings behind the words.
+
+"Celas," the name of the company and the app, can be an Ido and Spanish word meaning "you conceal," with an additional Spanish meaning of "you watch over."
+
+"Jeus," the apparent code name of the malware campaign, can be a Catalan word meaning "you lie down."
+
+So perhaps the idea is that while you (the victim) lie down, you (now meaning the threat actor) conceal malicious activity (in a Trojan horse) and watch over the victim (via the Trojan's backdoor payload) while they sleep.
+
+Where Can I Learn More?
+
+[]We'll talk about OSX/Lazarus on this week's episode of the Intego Mac Podcast. Subscribe now to make sure you don't miss an episode!
+
+If you'd like additional technical details about OSX/Lazarus, you can read Securelist's coverage.
+
+Apple juice/apples image credit: Phong Nguyen; modified by Joshua Long.
+
+[]
+
+About Joshua Long
+
+Joshua Long (@theJoshMeister), Intego's Chief Security Analyst, is a renowned security researcher and writer. Josh has a master's degree in IT concentrating in Internet Security and has taken doctorate-level coursework in Information Security. Apple has publicly acknowledged Josh for discovering an Apple ID authentication vulnerability. Josh's security research has been featured by many fine publications such as CNET, CBS News, ZDNet UK, Lifehacker, CIO, Macworld, The Register, and MacTech Magazine. Look for more of Josh's articles at security.thejoshmeister.com and follow him on Twitter. View all posts by Joshua Long →
+
+This entry was posted in Malware, Recommended and tagged AppleJeus, APT, Lazarus Group, OSX/Lazarus, Trojan horse. Bookmark the permalink.
+
+[]
+
+[]
+
+Popular Stories
+
+-   [Researchers use lasers to hack Siri, Alexa, Google assistants]
+    Researchers use lasers to hack Siri, Alexa, Google assistants
+
+Intego on YouTube
+
+Recommended
+
+-   How To + Security & Privacy  
+     How to avoid getting hacked after data breaches
+-   How To  
+     How to choose the right Mac for your use case
+-   Security & Privacy + Software & Apps  
+     How safe is the Mac App Store? Privacy-violating apps uncovered
+-   How To  
+     How to tell if an online article is real, fake or a scam
+
+Subscribe
+
+Sign up for a Free Mac Security Newsletter to stay updated.
+
+Email address:
+
+Facebook
+
+Intego Mac Podcast
+
+[Intego Mac Podcast]
+
+Mac Security News
+
+-   Facebook sues NSO Group for WhatsApp spyware attack
+-   Firefox and Chrome rolling out DNS over HTTPS (DoH) feature
+-   CIA porn accusation emails: Here’s what Mac users need to know
+-   RSA Conference 2019 highlights: a Mac perspective
+
+Apple News
+
+-   iPad vs. MacBook: is iPadOS a game changer?
+-   Review: iPhone 11, the iPhone for everyone
+-   Apple Watch Series 5 Review: incremental changes for a solid device
+-   Apple updates iPhone, Apple Watch, and iPad; gives info on Apple Arcade and Apple TV+
+
+Related posts:
+
+1.  Mac malware on the rise again; several new threats found
+2.  OSX/Calisto Mac malware masquerades as Intego software
+3.  New Mac malware targets cryptocoin ‘dummies’
+
+Mac Security Products for Home
+
+-   Mac Internet Security X9
+-   Mac Premium Bundle X9
+-   ContentBarrier X9
+-   ContentBarrier Secure X9
+-   Mac Washing Machine
+-   Mac Washing Machine Secure X9
+
+Mac Security Products for Business
+
+-   VirusBarrier X9
+-   NetBarrier X9
+
+Support
+
+-   Knowledge Base
+-   Downloads
+-   Submit Malware
+-   Contact Support
+-   Check Your Requests
+
+Mac Resource Center
+
+-   New Mac User Center
+-   Malware Definitions
+-   Glossary of Terms
+-   Why Trust a PC Vendor?
+-   Free Mac Antivirus
+
+Company
+
+-   News
+-   Careers
+-   Awards
+-   Partners
+-   Privacy Policy
+-   Terms of Use
+-   Submission Policy
+-   Contact Us
+
+Downloads and Upgrades
+
+-   Renew
+-   Upgrade
+-   Buy Now
+-   Free Trial
+
+Find Us
+
+-   Facebook
+-   Twitter
+-   LinkedIn
+-   YouTube
+
+Sitemap
+
+Intego Logo
+
+-   Privacy Policy | Terms of Use
+
+Copyright © 2019 Intego
+
+Sign up For Our Newsletter
+
+Get the latest Mac security news direct to your inbox.
+
+Email address:

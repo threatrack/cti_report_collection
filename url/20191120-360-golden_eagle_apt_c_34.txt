@@ -1,0 +1,2 @@
+ftp://176.*.*.*/
+http://.ru//get.php?=1&n=31337&u=7&id=xx&pwd=xx&m=d4628443
