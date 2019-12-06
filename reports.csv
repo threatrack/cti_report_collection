@@ -134,6 +134,7 @@
 "20190503","kaspersky","zoopark","pdf","https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/05/24122414/ZooPark_for_public_final_edited.pdf"
 "20190430","threatrecon","sectorb06","html","https://threatrecon.nshc.net/2019/04/30/sectorb06-using-mongolian-language-in-lure-document/"
 "20190424","cyberint","legit_rat_report","pdf","https://e.cyberint.com/hubfs/Report%20Legit%20Remote%20Access%20Tools%20Turn%20Into%20Threat%20Actors%20Tools/CyberInt_Legit%20Remote%20Access%20Tools%20Turn%20Into%20Threat%20Actors%27%20Tools_Report.pdf"
+"20190424","checkpoint","apt32_deobfuscating","html","https://research.checkpoint.com/2019/deobfuscating-apt32-flow-graphs-with-cutter-and-radare2/"
 "20190423","kaspersky","shadowhammer","html","https://securelist.com/operation-shadowhammer-a-high-profile-supply-chain-attack/90380/"
 "20190422","checkpoint","finteam","html","https://research.checkpoint.com/finteam-trojanized-teamviewer-against-government-targets/"
 "20190419","malwarebytes","oceanlotus","html","https://blog.malwarebytes.com/threat-analysis/2019/04/funky-malware-format-found-in-ocean-lotus-sample/"

@@ -1,0 +1,42 @@
+RevengeRAT - fucksaudi.ddns[.]net
+d8e60135aecb3a2a7422c06cfb94ed9aaf1182145d1c482f84b0bd81aa5d2416
+NanoCoreRAT - googlechromehost.ddns[.]net
+e2cfc91085b9b5db41c4c4297c594758dd9a0c8561ce4544da9faedd3a6b91e8
+StoneDrill - backupnet.ddns[.]net
+a217eb149b65552e3127c65c306aa521dca54959ceee89e85dd2e6e38c0d8f8b
+SandroRAT - younesadams.ddns[.]net
+410b5f374059cc21b2c738a71957c97e4183d92580d1d48df887deece6d2f663
+DarkComet - teamnj.ddns[.]net
+e144db21cc5f8f57aa748c0a8e4008fc34f8dd831eb2442eb35961e4cdf41f22
+
+hyperservice.ddns[.]net
+microsoftupdated[.]com
+mynetwork[.]cf
+mynetwork.ddns[.]net
+mypsh.ddns[.]net
+mywinnetwork.ddns[.]net
+remote-server.ddns[.]net
+remserver.ddns[.]net
+securityupdated[.]com
+servhost.hopto[.]org
+service-avant[.]com
+srvhost.servehttp[.]com
+svcexplores[.]com
+update-sec[.]com
+
+162.250.145[.]204
+162.250.145[.]234
+188.165.4[.]81
+192.119.15[.]35
+192.119.15[.]37
+192.119.15[.]39
+192.119.15[.]41
+195.20.52[.]172
+204.11.56[.]48
+213.252.244[.]14
+213.252.244[.]144
+217.13.103[.]46
+217.147.168[.]44
+37.48.105[.]178
+5.187.21[.]70
+5.187.21[.]71
