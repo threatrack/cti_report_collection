@@ -45,6 +45,14 @@ cat reports.csv | while read line; do
 	#curl "https://web.archive.org/save/${url}" > /dev/null
 
 case "${filetype}" in
+	"txt")
+		if [ ! -f "${text}" ]; then
+			echo "  [+] Downloading: ${text}"
+			eval "${curlcmd} \"${url}\" -o \"${text}\""
+		else
+			echo "  [.] We already have: ${text}"
+		fi
+		;;
 	"html")
 		if [ ! -f "${html}" ]; then
 			echo "	[+] Downloading: ${html}"
