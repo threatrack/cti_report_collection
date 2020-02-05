@@ -1,0 +1,553 @@
+Solutions for:
+
+-   Home Products
+-   Small Business 1-50 employees
+-   Medium Business 51-999 employees
+-   Enterprise 1000+ employees
+
+Kaspersky
+
+-   CompanyAccount
+-   Get In Touch
+
+-   Solutions
+    -   -   []
+
+            Endpoint Security
+
+            Learn More
+
+        -   []
+
+            Hybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            Internet of Things & Embedded Security
+
+            Learn More
+
+        -   []
+
+            Threat Management and Defense
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Fraud Prevention
+
+            Learn More
+
+-   Industries
+    -   -   []
+
+            National Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Finance Services Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Healthcare Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Transportation Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Retail Cybersecurity
+
+            Learn More
+
+    -   -   Other Industries
+
+        -   Telecom Cybersecurity
+        -   View all
+
+-   Products
+    -   -   []
+
+            KasperskyEndpoint Security
+
+            Learn More
+
+        -   []
+
+            KasperskyEndpoint Detection and Response
+
+            Learn More
+
+        -   []
+
+            KasperskyHybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            KasperskyAnti Targeted Attack Platform
+
+            Learn More
+
+        -   []
+
+            KasperskyPrivate Security Network
+
+            Learn More
+
+        -   []
+
+            KasperskyEmbedded Systems Security
+
+            Learn More
+
+    -   -   Other Products
+
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View All
+
+-   Services
+    -   -   []
+
+            KasperskyCybersecurity Services
+
+            Learn More
+
+        -   []
+
+            KasperskySecurity Awareness
+
+            Learn More
+
+        -   []
+
+            KasperskyPremium Support
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Intelligence
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Hunting
+
+            Learn More
+
+        -   []
+
+            KasperskyIncident Response
+
+            Learn More
+
+    -   -   Other Services
+
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View All
+
+-   Resource Center
+    -   Case Studies
+    -   White Papers
+    -   Datasheets
+    -   Technologies
+-   Contact Us
+-   GDPR
+
+Menu
+
+Securelist
+
+English
+
+-   
+    English
+-   
+    Pусский
+-   
+    Deutsch
+-   
+    Français
+-   
+    Italiano
+-   
+    Español
+-   
+    Polski
+
+-   Threats
+    -   Mobile threats
+    -   Secure environment (IoT)
+    -   Financial threats
+    -   Spam and phishing
+    -   Industrial threats
+    -   Vulnerabilities and exploits
+    -   Web threats
+-   Categories
+    -   APT reports
+    -   Research
+    -   Incidents
+    -   Security Bulletin
+    -   Publications
+    -   Malware reports
+    -   Spam and phishing reports
+    -   All categories
+-   Tags
+    -   Ransomware
+    -   Targeted Attacks
+    -   Botnets
+    -   Internet Banking
+    -   Mobile Malware
+    -   Social Engineering
+    -   Malware Statistics
+    -   Show all tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+-   KSB 2019
+
+-   Solutions for:
+-   Home Users
+    -   Products
+        -   KasperskyTotal Security
+        -   KasperskyInternet Security
+        -   KasperskyAnti-Virus
+        -   KasperskyInternet Security for Mac
+        -   Kaspersky Internet Security for Android
+        -   KasperskySecure Connection
+        -   Free Tools
+        -   Kaspersky Safe Kids
+        -   Kaspersky Password Manager
+        -   Kaspersky Software Updater
+        -   View more
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+    -   My Kaspersky
+        -    My Devices
+        -    My Products / Subscriptions
+        -    My Orders
+-   Small Business(1-50 employees)
+    -   Products
+        -   KasperskySmall Office Security
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   KSOS Portal
+-   Medium Business(51-999 employees)
+    -   Products
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskySecurity for Office 365
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+        -   KasperskySecurity for Business Total
+        -   KasperskyPhysical, Virtual & Cloud Workloads Security
+        -   TARGETED SECURITY SOLUTIONS
+        -   Mail Server
+        -   File Server
+        -   Mobile
+        -   Internet Gateway
+        -   Virtualization and Hybrid Cloud
+        -   Collaboration
+        -   Vulnerability and Patch Management
+        -   Storage
+        -   View More
+    -   Services
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   CompanyAccount
+-   Enterprise(1000+ employees)
+    -   Solutions
+        -   Endpoint Security
+        -   Hybrid Cloud Security
+        -   Internet of Things & Embedded Security
+        -   Threat Management and Defense
+        -   Industrial Cybersecurity
+        -   Fraud Prevention
+    -   Industries
+        -   National Cybersecurity
+        -   Industrial Cybersecurity
+        -   Finance Services Cybersecurity
+        -   Healthcare Cybersecurity
+        -   Transportation Cybersecurity
+        -   Retail Cybersecurity
+        -   Other industries
+        -   Telecom Cybersecurity
+        -   View all
+    -   Products
+        -   KasperskyEndpoint Security
+        -   KasperskyEndpoint Detection and Response
+        -   KasperskyHybrid Cloud Security
+        -   KasperskyAnti Targeted Attack Platform
+        -   KasperskyPrivate Security Network
+        -   KasperskyEmbedded Systems Security
+        -   Other products
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View all
+    -   Services
+        -   KasperskyCybersecurity Services
+        -   KasperskySecurity Awareness
+        -   KasperskyPremium Support
+        -   KasperskyThreat Intelligence
+        -   KasperskyThreat Hunting
+        -   KasperskyIncident Response
+        -   Other Services
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View all
+    -   Resource Center
+        -   Case Studies
+        -   White Papers
+        -   Datasheets
+        -   Technologies
+    -   Contact Us
+    -   GDPR
+    -   CompanyAccount
+-   -   Securelist
+-   Threats
+    -   Financial threats
+    -   Mobile threats
+    -   Web threats
+    -   Secure environment (IoT)
+    -   Vulnerabilities and exploits
+    -   Spam and Phishing
+    -   Industrial threats
+-   Categories
+    -   APT reports
+    -   Incidents
+    -   Research
+    -   Malware reports
+    -   Spam and phishing reports
+    -   Kaspersky Security Bulletin
+    -   Publications
+-   Tags
+    -   Ransomware
+    -   Botnets
+    -   Mobile Malware
+    -   Social Engineering
+    -   Targeted Attacks
+    -   Malware Statistics
+    -   All Tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+-   -   Partners
+    -   Partners
+    -   Find a Partner
+    -   Affiliate
+    -   Technology
+    -   Whitelist Program
+-   About Us
+    -   About Us
+    -   Company
+    -   Team
+    -   Transparency
+        -   Transparency Center
+        -   Policy Blog
+    -   Corporate News
+    -   Press Center
+    -   Careers
+    -   Incubator
+    -   Sponsorships
+
+Research
+
+Windows 0-day exploit CVE-2019-1458 used in Operation WizardOpium {.entry-title}
+=================================================================
+
+By AMR, GReAT on December 10, 2019. 8:00 pm
+
+In November 2019, Kaspersky technologies successfully detected a Google Chrome 0-day exploit that was used in Operation WizardOpium attacks. During our investigation, we discovered that yet another 0-day exploit was used in those attacks. The exploit for Google Chrome embeds a 0-day EoP exploit (CVE-2019-1458) that is used to gain higher privileges on the infected machine as well as escaping the Chrome process sandbox. The exploit is very similar to those developed by the prolific 0-day developer known as ‘Volodya’.
+
+The EoP exploit consists of two stages: a tiny PE loader and the actual exploit. After achieving a read/write primitive in the renderer process of the browser through vulnerable JS code, the PE exploit corrupts some pointers in memory to redirect code execution to the PE loader. This is done to bypass sandbox restrictions because the PE exploit cannot simply start a new process using native WinAPI functions.
+
+The PE loader locates an embedded DLL file with the actual exploit and repeats the same process as the native Windows PE loader – parsing PE headers, handling imports/exports, etc. After that, a code execution is redirected to the entry point of the DLL – the DllEntryPoint function. The PE code then creates a new thread, which is an entry point for the exploit itself, and the main thread simply waits until it stops.
+
+[]
+
+EoP exploit used in the attack
+
+The PE file encapsulating this EoP exploit has the following header:
+
+[]
+
+The compilation timestamp of Wed Jul 10 00:50:48 2019 is different from the other binaries, indicating it has been in use for some time.
+
+Our detailed analysis of the EoP exploit revealed that the vulnerability it used belongs to the win32k.sys driver and that the EoP exploit was the 0-day exploit because it works on the latest (patched) versions of Windows 7 and even on a few builds of Windows 10 (new Windows 10 builds are not affected because they implement measures that prevent the normal usage of the exploitable code).
+
+The vulnerability itself is related to windows switching functionality (for example, the one triggered using the Alt-Tab key combination). That’s why the exploit’s code uses a few WinAPI calls (GetKeyState/SetKeyState) to emulate a key press operation.
+
+At the beginning, the exploit tries to find the operating system version using ntdll.dll’s RtlGetVersion call that’s used to find a dozen offsets needed to set up fake kernel GDI objects in the memory. At the same time, it tries to leak a few kernel pointers using well-known techniques to leak kernel memory addresses (gSharedInfo, PEB’s GdiSharedHandleTable). After that, it tries to create a special memory layout with holes in the heap using many calls to CreateAcceleratorTable/DestroyAcceleratorTable. Then a bunch of calls to CreateBitmap are performed, the addresses to which are leaked using a handle table array.
+
+[]
+
+Triggering exploitable code path
+
+After that, a few pop-up windows are created and an undocumented syscall NtUserMessageCall is called using their window handles. In addition, it creates a special window with the class of a task switch window (#32771) and it’s important to trigger an exploitable code path in the driver. At this step the exploit tries to emulate the Alt key and then using a call to SetBitmapBits it crafts a GDI object which contains a controllable pointer value that is used later in the kernel driver’s code (win32k!DrawSwitchWndHilite) after the exploit issues a second undocumented call to the syscall (NtUserMessageCall). That’s how it gets an arbitrary kernel read/write primitive.
+
+[]
+
+Achieving primitives needed to get arbitrary R/W
+
+This primitive is then used to perform privilege escalation on the target system. It’s done by overwriting a token in the EPROCESS structure of the current process using the token value for an existing system driver process.
+
+[]
+
+Overwriting EPROCESS token structure
+
+Kaspersky products detect this exploit with the verdict PDM:Exploit.Win32.Generic.  
+ These kinds of threats can also be detected with our Sandbox technology. This detection component is a part of our KATA and Kaspersky Sandbox products. In this particular attack sandbox solution can analyze URL/malicious payload in isolated environment and detect the EPROCESS token manipulation.
+
+Microsoft Windows Vulnerabilities and exploits Zero-day vulnerabilities
+
+Share post on:
+
+Facebook
+
+Twitter
+
+Related Posts
+
+-   Kaspersky Security Bulletin 2019. Statistics
+
+-   APT review: what the world’s threat actors got up to in 2019
+
+-   IT threat evolution Q3 2019. Statistics
+
+[]
+
+There are 2 comments
+
+1.  []
+
+    aeljamali
+
+    Posted on December 12, 2019. 6:49 pm
+
+    Very good article. Thanks
+
+    Reply
+
+2.  []
+
+    Dominic
+
+    Posted on December 13, 2019. 8:35 pm
+
+    What exactly win32k function has the bug ?
+
+    Reply
+
+Leave a Reply Cancel Reply
+
+Your email address will not be published. Required fields are marked *
+
+Name *
+
+Email *
+
+Save my name, email, and website in this browser for the next time I comment.
+
+ Notify me when new comments are added.
+
+ 
+
+In the same category
+
+-   []
+
+    Unwanted notifications in browser
+
+-   []
+
+    The cybercrime ecosystem: attacking blogs
+
+-   []
+
+    Steam-powered scammers
+
+-   []
+
+    Assessing the impact of protection from web miners
+
+-   []
+
+    Agent 1433: remote attack on Microsoft SQL Server
+
+[]
+
+© 2019 AO Kaspersky Lab. All Rights Reserved.   
+Registered trademarks and service marks are the property of their respective owners.
+
+Contact us | Privacy Policy | License Agreement
+
+-   *
+-   *
+    -   I agree to provide my email address to “AO Kaspersky Lab” to receive information about new posts on the site. I understand that I can withdraw this consent at any time via e-mail by clicking the “unsubscribe” link that I find at the bottom of any e-mail sent to me for the purposes mentioned above.
+
+-   Twitter
+-   Facebook
+-   LinkedIn
+-   YouTube
+-   RSS
+-   Email
+
+[] []
+
+[]

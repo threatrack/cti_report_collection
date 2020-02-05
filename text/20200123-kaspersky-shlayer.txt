@@ -1,0 +1,675 @@
+Solutions for:
+
+-   Home Products
+-   Small Business 1-50 employees
+-   Medium Business 51-999 employees
+-   Enterprise 1000+ employees
+
+Kaspersky
+
+-   CompanyAccount
+-   Get In Touch
+
+-   Solutions
+    -   -   []
+
+            Endpoint Security
+
+            Learn More
+
+        -   []
+
+            Hybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            Internet of Things & Embedded Security
+
+            Learn More
+
+        -   []
+
+            Threat Management and Defense
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Fraud Prevention
+
+            Learn More
+
+-   Industries
+    -   -   []
+
+            National Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Industrial Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Finance Services Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Healthcare Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Transportation Cybersecurity
+
+            Learn More
+
+        -   []
+
+            Retail Cybersecurity
+
+            Learn More
+
+    -   -   Other Industries
+
+        -   Telecom Cybersecurity
+        -   View all
+
+-   Products
+    -   -   []
+
+            KasperskyEndpoint Security
+
+            Learn More
+
+        -   []
+
+            KasperskyEndpoint Detection and Response
+
+            Learn More
+
+        -   []
+
+            KasperskyHybrid Cloud Security
+
+            Learn More
+
+        -   []
+
+            KasperskyAnti Targeted Attack Platform
+
+            Learn More
+
+        -   []
+
+            KasperskyPrivate Security Network
+
+            Learn More
+
+        -   []
+
+            KasperskyEmbedded Systems Security
+
+            Learn More
+
+    -   -   Other Products
+
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View All
+
+-   Services
+    -   -   []
+
+            KasperskyCybersecurity Services
+
+            Learn More
+
+        -   []
+
+            KasperskySecurity Awareness
+
+            Learn More
+
+        -   []
+
+            KasperskyPremium Support
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Intelligence
+
+            Learn More
+
+        -   []
+
+            KasperskyThreat Hunting
+
+            Learn More
+
+        -   []
+
+            KasperskyIncident Response
+
+            Learn More
+
+    -   -   Other Services
+
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View All
+
+-   Resource Center
+    -   Case Studies
+    -   White Papers
+    -   Datasheets
+    -   Technologies
+-   Contact Us
+-   GDPR
+
+Menu
+
+Securelist
+
+English
+
+-   
+    English
+-   
+    Pусский
+-   
+    Deutsch
+-   
+    Français
+-   
+    Italiano
+-   
+    Español
+-   
+    Polski
+
+-   Threats
+    -   Mobile threats
+    -   Secure environment (IoT)
+    -   Financial threats
+    -   Spam and phishing
+    -   Industrial threats
+    -   Vulnerabilities and exploits
+    -   Web threats
+-   Categories
+    -   APT reports
+    -   Research
+    -   Incidents
+    -   Security Bulletin
+    -   Publications
+    -   Malware reports
+    -   Spam and phishing reports
+    -   All categories
+-   Tags
+    -   Ransomware
+    -   Targeted Attacks
+    -   Botnets
+    -   Internet Banking
+    -   Mobile Malware
+    -   Social Engineering
+    -   Malware Statistics
+    -   Show all tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+-   KSB 2019
+
+-   Solutions for:
+-   Home Users
+    -   Products
+        -   KasperskyTotal Security
+        -   KasperskyInternet Security
+        -   KasperskyAnti-Virus
+        -   KasperskyInternet Security for Mac
+        -   Kaspersky Internet Security for Android
+        -   KasperskySecure Connection
+        -   Free Tools
+        -   Kaspersky Safe Kids
+        -   Kaspersky Password Manager
+        -   Kaspersky Software Updater
+        -   View more
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+    -   My Kaspersky
+        -    My Devices
+        -    My Products / Subscriptions
+        -    My Orders
+-   Small Business(1-50 employees)
+    -   Products
+        -   KasperskySmall Office Security
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+    -   Renew
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   KSOS Portal
+-   Medium Business(51-999 employees)
+    -   Products
+        -   KasperskyEndpoint Security Cloud
+        -   KasperskySecurity for Office 365
+        -   KasperskyEndpoint Security for Business Select
+        -   KasperskyEndpoint Security for Business Advanced
+        -   KasperskySecurity for Business Total
+        -   KasperskyPhysical, Virtual & Cloud Workloads Security
+        -   TARGETED SECURITY SOLUTIONS
+        -   Mail Server
+        -   File Server
+        -   Mobile
+        -   Internet Gateway
+        -   Virtualization and Hybrid Cloud
+        -   Collaboration
+        -   Vulnerability and Patch Management
+        -   Storage
+        -   View More
+    -   Services
+    -   Downloads
+    -   Support
+    -   Resource Center
+        -   Insights
+        -   Products & Solutions
+        -   Customer Stories
+        -   Awards & Recognition
+        -   Technology
+    -   GDPR
+    -   CompanyAccount
+-   Enterprise(1000+ employees)
+    -   Solutions
+        -   Endpoint Security
+        -   Hybrid Cloud Security
+        -   Internet of Things & Embedded Security
+        -   Threat Management and Defense
+        -   Industrial Cybersecurity
+        -   Fraud Prevention
+    -   Industries
+        -   National Cybersecurity
+        -   Industrial Cybersecurity
+        -   Finance Services Cybersecurity
+        -   Healthcare Cybersecurity
+        -   Transportation Cybersecurity
+        -   Retail Cybersecurity
+        -   Other industries
+        -   Telecom Cybersecurity
+        -   View all
+    -   Products
+        -   KasperskyEndpoint Security
+        -   KasperskyEndpoint Detection and Response
+        -   KasperskyHybrid Cloud Security
+        -   KasperskyAnti Targeted Attack Platform
+        -   KasperskyPrivate Security Network
+        -   KasperskyEmbedded Systems Security
+        -   Other products
+        -   Kaspersky Security for Mail Server
+        -   Kaspersky DDoS Protection
+        -   Kaspersky Mobile Security
+        -   Kaspersky Security for Storage
+        -   View all
+    -   Services
+        -   KasperskyCybersecurity Services
+        -   KasperskySecurity Awareness
+        -   KasperskyPremium Support
+        -   KasperskyThreat Intelligence
+        -   KasperskyThreat Hunting
+        -   KasperskyIncident Response
+        -   Other Services
+        -   Kaspersky Professional Services
+        -   Kaspersky Security Assessment
+        -   Kaspersky Security Training
+        -   Kaspersky Advanced Cyber Incident Communications
+        -   View all
+    -   Resource Center
+        -   Case Studies
+        -   White Papers
+        -   Datasheets
+        -   Technologies
+    -   Contact Us
+    -   GDPR
+    -   CompanyAccount
+-   -   Securelist
+-   Threats
+    -   Financial threats
+    -   Mobile threats
+    -   Web threats
+    -   Secure environment (IoT)
+    -   Vulnerabilities and exploits
+    -   Spam and Phishing
+    -   Industrial threats
+-   Categories
+    -   APT reports
+    -   Incidents
+    -   Research
+    -   Malware reports
+    -   Spam and phishing reports
+    -   Kaspersky Security Bulletin
+    -   Publications
+-   Tags
+    -   Ransomware
+    -   Botnets
+    -   Mobile Malware
+    -   Social Engineering
+    -   Targeted Attacks
+    -   Malware Statistics
+    -   All Tags
+-   Statistics
+-   Encyclopedia
+-   Descriptions
+-   -   Partners
+    -   Partners
+    -   Find a Partner
+    -   Affiliate
+    -   Technology
+    -   Whitelist Program
+-   About Us
+    -   About Us
+    -   Company
+    -   Team
+    -   Transparency
+        -   Transparency Center
+        -   Policy Blog
+    -   Corporate News
+    -   Press Center
+    -   Careers
+    -   Incubator
+    -   Sponsorships
+
+Research
+
+Shlayer Trojan attacks one in ten macOS users {.entry-title}
+=============================================
+
+By Anton V. Ivanov, Mikhail Kuzin, Ilya Mogilin on January 23, 2020. 10:00 am
+
+Contents
+
+-   Technical details
+-   First stage of infection
+-   Second stage of infection
+-   Family ties
+-   Distribution
+-   Conclusion
+
+For close to two years now, the Shlayer Trojan has been the most common threat on the macOS platform: in 2019, one in ten of our Mac security solutions encountered this malware at least once, and it accounts for almost 30% of all detections for this OS. The first specimens of this family fell into our hands back in February 2018, and we have since collected almost 32,000 different malicious samples of the Trojan and identified 143 C&C server domains.
+
+TOP 10 threats for macOS by share of users attacked, as detected by Kaspersky security solutions for macOS, January– November 2019(download)
+
+The operation algorithm has changed little since Shlayer was first discovered, nor has its activity decreased much: the number of detections remains at the same level as in the first months after the malware was uncovered.
+
+Shlayer malware detections by Kaspersky security solutions for macOS, February 2018 – November 2019(download)
+
+Technical details
+-----------------
+
+Despite its prevalence, from a technical viewpoint Shlayer is a rather ordinary piece of malware. Of all its modifications, only the recent Trojan-Downloader.OSX.Shlayer.e stands apart. Unlike its Bash-based cousins, this variant of the malware is written in Python, and its operation algorithm is also somewhat different. Let’s demonstrate this using a DMG file with MD5 4d86ae25913374cfcb80a8d798b9016e.
+
+First stage of infection
+
+After mounting this DMG image, the user is prompted to run an “installation” file. However, the seemingly standard installer turns out to be a Python script, which is already atypical of macOS installation software.
+
+[]
+
+Shlayer user guide
+
+The directory with executable files inside the application package contains two Python scripts: gjpWvvuUD847DzQPyBI (main) and goQWAJdbnuv6 (auxiliary). The latter implements data encryption functions by means of a byte shift on the key key:
+
+-   TheencryptText/decryptText pair of functions encrypt and decrypt strings;
+-   encryptList encrypts the contents of the list passed in the arguments; decryptList performs the inverse operation;
+-   The getKey() function generates an encryption key based on the time in the operating system.
+
+[]
+
+Main script of the Trojan
+
+[]
+
+Auxiliary script of the Trojan
+
+Next, the main script generates a unique user and system ID, and also collects information about the version of macOS in use. Based on this data, the GET query parameters are generated to download the ZIP file:
+
+[]
+
+The ZIP archive downloaded to the /tmp/%(sessionID) directory is unpacked to the /tmp/tmp directory using the unzip function:
+
+[]
+
+The ZIP archive was found to contain an application package with the executable file 84cd5bba3870:
+
+[]
+
+After unpacking the archive, the main python script uses the chmod tool to assign the file 84cd5bba3870 permission to run in the system:
+
+[]
+
+For added effect, the sample copies the icon of the original mounted DMG image to the directory with the newly downloaded application package using the moveIcon and findVolumePath functions:
+
+[]
+
+After that, the Trojan runs the downloaded and unpacked application package using the built-in open tool, and deletes the downloaded archive and its unpacked contents:
+
+[]
+
+Second stage of infection
+
+Shlayer itself performs only the initial stage of the attack — it penetrates the system, loads the main payload, and runs it. The negative consequences for the user can be seen by investigating the AdWare.OSX.Cimpli family, which was being actively downloaded by the Trojan at the time of writing.
+
+At first glance, the Cimpli installer looks harmless enough, simply offering to install a partner application (for example, Any Search):
+
+[]
+
+But in actual fact, Cimpli performs several actions unseen by the user. First, it installs a malicious extension in Safari, hiding the OS security notification behind a malware fake window. By clicking on the buttons in the notification, the user in effect agrees to install the extension.
+
+[]
+
+Left: what the user sees; right: what’s really going on
+
+One of these extensions is called ManagementMark, which we detect as not-a-virus:HEUR:AdWare.Script.SearchExt.gen. It monitors user searches and redirects them to the address hxxp://lkysearchex41343-a.akamaihd[.]net/as?q=c by injecting the script script.js in the browser pages:
+
+[]
+
+The sample also loads the mitmdump tool, which is packed using PyInstaller. To allow mitmdump to view HTTPS traffic, a special trusted certificate is added to the system. This is likewise done by superimposing a fake window over the installation confirmation box. After that, all user traffic is redirected to the SOCKS5 proxy launched using mitmdump.
+
+[]
+
+Arguments for running the packed mitmdump run arguments
+
+From the screenshot, it can be seen that all traffic passing through mitmdump (SearchSkilledData) is processed by the script SearchSkilledData.py (-s option):
+
+[]
+
+This script redirects all user search queries to hxxp://lkysearchds3822-a.akamaihd[.]net. Kaspersky solutions detect this script as not-a-virus:AdWare.Python.CimpliAds.a.
+
+Cimpli adware thus becomes firmly anchored in the system; in the event that traffic does not pass through the proxy server, the JS code of the extension injected in the page handles the redirection of queries. The attacker gains access to the user’s search queries and can modify the search engine results to display advertising. As a result, the user is inundated with unsolicited ads.
+
+Note that Cimpli is not the only family of adware apps that Shlayer can download. The list also includes AdWare.OSX.Bnodlero, AdWare.OSX.Geonei, and AdWare.OSX.Pirrit, which made up almost all the remaining positions in the Top 10 threats for macOS in 2019.
+
+Family ties
+-----------
+
+The behavioral similarities between the Python version of Shlayer and earlier modifications of the family written in Bash are not hard to spot: harvesting IDs and system versions, downloading an archive to a temporary directory, executing the downloaded file, deleting traces of downloading — we’ve seen this course of actions before. Moreover, both modifications use curl with the combination of options -f0L, which is basically the calling card of the entire family:
+
+[]
+
+[]
+
+Top: an old modification of the Trojan; bottom: the latest version
+
+[]
+
+Finding legitimate use for curl with options –f0L is not an easy task
+
+Distribution
+------------
+
+Distribution is a vital part of any malware’s life cycle, and the creators of Shlayer have taken this issue to heart. Looking for the latest episode of your favorite TV show? Want to watch a live broadcast of a soccer match? Then take extra care, since the chances of a run-in with Shlayer are high.
+
+[]
+
+[]
+
+Examples of Shlayer landing pages
+
+We noticed at once several file partner programs in which Shlayer was offered as a monetization tool. Having analyzed various offers, we identified a general trend: Shlayer stands out from the field for the relatively high installation fee (though only installations performed by U.S.-based users count). The prospect of a juicy profit likely contributed to the popularity of the offer (we counted more than 1000 partner sites distributing Shlayer).
+
+[]
+
+Description of the offer on a partner program website
+
+In most cases, it was advertising landing pages that brought users to the next stage of the distribution chain — nicely crafted fake pages prompting to install the malware under the veil of a Flash Player update. This is primarily how the Trojan-Downloader.OSX.Shlayer.a modification was distributed.
+
+[]
+
+Fake Flash Player download page
+
+The version of Trojan-Downloader.OSX.Shlayer.e discussed above was propagated in a slightly different way. Similar to the previous scheme, users ended up on a page seemingly offering an Adobe Flash update. But they were redirected there from large online services boasting a multimillion-dollar audience. Time and again, we have uncovered links pointing to malware downloads in the descriptions of YouTube videos:
+
+[]
+
+Another example is links to Shlayer distribution pages contained in the footnotes to Wikipedia articles:
+
+[]
+
+These links were not added by the cybercriminals themselves: we found that all those malicious domains had recently expired, and, judging by the WHOIS data, they now belong to a single individual. On the websites, the newly minted owner posted a malicious script that redirects users to Shlayer download landing pages. There are already over 700 such domains in total.
+
+Our statistics show that the majority of Shlayer attacks are against users in the U.S. (31%), followed by Germany (14%), France (10%), and the UK (10%). This is wholly consistent with the terms and conditions of partner programs that deliver the malware, and with the fact that almost all sites with fake Flash Player download pages had English-language content.
+
+Geographic distribution of users attacked by the Shlayer Trojan, February 2018 – October 2019(download)
+
+Conclusion
+----------
+
+Having studied the Shlayer family, we can conclude that the macOS platform is a good source of revenue for cybercriminals. The Trojan links even reside on legitimate resources — attackers are adept in the art of social engineering, and it is hard to predict how sophisticated the next deception technique will be.
+
+Kaspersky solutions detect Shlayer and its artifacts and download pages with the following verdicts:
+
+-   HEUR:Trojan-Downloader.OSX.Shlayer.*
+-   not-a-virus:HEUR:AdWare.OSX.Cimpli.*
+-   not-a-virus:AdWare.Script.SearchExt.*
+-   not-a-virus:AdWare.Python.CimpliAds.*
+-   not-a-virus:HEUR:AdWare.Script.MacGenerator.gen
+
+IOCS:
+
+-   4d86ae25913374cfcb80a8d798b9016e
+-   fa124ed3905a9075517f497531779f92
+-   594aa050742406db04a8e07b5d247cdd
+
+Malicious links:
+
+-   hxxp://80.82.77.84/.dmg
+-   hxxp://sci-hub[.]tv
+-   hxxp://kodak-world[.]com
+
+C&C Urls:
+
+-   hxxp://api.typicalarchive[.]com
+-   hxxp://api.entrycache[.]com
+-   hxxp://api.macsmoments[.]com
+
+macOS Malware
+
+Share post on:
+
+Facebook
+
+Twitter
+
+Related Posts
+
+-   How we developed our simple Harbour decompiler
+
+-   The cybercrime ecosystem: attacking blogs
+
+-   IoT: a malware story
+
+[]
+
+Leave a Reply Cancel Reply
+
+Your email address will not be published. Required fields are marked *
+
+Name *
+
+Email *
+
+Save my name, email, and website in this browser for the next time I comment.
+
+ Notify me when new comments are added.
+
+ 
+
+In the same category
+
+-   []
+
+    Windows 0-day exploit CVE-2019-1458 used in Operation WizardOpium
+
+-   []
+
+    Unwanted notifications in browser
+
+-   []
+
+    The cybercrime ecosystem: attacking blogs
+
+-   []
+
+    Steam-powered scammers
+
+-   []
+
+    Assessing the impact of protection from web miners
+
+[]
+
+© 2019 AO Kaspersky Lab. All Rights Reserved.   
+Registered trademarks and service marks are the property of their respective owners.
+
+Contact us | Privacy Policy | License Agreement
+
+-   *
+-   *
+    -   I agree to provide my email address to “AO Kaspersky Lab” to receive information about new posts on the site. I understand that I can withdraw this consent at any time via e-mail by clicking the “unsubscribe” link that I find at the bottom of any e-mail sent to me for the purposes mentioned above.
+
+-   Twitter
+-   Facebook
+-   LinkedIn
+-   YouTube
+-   RSS
+-   Email
+
+[] []
+
+[]
