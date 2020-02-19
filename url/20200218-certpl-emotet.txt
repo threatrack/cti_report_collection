@@ -1,0 +1,8 @@
+tel:+48
+https://policies.google.com/privacy?hl=pl&gl=pl
+fax:+48
+https://policies.google.com/technologies/cookies
+https://d00rt.github.io/emotet_network_protocol/
+https://help.twitter.com/en/rules-and-policies/twitter-cookies
+https://pl-pl.facebook.com/policies/cookies/
+https://www.cert.pl/en/news/single/analysis-of-emotet-v4/

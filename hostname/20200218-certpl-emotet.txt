@@ -1,0 +1,6 @@
+policies.google.com
+d00rt.github.io
+www.cert.pl
+cert.pl
+pl-pl.facebook.com
+help.twitter.com
