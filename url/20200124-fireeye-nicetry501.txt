@@ -1,0 +1,6 @@
+http://198.44.227.126:81/citrix/ld.sh.
+http://45.120.53.214/patch32
+http://45.120.53.214/patch64
+http://45.120.53.214/de
+http://45.120.53.214/piz.Lan
+Feed:Stay

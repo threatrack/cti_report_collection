@@ -1,0 +1,3 @@
+www.minpop.com
+backdoor.sh
+trojan.sh

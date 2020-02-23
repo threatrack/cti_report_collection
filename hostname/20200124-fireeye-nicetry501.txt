@@ -1,0 +1,10 @@
+net.zip
+fireeye.com
+ld.sh
+scan.py
+new.zip
+6.it
+protonmail.com
+yandex.com
+de.py
+ctemplar.com

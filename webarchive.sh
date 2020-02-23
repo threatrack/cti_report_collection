@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat reports.csv | while read line; do
+tac reports.csv | while read line; do
         date="$(echo "${line}" | sed 's/^"//g;s/"$//g' |  awk -F'","' '{print $1}')"
         author="$(echo "${line}" | sed 's/^"//g;s/"$//g' |  awk -F'","' '{print $2}')"
         name="$(echo "${line}" | sed 's/^"//g;s/"$//g' |  awk -F'","' '{print $3}')"
@@ -10,5 +10,5 @@ cat reports.csv | while read line; do
 
 	echo " [+] Archiving via web.archive.org/save/${url}"
 	curl "https://web.archive.org/save/${url}" | head
-	sleep 3
+	sleep 5
 done
