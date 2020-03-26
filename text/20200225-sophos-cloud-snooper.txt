@@ -1,0 +1,946 @@
+Skip to content
+
+Sophos News {.site-title}
+===========
+
+-   Products
+    -   XG Firewall
+        The next thing in next-gen.
+    -   SG UTM
+        The ultimate network security package.
+    -   Secure Wi-Fi
+        Super secure, super wi-fi.
+    -   Secure Web Gateway
+        Complete web protection everywhere.
+    -   Secure Email Gateway
+        Simple protection for a complex problem.
+    -   PureMessage
+        Good news for you. Bad news for spam.
+    -   Endpoint Protection
+        Comprehensive security for users and data.
+    -   Intercept X
+        A completely new approach to endpoint security.
+    -   Sophos Clean
+        Advanced scanner and malware removal tool.
+    -   Mobile Control
+        Countless devices, one solution.
+    -   SafeGuard Encryption
+        Protecting your data, wherever it goes.
+    -   Server Protection
+        Security optimized for servers.
+    -   Sophos Home
+        Free protection for home computers.
+-   Solutions
+    -   Industries
+        Your industry. Our expertise.
+    -   IT Initiatives
+        Embrace IT initiatives with confidence.
+    -   Compliance
+        Helping you to stay regulatory compliant.
+    -   OEM Solutions
+        Trusted by world-leading brands.
+    -   Professional Services
+        Our experience. Your peace of mind.
+    -   SophosLabs
+        Behind the scene of our 24/7 security.
+    -   Public Cloud
+        Stronger, simpler cloud security.
+-   Partners
+-   Support
+-   Company
+-   Downloads
+    -   Free Trials
+        All product trials in one place.
+    -   Free Tools
+        Try our tools for use at home.
+    -   Get Pricing
+        The right price every time.
+-   Search
+-   Sign In
+
+-   Overview
+-   Press
+-   Events
+-   Community
+-   Blog
+-   Careers
+-   Contact
+
+Sophos News {.news-title}
+===========
+
+Menu
+
+Search
+
+-   Search
+
+Go
+
+Close
+
+‘Cloud Snooper’ Attack Bypasses Firewall Security Measures {.entry-title}
+==========================================================
+
+SophosLabs Uncut
+
+25 February 2020
+
+-   6
+-   Share on Twitter
+-   Share on Facebook
+-   Share on LinkedIn
+
+By Sergei Shevchenko
+
+In the course of investigating a malware infection of cloud infrastructure servers hosted in the Amazon Web Services (AWS) cloud, SophosLabs discovered a sophisticated attack that employed a unique combination of techniques to evade detection and that permits the malware to communicate freely with its command and control (C2) servers through a firewall that should, under normal circumstances, prevent precisely that kind of communication from reaching the infected server.
+
+We have published an in-depth report on the attack, which we have named Cloud Snooper.
+
+Though we discovered the technique in use on AWS, the problem is not an AWS problem per se. It represents a method of piggybacking C2 traffic on a legitimate traffic, such as normal web traffic, in a way that can bypass many, if not most, firewalls.
+
+The complexity of the attack and the use of a bespoke APT (Advanced Persistent Threat) toolset gives us reason to believe that the malware and its operators were an advanced threat actor, possibly nation-state sponsored.
+
+The compromised systems were running both Linux and Windows EC2 instances.
+
+Anomalous traffic raises alerts
+-------------------------------
+
+As often happens with incidents like this, our investigation started when someone noticed an anomaly. While the AWS security groups (SGs) were properly tuned, set up only to allow inbound HTTP or HTTPS traffic, the compromised Linux system was still listening for inbound connections on ports 2080/TCP and 2053/TCP.
+
+An analysis of this system revealed the presence of a rootkit that granted the malware’s operators the ability to remotely control the server through the AWS SGs. But this rootkit’s capabilities are not limited to doing this in the Amazon cloud: It also could be used to communicate with, and remotely control, malware on any server behind any boundary firewall, even an on-premises server.
+
+By unwinding other elements of this attack, we further identified other Linux hosts, infected with the same or a similar rootkit.
+
+Finally, we identified a compromised Windows system with a backdoor that communicated with a similar C2 as other compromised Linux hosts, using a very similar configuration format. The backdoor is apparently based on source code of the infamous Gh0st RAT malware.
+
+At this point in the investigation, we still have some open questions. For example, it is still unclear how the attackers managed to compromise the client’s system in the first place. One of the working theories is that the attackers broke into a server through SSH, protected with password authentication.
+
+High-level illustration
+-----------------------
+
+Before we start our technical description, let us provide a high-level view of the Cloud Snooper attack. Doing so might help the reader to get an overall idea of how its elements are related to each other.
+
+[]
+
+In the illustration above, our castle represents the targeted server infrastructure; In the case of the incident we investigated, the server was hosted by Amazon Web Services (AWS). At its perimeter, the AWS Security Groups (SGs) – a set of firewall rules that provide security at the protocol and port access level – limit the inbound network traffic.
+
+For example, you might typically set up an AWS Security Group that only allows web traffic – that is, TCP packets that arrive at ports 80 or 443 – to reach your server. Network traffic with any other destination port never makes it past the SGs.
+
+The infection involves a rootkit that inspects network traffic, and a backdoor that the attackers leverage the rootkit to send commands to, and receive data from, the backdoor.
+
+In order to get around the firewall rules, depicted here as guards, the attackers communicate with the rootkit by sending innocent-looking requests (depicted in the illustration as a wolf in sheep’s clothing) to the web server on the normal web server ports. A listener that inspects inbound traffic before it reaches the web server intercepts the specially-crafted requests, and sends instructions to the malware based on characteristics of those requests.
+
+The listener sends a “reconstructed” C2 command to the backdoor Trojan installed by the rootkit. Depending on the commands included into C2 traffic, the attacker may use the backdoor to steal sensitive data from the target.
+
+The collected data is then delivered back with the C2 traffic. Only this time, the rootkit has to masquerade it again in order to bypass the guards: the wolf dresses itself in sheep’s clothing once again. Once outside, the C2 traffic delivers the collected data back to the attackers.
+
+During an entire operation, the normal web traffic, depicted as sheep, keeps flowing to and from the web server through the allowed gate. Visually, the C2 traffic stays largely indistinguishable from the legitimate web traffic.
+
+Dismantling the Cloud Snooper tools
+-----------------------------------
+
+As you will see from the description below, some samples that we collected are directly related to each other, while others belong to a completely different malware family. Nevertheless, all these samples were collected from the same infrastructure, and thus, we consider them part of the same toolset.
+
+The description starts with the Linux malware, then progresses into its Windows counterpart that is apparently based on Gh0st RAT.
+
+Overall, we discovered and studied 10 samples in the course of the investigation, which can be broken down as:
+
+#
+
+MD5
+
+Name
+
+Filesize
+
+Platform
+
+Linux Malware, Group 1
+
+1
+
+a3f1e4b337ba1ed35cac3fab75cec369
+
+snd_floppy
+
+738,368
+
+ELF64, x86-64
+
+2
+
+6a1d21d3fd074520cb6a1fda76d163da
+
+snd_floppy
+
+738,368
+
+ELF64, x86-64
+
+3
+
+c7a3fefb3c231ad3b683f00edd0e26e4
+
+snoopy
+
+305,309
+
+ELF64, x86-64
+
+4
+
+9cd93bb2a12cf4ef49ee1ba5bb0e4a95
+
+snd_floppy
+
+544,832
+
+ELF64, x86-64
+
+5
+
+15e96f0ee3abc9d5d2395c99aabc3b92
+
+vsftpd
+
+60,456
+
+ELF64, x86-64
+
+6
+
+2b7d54251068a668c4fe8f988bfc3ab5
+
+ips
+
+35,580
+
+ELF32, x86
+
+Linux Malware, Group 2 – Gh0st RAT
+
+7
+
+ecac141c99e8cef83389203b862b24fd
+
+snort
+
+64,412
+
+ELF32, x86
+
+8
+
+67c8235ac0861c8622ac2ddb1f5c4a18
+
+javad
+
+64,412
+
+ELF32, x86
+
+9
+
+850bf958f07e6c33a496b39be18752f3
+
+nood.bin
+
+66,000
+
+ELF32, x86
+
+Windows Malware – Gh0st RAT
+
+10
+
+a59c83285679296758bf8589277abde7
+
+NSIProvider.dll
+
+219,648
+
+PE32, x86
+
+11
+
+76380fea8fb56d3bb3c329f193883edf
+
+NSIProvider.dll.crt
+
+516,097
+
+[encrypted]
+
+The Cloud Snooper communications handler
+----------------------------------------
+
+The central piece of the attack is a file named snd_floppy – a kernel module that sets up a network packet filter, using a Netfilter hook (NF_INET_LOCAL_IN and NF_INET_LOCAL_OUT).
+
+This component was instrumental in giving the malware’s operators the ability to communicate with the malware, despite the firewall protecting the AWS EC2 servers.
+
+The NF_INET_LOCAL_IN is a type of hook that is triggered before the packet reaches the destination port.
+
+The installed hook handler inspects the socket buffer of every IPv4 packet, looking for a command concealed within a header – the command being the source port number of the packet originating from the attacker’s machine. These commands/source ports can be one of the following port numbers: 1010, 2020, 6060, 7070, 8080, 9999.
+
+Firewalls typically prevent machines behind the firewall from receiving traffic sent to arbitrary destination ports, but they don’t pay attention to the source ports, because source ports are normally ephemeral, and not relevant to the server or the services it is hosting.
+
+In a typical cloud instance, the server may be set up to receive traffic from any IP address on port 80/TCP (for HTTP) and on 443/TCP (for HTTPS), so the firewall will let any traffic to those ports through to the server. So long as the traffic coming in to one of these standard ports fits the pattern the communications handler is looking for, it will execute one of its built-in instructions. Anything else will be ignored, and the server will serve web pages as normal to browsers.
+
+For example, if the communications handler receives a TCP SYN packet with an origin port of 6060, the malware will decrypt an embedded file that has been encrypted with RC4 (the key is ‘YaHo0@’).
+
+It will then drop that decrypted file as /tmp/snoopy, wait for half a second, and then execute it as a usermode application with the call_usermodehelper() syscall. Immediately after that, it deletes the /tmp/snoopy file, so the snoopy application remains running in memory with no physical file present.
+
+If the command is 9999 as a TCP SYN packet, the /tmp/snoopy process self-terminates (in case killall is supported by OS), by passing the following commands to call_usermodehelper() syscall.
+
+``` {style="background-color: #fff"}
+/bin/sh -c /tmp/snoopy
+rm -rf /tmp/snoopy
+killall /tmp/snoopy
+```
+
+NOTE: executing snoopy again while it’s already running has no effect; by using a file lock mechanism, snoopy makes sure only one instance is running. If that happens, it will output:
+
+``` {style="background-color: #fff"}
+[ERROR] there is already a instance.
+```
+
+Here is the logic of the NF_INET_LOCAL_IN hook handler, which listens for SYN packets sent to the server, using the various source ports:
+
+``` {style="margin: 0;line-height: 125%;background-color: #fff"}
+if tcp:
+    if tcp.src_port == 6060:
+        if tcp.flags == SYN:
+            drop_payload()        # drops/runs snoopy
+            return NF_STOP
+    elif tcp.src_port == 7070:
+        tcp.dst_port = 2080
+        adjust_tcp_checksum()
+        return NF_STOP
+    elif tcp.src_port == 9999:
+        if tcp.flags == SYN:
+            kill_payload()        # kills snoopy process
+            return NF_STOP
+    elif tcp.src_port == 2020:
+        return NF_STOP
+    elif tcp.src_port == 1010:
+        tcp.dst_port = 22
+        adjust_tcp_checksum()
+        return NF_STOP
+    else:
+        return NF_ACCEPT
+elif udp:
+    if udp.src_port == 8080:
+        udp.dst_port = 2053
+        adjust_udp_checksum()
+        return NF_STOP
+else:
+    return NF_ACCEPT
+```
+
+And here is the logic of the NF_INET_LOCAL_OUT hook handler:
+
+``` {style="margin: 0;line-height: 125%;background-color: #fff"}
+if tcp:
+    if tcp.dst_port == 7070:
+        tcp.src_port = 443        # or, 80 in another variant
+        adjust_udp_checksum()
+        return NF_STOP
+    if tcp.dst_port == 2020:
+        return NF_STOP
+    if tcp.dst_port == 1010:
+        tcp.src_port = 443        # or, 80 in another variant
+        adjust_udp_checksum()
+        return NF_STOP
+    else:
+        return NF_ACCEPT
+elif upd:
+    if udp.dst_port == 8080:
+        udp.src_port = 53
+        return NF_STOP
+else:
+    return NF_ACCEPT
+```
+
+Explanation
+-----------
+
+To trigger the payload (snoopy) activation, an attacker would send the following packet:
+
+[]
+
+Next, the snoopy module would be accessed by the C2, using source port 7070 for TCP-based or 8080 for UDP-based control:
+
+[]
+
+On the way back, the NF_INET_LOCAL_OUT hook handler rebuilds the packet again, to make sure its source port is restored back to the original port where the incoming packet was destined for. This way, the C2 traffic transparently flows through the port(s) allowed by AWS SGs:
+
+[]
+
+No other Netfilter hooks within the chain, such as iptables INPUT/OUTPUT rules, will process the packet if the hook returns NF_STOP. This appears to be the purpose of the TCP command 2020: to bypass other Netfilter hooks.
+
+In instances where the Netfilter receives inbound traffic with a source port of 1010/TCP, it directs the contents to the Secure Shell (SSH) port, 22/TCP. For outbound traffic we have seen two variants using either port 80 or port 443. This will allow for an SSH connection to step around an AWS SG with IP restrictions on traffic to port 22.
+
+Hence, the ultimate purpose of the snd_floppy rootkit is to provide a covert control channel for the snoopy usermode process, running on a compromised host.
+
+Such covert control channels can be established via any port allowed by AWS SGs, be it 80, 443, 22, or any other port.
+
+From the outside, the compromised system will show an unusually large volume of traffic that comes from the remote ports 6060, 7070, 8080, and 9999.
+
+But what is the snoopy module? What does it do?
+
+The Snoopy Module
+-----------------
+
+snoopy is a backdoor trojan that can be executed both as a command line tool and as a daemon (though it needs to be launched with the -d flag for that). The backdoor’s internal version is 3.0.1-2.20170303.
+
+It opens HTTP and/or DNS services on a compromised system, and allows tunneling of the traffic, operating both as a reverse SOCKS5 proxy server, and client.
+
+For example, the incoming control traffic can also be relayed to a different server.
+
+When run with -h option, the tool prints the following syntax:
+
+``` {style="background-color: #fff"}
+Usage: rrtserver [OPTIONS]
+OPTIONS:
+    -h
+    -d
+    -s IPv4[:PORT:{udp|tcp}:{dns|http|none}]
+```
+
+Where:
+
+-   -h option will print out the usage above
+-   -d will run the tool as daemon
+-   -s allows to specify a server address to bind the listening socket to, its port number, and what protocol is used for the traffic: either UDP-based DNS or TCP-based HTTP
+
+The binary requires root privilege; when run, it calls geteuid() to get the user ID. If it fails, it prints the line below and quits:
+
+``` {style="background-color: #fff"}
+"Administrator privileges are required."
+```
+
+It sets the working directory to /tmp, and obtains a lock for the file /tmp/rrtserver-lock. The lock file is used to make sure there is only one version of the tool running.
+
+The incoming HTTP traffic is accepted on port 2080, and DNS traffic on port 2053.
+
+NOTE: the port numbers 2080 and 2053 are default ones; the tool can be executed with different port numbers specified as parameters.
+
+Snoopy parses the received DNS/HTTP traffic to extract hidden commands within it – such commands are called “rrootkit messages” and are distinguished by the presence of a magic header or marker.
+
+For example, to find “rrootkit messages” in HTTP traffic, Snoopy parses the HTTP request to see if it starts with "GET /* HTTP/1.1\r\ndata:" or "HTTP/1.1 200 OK\r\ndata:".
+
+Next, the “rrootkit messages” would start from a magic header 0xE381B7F5. If this header is found, such data is called msg-data.
+
+The received msg-data is then decrypted with RC4, using the quite specific key ‘A YARN-based system for parallel processing of large data sets’.
+
+The tool then initiates several additional components. These components will process the received msg-data.
+
+Depending on a separate magic header within each msg-data, the data will be processed by a different component.
+
+The initiated components are:
+
+-   view-shell (magic header 0xFC72E392): pty (pseudo terminal) that allows remote shell
+    -   the HISTFILE variable is cleared, to make sure /bin/sh execution leaves no history
+    -   the received commands are then executed with /bin/sh
+-   view-file (magic header 0xFC72E393): file manager that accepts 3 commands:
+    -   ‘get’ – read files
+    -   ‘put’ – save file
+    -   any other command – execute file with popen() syscall
+-   view-proxy (magic header 0xFC72E394): proxy server that accepts the following commands:
+    -   ‘exit’ or ‘quit’ – quit proxy server
+    -   ‘socks5’ – starts SOCKS5 proxy server, authentication is provided with user/password passed with the '-u' and '-p' parameters
+    -   ‘rcsocks-cmd: socks is closed.’ – closes SOCKS proxy
+
+    The SOCKS5 server is based on the open-source sSocks proxy implementation.
+-   view-pipe (magic header 0xFC72E398): p2p communicator, that receives commands ‘pwd’, ‘exit’, ‘quit’, ‘connect’  
+     On receiving the ‘connect’ command, it accepts the same parameters as the command-line tool (server IP, port, protocol) and starts tunneling commands to another peer.  
+     The pipe appears to be used to establish connections to other peers.  
+     The negotiation protocol to other peers includes a message ‘rrootkit-negotiation: hello’.  
+     Once the connection is established, the logged message displays what peers have been connected, and that a new network node is now open:
+    -   “view-pipe: left[address, port]->right[address, port].”
+    -   “view-pipe: the network node is opened.”
+-   view-myproto (magic header 0xFC72E397): a ‘ping’/’pong’; depending on a flag it receives, it either:
+    -   receives a message “rrootkit-negotiation: hello”, then responds back “rrootkit-negotiation: ok, go on”
+    -   checks if the received message was “rrootkit-negotiation: ok, go on”
+-   loop-notifier – creates a pipe, a data channel for inter-process communication (IPC).  
+     The backdoor allows control via IPC pipe as a backup control channel.
+
+Logging
+-------
+
+snoopy stores many debug messages in clear text.
+
+However, with the internal level of logging set to 0 (none), no debug messages are ever printed. Hence, these debug messages are only used in the testing phase of the malware.
+
+Some of the debug messages are in Chinese:
+
+-   远程路径太长! – The remote path is too long!
+-   远程文件不存在! – The remote file does not exist!
+-   远程内存空间分配失败! – Remote memory space allocation failed!
+-   远程路径不存在! – The remote path does not exist!
+-   远程文件已存在! – The remote file already exists!
+-   连接失败! – Connection failed!
+-   连接成功! – Connection succeeded!
+-   参数错误! – Parameter error!
+
+Some messages reveal poor English grammar:
+
+-   view don’t found
+-   view-shell: data do not belong to SHELL
+
+Building a Client
+-----------------
+
+By knowing how the C2 protocol works, it is possible to build a client to talk to snoopy either directly, or via snd_floppy rootkit.
+
+What for?
+
+Firstly, the client can ping a host located in the same network to see if it’s infected or not.
+
+Secondly, if a host is infected, the client can disinfect it remotely by instructing snoopy to execute its disinfection routine (see the rmmod command below – after serving it, the rootkit stopped responding as it was unloaded).
+
+Last but not least, building such a client is cool.
+
+The following screenshot demonstrates the client in action. The snd_floppy rootkit intercepts traffic on port 22, even though it’s destined to the SSH daemon (seen as 981/sshd in the snapshot below). Next, it re-routes such traffic internally to the snoopy module.
+
+[]
+
+As long as the rootkit is active, the attackers may attempt to smuggle the control traffic through any port allowed by the firewall (the screenshot demonstrates that using ports 21 and 24 makes no difference – these packets are still re-routed by the rootkit to the backdoor).
+
+Gh0st RAT (the Linux version)
+-----------------------------
+
+Apart from those samples, we have also recovered a different Linux backdoor, a backdoor that does not open any ports. Instead, it relies on a C2 polling mechanism.
+
+The analysis of this bot functionality reveals it belongs to Gh0st RAT, only it’s a version that has been written for Linux.
+
+It is hard to tell if Gh0st always existed as a multi-platform RAT, or whether the attackers developed a Linux-based Gh0st after the source code of Gh0st for Windows was leaked online.
+
+At the end of the day, it makes sense to have clients deployed across various platforms, using a unified configuration format and C2 protocol, while having a single server for all those clients.
+
+Still, we will leave the guesswork out of this description, rather focusing on what the recovered samples actually do.
+
+/bin/snort is a backdoor that contacts a remote C2 to fetch and execute commands. Its internal config file is encrypted with RC4, using the password: "r0st@#$":
+
+``` {style="background-color: #fff"}
+185[.]86[.]151[.]67:443;|1;1;1;1;1;0;0;|10-20;|10
+```
+
+the '1;1;1;1;1;0;0;' part of the config are the flags that stand for seven days of the week.
+
+the '10-20;' seem to indicate working hours (10am to 8pm), so current weekday and current hour should match what’s in config.
+
+If there is no match, the bot falls asleep for just over seven minutes (423.756 seconds), then checks the time again.
+
+In case of a match, it attempts to reach the C2; if it cannot, it retries again in one minute.
+
+Traffic to the C2 is encrypted with double RC4, where a key is randomly generated based on the current time.
+
+The backdoor has six commands:
+
+-   The bot clears environmental variable HISTFILE, to make sure no history is kept for /bin/bash execution; the C2 responds with a string, the bot sets the TERM variable to that string  
+     Next, it receives a command and executes it with /bin/bash, with or without the '-c' switch (allows for executing commands as provided within the quotes)  
+     The output from the executed command is sent back
+-   File manipulations:
+    -   Locate and obtain timestamp for the specified file
+    -   Rename specified file
+    -   Recursively delete all files in the specified directory
+-   More file manipulations:
+    -   Read the contents of the specified file
+    -   Recursive search for files
+    -   Write data into a specified file
+    -   Create specified directory
+-   The next two commands manipulate file descriptors with fcntl() syscall, and fork child processes
+-   Receive data and save it into a local file /usr/include/sdfwex.h
+
+It appears that /usr/include/sdfwex.h contains a timestamp (year, month, day, hour, minutes) for when the C2 connection should commence.
+
+If the bot cannot open this file, it tries to open /tmp/.llock – if that file also cannot be opened, the bot skips the timestamp check, and proceeds with trying to connect to the C2.
+
+Other variations of this sample use different configurations, such as:
+
+``` {style="background-color: #fff"}
+cloud[.]newsofnp[.]com:443;|1;1;1;1;1;1;1;|00-24;|1
+load[.]CollegeSmooch[.]com:82;|1;1;1;1;1;1;1;|00-24;|10
+```
+
+For the beacon signal it sends to the C2, it collects basic system configuration into a fingerprint. This info consists of:
+
+-   Hostname and IP address
+-   Platform type, as read from /proc/version, such as 'x86_64'
+-   Full name of the Linux version, as read from /etc/issue.net and /etc/issue, such as:
+    -   ‘Red Hat Enterprise Linux Server release 6.10 (Santiago)’
+    -   ‘Ubuntu 16.04.5 LTS’
+
+The communications with the C2 are always encrypted using a bespoke algorithm that relies on a time-based random RC4 key with extra encryption layers.
+
+Windows Malware
+---------------
+
+NSIProvider.dll is a malicious Windows service DLL, executed under svchost.exe.
+
+The service name is NSIProvider, registered with the description name “Netword Store Interface Provider”.
+
+NOTE: ‘Netword’ with ‘d’.
+
+[]
+
+The DLL is heavily obfuscated.
+
+Once started as a service, it conveniently spits out debug messages documenting the operation.
+
+Sysinternal’s DebugView shows these messages:
+
+``` {style="background-color: #fff"}
+00000000    0.00000000  [4052] DLL_PROCESS_ATTACH.  
+00000001    0.00489140  [4052] Rundll32Entry()  
+00000002    0.01733349  [4052] ServerLoadPayload()  
+00000003    0.01749189  [4052] Get Module File Name.    
+00000004    0.01753826  [4052] Get Payload File Name.   
+00000005    0.01757095  [4052] Switch to payload directory. 
+00000006    0.01768074  [4052] Read Payload File.   
+00000007    0.01811264  [4052] Decrypt Payload Data.    
+00000008    0.06122175  [4052] Verify Payload Data. 
+00000009    0.06732560  [4052] ServerExecutePayload()   
+00000010    0.06740102  [4052] Call Shellcode.‬‬‬
+```
+
+Once loaded, the DLL locates the encrypted payload file and loads it into memory.  
+ The steps are:
+
+-   Get current module filename with GetModuleFileName() API, i.e. %PATH%\NSIProvider.dll
+-   Concatenate current module filename with ‘.crt’, e.g. %PATH%\NSIProvider.dll.crt
+-   Allocate memory with VirtualAlloc() and read the entire payload file into memory
+-   Initialise a permutation table that consists of 256 DWORDs  
+     Each value of the permutation table is calculated as:
+
+    ``` {style="background-color: #fff"}
+    *ptr= ((*ptr >> 1) & 0x54384748 | ~(*ptr >> 1) & 0xABC7B8B7) ^ 0x467F3B97;
+    ...
+    PERM_TABLE[*index] = *ptr;
+    ```
+
+-   Start decryption loop – in this loop, a key value is subtracted from each byte of the encrypted payload; the key value itself is calculated in each iteration based on the previous key value, current index of the decrypted byte, and the permutation table:
+
+    ``` {style="background-color: #fff"}
+    ptr = __ptr_index++;
+    val = PERM_TABLE[((*ptr & 0x67612505 | ~*ptr & 0x989EDAFA) ^ (KEY & 0x67612505 | ~KEY & 0x989EDAFA)) & ((*ptr & 0x67612505 | ~*ptr & 0x989EDAFA) ^ (KEY & 0x67612505 | ~KEY & 0x989EDAFA) ^ 0xFFFFFF00)];
+    KEY = (val & 0x432AA81D | ~val & 0xBCD557E2) ^ ((KEY >> 8) & 0x432AA81D | ~(KEY >> 8) & 0xBCD557E2);
+    ```
+
+-   The decrypted payload reveals a checksum, a number of zero bytes, followed with the initial shellcode itself:  
+     []
+
+The decrypted payload blob is copied into a newly allocated memory buffer and the initial shellcode (starts from bytes EB 17 58 in the image above) is called.
+
+The initial shellcode will then decrypt the rest of the blob, using an XOR key that starts from 0x2B, and then incremented by the index of the decrypted byte, i.e. the XOR key values are: 0x2B, 0x2C, 0x2E, 0x31, etc.
+
+[]
+
+As the rest of the blob is decrypted, the configuration file is decrypted as well, followed by other parts.
+
+After the initial shellcode has finished the decryption, the fully decrypted blob will consist of:
+
+-   Initial shellcode
+-   Decrypted config:
+
+    ``` {style="background-color: #fff"}
+    Microsoft.Windows.BNG|‪ssl[.]newsofnp[.]com:443‬;|1;1;1;1;1;1;1;|00-24;|1
+    ```
+
+-   Zlib-compressed LIBEAY32.dll (77,871 bytes, 167,936 bytes when decompressed)
+-   Zlib-compressed LIBEAY32.dll (386,876 bytes, 851,968 bytes when decompressed)
+-   Backdoor, implemented in the form of a second-stage shellcode
+
+Once it’s decoded, the second-stage shellcode is called – this is the backdoor itself.
+
+When it gets control, it dynamically obtains all APIs it needs by using hard-coded API hashes. To find matching hashes from the API names, the shellcode relies on a a slight modification of the ROR-13 algorithm. The only difference is that it checks if the zero byte is at the end of the loop, thus has an additional ROR for the terminating zero byte.
+
+[]
+
+All the required DLLs are loaded dynamically.
+
+Next, it will decompress and load 2 stubs as DLLs. Both DLLs have the internal name LIBEAY32.dll.
+
+Both DLLs rely on an older (2004) build of the libeay32.dll – below are some strings found in the body of these DLLs:
+
+``` {style="background-color: #fff"}
+MD2 part of OpenSSL 0.9.7d 17 Mar 2004
+MD4 part of OpenSSL 0.9.7d 17 Mar 2004
+MD5 part of OpenSSL 0.9.7d 17 Mar 2004
+SHA part of OpenSSL 0.9.7d 17 Mar 2004
+SHA1 part of OpenSSL 0.9.7d 17 Mar 2004
+```
+
+The backdoor relies on these DLLs for crypto-functions required to communicate with the C2.
+
+The config format is consistent with the ELF binaries, i.e., the seven '1;' means the bot should be active seven days a week, all hours (00-24), the C2 communicates via HTTPS.
+
+The same config is known to be used by Gh0st RAT.
+
+Just like /bin/snort described above, the bot also checks if the current day and hour match what’s specified in the config.
+
+If there is no match, the bot also falls asleep for just over seven minutes (423.756 seconds), then checks the time again.
+
+The code snippets below demonstrate that the 423,756-millisecond delay specified within /bin/snort executable is identical to its Windows counter-part:
+
+ELF executable: /bin/snort
+
+Windows  
+ shellcode:
+
+[]
+
+[]
+
+On Linux, the number 423,756 is multiplied by 1,000, then passed to usleep() syscall that takes an argument in microseconds.
+
+On Windows, the same number is passed to Sleep() API, which takes the argument in milliseconds.
+
+In both cases, the achieved delay is identical: 7.062 seconds.
+
+Conclusion
+----------
+
+This case is extremely interesting as it demonstrates the true multi-platform nature of a modern attack.
+
+A well-financed, competent, determined attacker will unlikely ever to be restricted by the boundaries imposed by different platforms.
+
+Building a unified server infrastructure that serves various agents working on different platforms makes perfect sense for them.
+
+When it comes to prevention against this or similar attacks, AWS SGs provide a robust boundary firewall for EC2 instances. However, this firewall does not eliminate the need for network administrators to keep all external-facing services fully patched.
+
+The default installation for the SSH server also needs extra steps to harden it against attacks, turning it into a rock-solid communication daemon.
+
+IOC
+---
+
+Ports open on a local host
+
+-   tcp 2080
+-   udp 2053
+-   tcp 10443
+
+Example:
+
+``` {style="background-color: #fff"}
+user@host:~$ sudo netstat -peanut | grep ":2080 \|:2053 "
+tcp  0  0 0.0.0.0:2080    0.0.0.0:*    LISTEN  0  34402  2226/snoopy
+udp  0  0 0.0.0.0:2053    0.0.0.0:*            0  34398  2224/snoopy
+```
+
+To check if these ports are open on a remote compromised host with IP 192.168.5.150:
+
+``` {style="background-color: #fff"}
+user@host:~$ sudo nmap 192.168.5.150 -p 2080
+...
+PORT     STATE    SERVICE
+2080/tcp filtered autodesk-nlm
+```
+
+``` {style="background-color: #fff"}
+user@host:~$ sudo nmap 192.168.5.150 -p 2053 -sU
+...
+PORT     STATE    SERVICE
+2053/udp filtered lot105-ds-upd
+```
+
+Inbound connections from the remote ports:  
+ 1010, 2020, 6060, 7070, 8080, 9999
+
+Domains:
+
+-   cloud[.]newsofnp[.]com
+-   ssl[.]newsofnp[.]com
+-   load[.]CollegeSmooch[.]com
+
+IPs:
+
+-   62[.]113[.]255[.]18
+-   89[.]33[.]246[.]111
+-   185[.]86[.]151[.]67
+
+Filenames:
+
+-   /tmp/rrtserver-lock
+-   /proc/sys/rrootkit
+-   /tmp/rrtkernel.ko
+-   /usr/bin/snd_floppy
+
+Kernel module:
+
+-   snd_floppy  
+     Example:
+
+    ``` {style="background-color: #fff"}
+    user@host:~$ sudo lsmod | grep "snd_floppy"
+    snd_floppy 316594 0
+    ```
+
+Syslog messages:
+
+-   “…insmod: ERROR: could not insert module /usr/bin/snd_floppy: File exists”
+-   “…kernel: snd_floppy: loading out-of-tree module taints kernel.”
+-   “…kernel: snd_floppy: module verification failed: signature and/or required key missing – tainting kernel”
+
+Post navigation {.screen-reader-text}
+---------------
+
+Prev Five steps to avoid a cloud data breach
+
+Next Harden your public cloud environment against APT-style attacks
+
+About the Author {.author-title}
+----------------
+
+[]
+
+Sergei Shevchenko
+
+Sergei Shevchenko has 20 years of professional experience reverse engineering malware and is a recognized expert in his field. His analysis of high-profile malware attacks, including previous years' Bangladesh Bank heist, attacks on other banks, cyber espionage within managed service providers and ransomware attacks affecting thousands of vital service organizations globally, is the go-to information source for risk and technology officers and their teams around the world. He manages our threat research team in Sydney.
+
+6 Comments {.comments-title}
+----------
+
+[]
+
+Nikesh Doshi {.comment-author}
+------------
+
+25 February 2020 at 10:52 am
+
+This can also occur in Azure, right?  
+ How do we prevent that?
+
+Reply
+
+[]
+
+Competetive_charity {.comment-author}
+-------------------
+
+26 February 2020 at 2:04 pm
+
+What policy set on a we server or an ingress would avoid this , any ideas?  
+ Nice writeup , though some of the time spent on drawing the picture and analogy could have been used to specify some ideas on defending against or mitigating ?
+
+Reply
+
+[]
+
+ZA {.comment-author}
+--
+
+27 February 2020 at 12:17 pm
+
+It mentions above in the post, “network administrators to keep all external-facing services fully patched.
+
+The default installation for the SSH server also needs extra steps to harden it against attacks, turning it into a rock-solid communication daemon.” Assumption of this kind of attack was ‘somehow rootkit gets installed in EC2, not sure how’. All comes down to patching and SSH hardening based on this article.
+
+Reply
+
+[]
+
+Anonymous {.comment-author}
+---------
+
+25 February 2020 at 4:45 pm
+
+Thank you for the illustration, I was just about to give up reading on the highly technical part of the article when I was able to refer back and see the devil letting the wolf-sheep in the pen and then it all made sense….
+
+Reply
+
+[]
+
+Ben {.comment-author}
+---
+
+26 February 2020 at 12:25 pm
+
+That is a great illustration – is it okay to replicate as long as we leave the ‘Sophos Labs’ in the corner of the pic?
+
+Reply
+
+[]
+
+Maksym {.comment-author}
+------
+
+26 February 2020 at 1:27 pm
+
+This kind of attack is only only possible with L3 firewalls without application inspections. Do yourself a favor, install NextGen firewall at your AWS/Azure Private Cloud in front web-server, slap inbound decryption proxy and sleep at night =)
+
+Reply
+
+Leave a Reply Cancel reply
+
+Your email address will not be published.
+
+Comment
+
+Name
+
+Email
+
+Website
+
+Save my name, email, and website in this browser for the next time I comment.
+
+You might also enjoy...
+
+18 Feb
+
+Corporate • Network
+
+XG Firewall v18 is now available {.featured-entry-title .dot-ellipsis .dot-resize-update .dot-load-update .dot-height-130}
+================================
+
+14 Jan
+
+Enduser
+
+Sophos Mobile 9.5 and Intercept X for Mobile have launched! {.featured-entry-title .dot-ellipsis .dot-resize-update .dot-load-update .dot-height-130}
+===========================================================
+
+12 Nov
+
+Enduser • Server
+
+Sophos EDR gets enhanced with prioritized lists of suspicious items {.featured-entry-title .dot-ellipsis .dot-resize-update .dot-load-update .dot-height-130}
+===================================================================
+
+11 Oct
+
+Corporate • Network
+
+XG Firewall v18 early access is now available {.featured-entry-title .dot-ellipsis .dot-resize-update .dot-load-update .dot-height-130}
+=============================================
+
+Start a Sophos demo in less than a minute. See exactly how our solutions work in a full environment without a commitment.
+
+Learn More
+
+Stay Connected
+
+-   [Facebook]
+-   [Instagram]
+-   [LinkedIn]
+-   [RSS]
+-   [Twitter]
+-   [YouTube]
+
+-   Careers
+-   Find a Partner
+-   Support
+-   Technical Papers
+-   Whitepapers
+
+© 1997 - 2020 Sophos Ltd. All rights reserved
+
+-   Legal
+-   Privacy
+-   Cookie Information
+-   Modern Slavery Statement
+
+Powered by WordPress.com VIP

@@ -1,0 +1,180 @@
+Telsy TRT
+
+-   
+-   
+
+[]
+
+Primary Menu
+
+-   Corporate
+-   Research
+-   Privacy
+-   Contact
+-   About TRT
+
+Skip to content
+
+Search for:
+
+[]
+
+APT34 (aka OilRig, aka Helix Kitten) attacks Lebanon government entities with MailDropper implants {.entry-title}
+==================================================================================================
+
+Published on 2 March 2020 16:183 March 2020 17:44 by webmaster@telsy.com
+
+[]
+
+Very recently another custom malicious implant that seems to be related to APT34 (aka OilRig) has been uploaded to a major malware analysis platform. Since 2014, year in which FireEye spotted out this hacking group, APT34 is well-known to conduct cyber operations primarily in the Middle East, mainly targeting financial, government, energy, chemical and telecommunications sector.
+
+In this case, the threat group probably compromised a Microsoft Exchange account of a sensitive entity related to Lebanese government, and used the mail server as command-and-control of the implant. All the traffic between the compromised machine and the C2 is conveyed through legit email messages, making the implant identification harder. The victim seems to be a Lebanese government entity, so it’s possible to guess that the APT group exploited the trust towards the first entity to compromise others and to hide its malicious operations. 
+
+Actor Profile
+-------------
+
+APT34 is believed to be a a threat actor close to Iranian government in consideration of the fact that it conducts operations aligned with the interests of this country. Over the time this group has been observed to carry out supply chain attacks, leveraging the trust relationship between their primary targets and others organizations. Over the time, many malware families have also been associated with this group including ISMAgent, ISMDoor, ISMInjector, TwoFace and, at the time of this analysis, the MailDropper one.
+
+Behavior Analysis 
+------------------
+
+The malware is delivered through spear-phishing email messages. The infection starts with a macro-armed Excel document. The Macro contains a base64 encoded executable payload, copied as “monitor.exe”, which will be deployed in a just created folder, named “.Monitor” under “C:\Users\Public”. Through the usage of Windows Task Scheduler, “monitor.exe”is added to a new task, named “SystemErrorReporter”, whose execution is scheduled every minute.
+
+Analyzing the resources embedded into “monitor.exe”, it is possible to discover some further information, such as the credentials used to access a Microsoft Exchange server hosted in Lebanon. For privacy reasons, the primary communication server will not be publicly released.
+
+[]
+
+hardcoded credentials of the implant
+
+We guess the attackers have compromised the account “media@xxx.local”, belonging to the local domain of the targeted institution, and used it to perform malicious operations. In this specific case, the access to the mail server is used by the malware to get a list of commands to be executed through the retrieving and parsing of a CMDlist. So, it acts like a command-and-control server.
+
+[]
+
+Retrieving and parsing CMDs
+
+If the mail server is down or deny the access, the malware uses a backup URL, “hxxp://godoycrus.com” to get the commands list, according to the evidences below:
+
+[]
+
+Switch between Command and Control servers
+
+The malware is capable to perform the following primary operations:
+
+[+] arbitrary commands execution
+
+[+] download and upload of files
+
+[+] data exfiltration
+
+The following is a extraction of the commands handling code snippet:
+
+[]
+
+Commands handling code snippet
+
+Interesting the way through which the malware retrieves the commands from the mail server. It access to the Inboxfolder and search for emails containing a specific subject: “Resume7AKF1PMAVAHI7SYK”. If one or more emails are found, the malware tries to extract the content of the attachment files, that corresponds to a Base64-encoded command that should be executed.
+
+[]
+
+Once the attachments are inspected, the current email is definitely deleted using the “HardDelete” flag. In this way the email message does not even appear in the trash folder.
+
+As shown above, the retrieved commands are executed using the “ExecAllCmds” method and the result is sent to the C2 through the “SendResult” method. If the malware is using the Exchange server as C2, the output of the commands execution is sent as email message. Once again, the malware uses a specific pattern to build the email: its subject is build starting from the string “Great! 7AKF1PMAVAHI7SYK”, appending the current date to it. The email body contains only the string “This is our reusme!” (showing with a syntax error) and the attachment is a “.txt” file named “resume.txt”, which contains the encoded information returned by the commands execution. The following image is another evidence about what observed:
+
+[]
+
+All the data exchanged between the implant and the server is encrypted using an AES+RSA schema. The data is first ciphered using AESalgorithm with an auto-generated key, then the key is encrypted using RSAand prepended to the data that will be sent to the server, as shown following:
+
+[]
+
+Persistence
+-----------
+
+The malware grants its persistence on the victim machine using the Windows Task Scheduler. It creates a new task pointing to “C:\Users\Public\.Monitor\monitor.exe”, starting the malicious payload every minute.
+
+Attribution
+-----------
+
+The analyzed sample has some similarities with DNSpionage, the remote administrative tool developed by APT34 and analyzed by Talos Group in 2019 (ref. https://blog.talosintelligence.com/2019/04/dnspionage-brings-out-karkoff.html). We can summarize some characteristics in common:
+
+-   both the implant targeted Lebanon;
+-   in both cases the initial document is an Excel file containing macro: in DNSpionage the content of the document is the only string “haha you are donkey”, but in the last case it is totally empty;
+-   both the samples use dot in the created folder name, which is “.msonedrive” in DNSpionageand “.Monitor” in the last sample;
+-   both the campaigns employ .NET payload.
+
+Telemetry
+---------
+
+At the time of this analysis, this implant seems to be used exclusively in the Lebanese region, confirming the targeted nature of the implant.
+
+[]
+
+Indicators of Compromise
+------------------------
+
+md5: b08dff2a95426a0e32731ef337eab542
+
+sha1: c53d785917c1da4d40cd9fac1455d096faa4b672
+
+sha256: ebae23be2e24139245cc32ceda4b05c77ba393442482109cc69a6cecc6ad1393
+
+Domain name: godoycrus[.]com
+
+Cyber Threat Intelligence, General APT, APT34, MailDropper, OilRig
+
+Post navigation {.screen-reader-text}
+---------------
+
+Previous Previous post: ON THE CONDITION NUMBER OF THE VANDERMONDE MATRIX OF THE nTH CYCLOTOMIC POLYNOMIAL
+
+Leave a Reply Cancel reply
+
+Your email address will not be published. Required fields are marked *
+
+Comment
+
+Name *
+
+Email *
+
+Website
+
+Save my name, email, and website in this browser for the next time I comment.
+
+Search {.widget-title}
+------
+
+Search for:
+
+Articles {.widget-title}
+--------
+
+-   APT34 (aka OilRig, aka Helix Kitten) attacks Lebanon government entities with MailDropper implants
+-   ON THE CONDITION NUMBER OF THE VANDERMONDE MATRIX OF THE nTH CYCLOTOMIC POLYNOMIAL
+-   Webinar: ”Iranian Cyber Capabilities”
+-   Telsy has been involved in the organization of the seminar: “BITCOIN, LA MONETA SENZA AUTORITÀ”.
+-   A PASSWORD IS NOT A PASS-WORD
+
+Categories {.widget-title}
+----------
+
+-   Crittografia
+-   Cyber Threat Intelligence
+-   General
+-   OSINT
+
+Tags {.widget-title}
+----
+
+agent tesla agenttesla APT APT-32 APT-C-00 APT32 APT34 APT38 AVE MARIA AVE_MARIA ceo ceo fraud Cobalt Kitty deadlykiss DNS Sicuro energy EXCHANGE fraud gamaredon group Hidden Cobra Internet Service Provider ISP italia italy JASON Lazarus Lazarus Group LightNeuron LiteHTTP Middle-East OceanLotus oil&gas OSINT primitive bear Red Team SeaLotus Secure DNS SecureDNS skipper Snake Stardust Chollima turla ukraine uroburos YARA
+
+Telsy Threat Recon Team © 2019 - P.IVA 00737690016 - REA TO443365
+
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.Accept Reject Read More
+
+Privacy & Cookies Policy
+
+Close
+
+Necessary Always Enabled
+
+
